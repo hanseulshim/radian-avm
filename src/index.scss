@@ -2,9 +2,8 @@
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+	font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: $default-text;
@@ -23,10 +22,16 @@ body {
 	font-weight: bold;
 }
 
+.section-title {
+	font-weight: bold;
+	border-bottom: 1px solid $black;
+	font-size: $chart-title;
+}
+
 .footer {
 	grid-area: footer;
-	padding: 0 $padding-sides;
-	font-size: $footer;
+	padding: 0 $side-spacer;
+	font-size: $small-text;
 	font-weight: 500;
 	color: $gray;
 }

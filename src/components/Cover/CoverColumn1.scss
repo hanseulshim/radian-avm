@@ -1,0 +1,108 @@
+@import 'styles/variables.scss';
+
+.cover-container {
+	.column1-container {
+		grid-area: column1;
+
+		.property-container {
+			position: relative;
+			.top-info,
+			.bottom-info {
+				position: absolute;
+				background: $black;
+				opacity: 0.6;
+				width: 100%;
+				box-sizing: border-box;
+				padding-left: $side-spacer;
+				padding-right: 30px;
+				color: $white;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.top-info {
+				top: 0;
+				height: 100px;
+
+				.address-container {
+					.street {
+						font-size: 32px;
+					}
+					.address {
+						font-size: $chart-title;
+					}
+				}
+
+				.info-container {
+					border: 2px solid $white;
+					display: flex;
+
+					.year {
+						padding: 5px 25px;
+						font-size: $chart-title;
+						font-weight: bold;
+						display: flex;
+						align-items: center;
+					}
+					.dwelling {
+						padding: 5px 25px;
+						background: $white;
+						color: $black;
+						display: flex;
+						align-items: center;
+					}
+				}
+			}
+
+			img {
+				width: 100%;
+			}
+
+			.bottom-info {
+				height: 150px;
+				bottom: 5px;
+				padding-top: 22px;
+				padding-bottom: 16px;
+
+				.info-container {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+					height: 100%;
+
+					.label {
+						font-size: $small-text;
+						font-weight: 500;
+					}
+
+					.icon {
+						img {
+							width: 30px;
+							height: 30px;
+							filter: invert(1);
+						}
+					}
+
+					.value {
+						font-size: $large-text;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		.avm-value-defined-container {
+			padding: 35px $side-spacer;
+
+			.section-title {
+				margin-bottom: 35px;
+			}
+
+			img {
+				margin-top: 35px;
+				width: 100%;
+			}
+		}
+	}
+}

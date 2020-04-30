@@ -1,13 +1,14 @@
 import React from 'react'
 import './Cover.scss'
 import CoverHeader from './CoverHeader'
+import CoverColumn1 from './CoverColumn1'
 
 const Cover = () => {
 	return (
 		<div className="cover-container page">
 			<CoverHeader />
 			<div className="cover-sub-header">Radian AVM</div>
-			<div className="cover-content">content goes here</div>
+			<CoverColumn1 />
 			<div className="footer">
 				This report is not an appraisal of the market value of the subject
 				property and is not intended to meet the Uniform Standards of

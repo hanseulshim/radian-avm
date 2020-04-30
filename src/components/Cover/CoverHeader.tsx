@@ -1,14 +1,14 @@
 import React from 'react'
-import RedBellLogo from 'assets/RedBellLogo.jpg'
+import RedBellLogo from 'assets/RedBellLogo.png'
 
 const CoverHeader = () => {
 	return (
 		<div className="cover-header-container">
-			<img className="logo" src={RedBellLogo} />
+			<img className="logo" src={RedBellLogo} alt="Logo" />
 			<div className="information">
 				<div className="info-container">
 					<span className="title">Pool Name</span>
-					<span className="text">Test_1102201556654654654</span>
+					<span className="text">Test_11022015</span>
 				</div>
 				<div className="info-container">
 					<span className="title">Loan #</span>

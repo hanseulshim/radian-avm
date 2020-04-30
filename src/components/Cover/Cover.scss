@@ -1,4 +1,6 @@
 @import 'styles/variables.scss';
+@import './CoverHeader.scss';
+@import './CoverColumn1.scss';
 
 .cover-container {
 	display: grid;
@@ -8,79 +10,14 @@
 	grid-template-areas:
 		'header header'
 		'sub-header sub-header'
-		'content content'
+		'column1 column2'
 		'footer footer';
-
-	.cover-header-container {
-		grid-area: header;
-		font-size: $sub-text;
-		height: 164px;
-		display: grid;
-		grid-template-columns: 1fr 501px;
-		grid-template-rows: 110px 1fr;
-		grid-template-areas:
-			'logo information'
-			'logo publish-date';
-
-		padding-left: $padding-sides;
-
-		.logo {
-			grid-area: logo;
-			width: 300px;
-			margin-top: 35px;
-		}
-		.information {
-			grid-area: information;
-			background: $wild-sand;
-			padding-right: $padding-sides;
-			padding-left: 55px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-
-			.info-container {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				max-width: 33%;
-
-				.text {
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-				}
-			}
-		}
-		.publish-date {
-			grid-area: publish-date;
-			padding-right: $padding-sides;
-			text-align: right;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-
-			.publish-date-row {
-				display: flex;
-				justify-content: flex-end;
-				text-align: right;
-
-				.title {
-					margin-right: 10px;
-				}
-			}
-		}
-	}
 
 	.cover-sub-header {
 		grid-area: sub-header;
 		font-size: 42px;
 		font-weight: bold;
-		padding: 20px $padding-sides 30px;
-	}
-
-	.cover-content {
-		grid-area: content;
-		padding: 0 $padding-sides;
+		padding: 20px $side-spacer 30px;
 	}
 
 	.footer {
