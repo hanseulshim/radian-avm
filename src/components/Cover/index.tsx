@@ -2,6 +2,7 @@ import React from 'react'
 import './Cover.scss'
 import CoverHeader from './CoverHeader'
 import CoverColumn1 from './CoverColumn1'
+import CoverColumn2 from './CoverColumn2'
 
 const Cover = () => {
 	return (
@@ -9,6 +10,7 @@ const Cover = () => {
 			<CoverHeader />
 			<div className="cover-sub-header">Radian AVM</div>
 			<CoverColumn1 />
+			<CoverColumn2 />
 			<div className="footer">
 				This report is not an appraisal of the market value of the subject
 				property and is not intended to meet the Uniform Standards of

@@ -54,10 +54,6 @@
 				}
 			}
 
-			img {
-				width: 100%;
-			}
-
 			.bottom-info {
 				height: 150px;
 				bottom: 5px;
@@ -93,7 +89,7 @@
 		}
 
 		.avm-value-defined-container {
-			padding: 35px $side-spacer;
+			padding: 35px 0 35px $side-spacer;
 
 			.section-title {
 				margin-bottom: 35px;
@@ -101,7 +97,6 @@
 
 			img {
 				margin-top: 35px;
-				width: 100%;
 			}
 		}
 	}

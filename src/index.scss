@@ -12,6 +12,7 @@ body {
 .app {
 	width: 100%;
 	max-width: 1440px;
+	margin: auto;
 }
 
 .page {
@@ -28,10 +29,19 @@ body {
 	font-size: $chart-title;
 }
 
+.sub-section-title {
+	font-weight: bold;
+	border-bottom: 1px solid $black;
+}
+
 .footer {
 	grid-area: footer;
 	padding: 0 $side-spacer;
 	font-size: $small-text;
 	font-weight: 500;
 	color: $gray;
+}
+
+img {
+	width: 100%;
 }
