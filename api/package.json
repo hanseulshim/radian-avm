@@ -1,0 +1,12 @@
+{
+	"name": "api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "handler.js",
+	"scripts": {
+		"deploy": "sls deploy -s dev --aws-profile boost"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

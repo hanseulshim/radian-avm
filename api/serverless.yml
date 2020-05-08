@@ -1,0 +1,13 @@
+service: radian-avm
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  server:
+    handler: handler.server
+    events:
+      - http:
+          path: /
+          method: get

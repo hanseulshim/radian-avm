@@ -786,7 +786,7 @@
 		"flooring": "Tile, Carpet",
 		"basementFinished": "No"
 	},
-	"subjectPropertyEvents": [
+	"subjectPropertyTransactions": [
 		{
 			"type": "retail",
 			"daysOnMarket": 30,
@@ -797,26 +797,7 @@
 			"actionDate": "3/9/2020",
 			"actionAmount": 1301000,
 			"actionSqFtPrice": 207.84,
-			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
-			"mlsName": "Metropolitan Regional Information Systems, Inc.",
-			"mlsComments": "Great Deal!! Luxurious 5br/4.5ba custom built home overlooking rock creek park! Built w/ high quality materials: hwood floors, oversized windows, granites & more! Open floor plan; gourmet granite & ss kitch; 2 gas fp; mbrw/ sitting rm & spa-like ba; home theater; walkout ll. Landscaped, lush by w/ mature trees, multi-level patio w/ fire pit &built-in grill. Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect",
-			"photos": [
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
-				"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg"
-			]
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg"
 		},
 		{
 			"type": "flip",
@@ -828,10 +809,7 @@
 			"actionDate": "5/6/2018",
 			"actionAmount": 1101500,
 			"actionSqFtPrice": 175.94,
-			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
-			"mlsName": null,
-			"mlsComments": null,
-			"photos": []
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg"
 		},
 		{
 			"type": "distressed",
@@ -843,10 +821,7 @@
 			"actionDate": "12/25/2011",
 			"actionAmount": 915000,
 			"actionSqFtPrice": 145.46,
-			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
-			"mlsName": null,
-			"mlsComments": null,
-			"photos": []
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg"
 		},
 		{
 			"type": "retail",
@@ -858,10 +833,7 @@
 			"actionDate": null,
 			"actionAmount": null,
 			"actionSqFtPrice": null,
-			"imagePath": null,
-			"mlsName": null,
-			"mlsComments": null,
-			"photos": []
+			"imagePath": null
 		},
 		{
 			"type": "rental",
@@ -873,10 +845,7 @@
 			"actionDate": "4/15/1989",
 			"actionAmount": 3400,
 			"actionSqFtPrice": 0.54,
-			"imagePath": null,
-			"mlsName": null,
-			"mlsComments": null,
-			"photos": []
+			"imagePath": null
 		},
 		{
 			"type": "retail",
@@ -888,10 +857,7 @@
 			"actionDate": "8/12/1978",
 			"actionAmount": 250000,
 			"actionSqFtPrice": 408.81,
-			"imagePath": null,
-			"mlsName": null,
-			"mlsComments": null,
-			"photos": []
+			"imagePath": null
 		}
 	],
 	"propertyValueTrend": {
@@ -1074,6 +1040,78 @@
 				"date": "01/01/2010",
 				"value": 800000
 			}
+		]
+	},
+	"subjectPropertyTransaction1": {
+		"listingStartDate": "4/9/2020",
+		"listingEndDate": "12/31/2020",
+		"heroImage": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+		"mlsName": "Metropolitan Regional Information Systems, Inc.",
+		"mlsComments": "Great Deal!! Luxurious 5br/4.5ba custom built home overlooking rock creek park! Built w/ high quality materials: hwood floors, oversized windows, granites & more! Open floor plan; gourmet granite & ss kitch; 2 gas fp; mbrw/ sitting rm & spa-like ba; home theater; walkout ll. Landscaped, lush by w/ mature trees, multi-level patio w/ fire pit &built-in grill. Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect",
+		"photos": [
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg"
+		]
+	},
+	"subjectPropertyTransaction2": {
+		"listingStartDate": "5/6/2018",
+		"listingEndDate": "5/30/2020",
+		"heroImage": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+		"mlsName": "Metropolitan Regional Information Systems, Inc.",
+		"mlsComments": "Great Deal!! Luxurious 5br/4.5ba custom built home overlooking rock creek park! Built w/ high quality materials: hwood floors, oversized windows, granites & more! Open floor plan; gourmet granite & ss kitch; 2 gas fp; mbrw/ sitting rm & spa-like ba; home theater; walkout ll. Landscaped, lush by w/ mature trees, multi-level patio w/ fire pit &built-in grill. Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect",
+		"photos": [
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg"
+		]
+	},
+	"subjectPropertyTransaction3": {
+		"listingStartDate": "6/25/2011",
+		"listingEndDate": "7/7/2011",
+		"heroImage": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+		"mlsName": "Metropolitan Regional Information Systems, Inc.",
+		"mlsComments": "Great Deal!! Luxurious 5br/4.5ba custom built home overlooking rock creek park! Built w/ high quality materials: hwood floors, oversized windows, granites & more! Open floor plan; gourmet granite & ss kitch; 2 gas fp; mbrw/ sitting rm & spa-like ba; home theater; walkout ll. Landscaped, lush by w/ mature trees, multi-level patio w/ fire pit &built-in grill. Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit amet, consect",
+		"photos": [
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
+			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg"
 		]
 	},
 	"footer": "This report is not an appraisal of the market value of the subject property and is not intended to meet the Uniform Standards of Professional Appraisal Practice of the Appraisal Foundation.This information is based in whole or in part on data supplied by Metropolitan Regional Information Systems, Inc., , for the period 05/12/2014 through 11/05/2015 . California RegionalMultiple Listing Service, Inc, Sandicor, does not guarantee nor is it in any way responsible for its accuracy. Data maintained by California Regional Multiple Listing Service, Inc, Sandicor,Inc may not reflect all real estate activity in the market. No representation or warranty is made as to the accuracy or completeness of the information contained herein. If an appraisal isdesired, the services of a licensed appraiser should be obtained."
