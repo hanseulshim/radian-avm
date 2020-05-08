@@ -1,22 +1,32 @@
 import React from 'react'
 import RedBellLogo from 'assets/RedBellLogo.png'
 
-const CoverHeader = () => {
+const CoverHeader = ({
+	poolName,
+	loanNumber,
+	orderID,
+	valuationDate
+}: {
+	poolName?: string
+	loanNumber?: string
+	orderID?: string
+	valuationDate?: string
+}) => {
 	return (
 		<div className="cover-header-container">
 			<img className="logo" src={RedBellLogo} alt="Logo" />
 			<div className="information">
 				<div className="info-container">
 					<span className="title">Pool Name</span>
-					<span className="text">Test_11022015</span>
+					<span className="text">{poolName}</span>
 				</div>
 				<div className="info-container">
 					<span className="title">Loan #</span>
-					<span className="text">2</span>
+					<span className="text">{loanNumber}</span>
 				</div>
 				<div className="info-container">
 					<span className="title">Order ID</span>
-					<span className="text">6519041-6</span>
+					<span className="text">{orderID}</span>
 				</div>
 			</div>
 			<div className="publish-date">
@@ -26,7 +36,7 @@ const CoverHeader = () => {
 				</div>
 				<div className="publish-date-row">
 					<span className="title">Valuation Date:</span>
-					<span>November 10, 2019</span>
+					<span>{valuationDate}</span>
 				</div>
 			</div>
 		</div>

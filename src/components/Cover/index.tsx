@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from 'components/App'
 import './Cover.scss'
 import CoverHeader from './CoverHeader'
 import CoverColumn1 from './CoverColumn1'
 import CoverColumn2 from './CoverColumn2'
 
 const Cover = () => {
+	const data = useContext(DataContext)
+
 	return (
 		<div className="cover-container page">
-			<CoverHeader />
+			<CoverHeader
+				poolName={data?.poolName}
+				loanNumber={data?.loanNumber}
+				orderID={data?.orderID}
+				valuationDate={data?.valuationDate}
+			/>
 			<div className="cover-sub-header">Radian AVM</div>
 			<CoverColumn1 />
 			<CoverColumn2 />
