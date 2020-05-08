@@ -25,9 +25,7 @@ const App = () => {
 
 	return (
 		<DataContext.Provider value={data}>
-			<div className="app">
-				<Cover />
-			</div>
+			<div className="app">{data && <Cover />}</div>
 		</DataContext.Provider>
 	)
 }
