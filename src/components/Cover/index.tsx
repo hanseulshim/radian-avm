@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
 import { DataContext } from 'components/App'
+import React, { useContext } from 'react'
 import './Cover.scss'
-import CoverHeader from './CoverHeader'
 import CoverColumn1 from './CoverColumn1'
 import CoverColumn2 from './CoverColumn2'
+import CoverHeader from './CoverHeader'
 
 const Cover = () => {
 	const data = useContext(DataContext)

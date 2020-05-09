@@ -1,6 +1,6 @@
-import React from 'react'
 import RedBellLogo from 'assets/RedBellLogo.png'
 import moment from 'moment'
+import React from 'react'
 
 const CoverHeader = ({
 	poolName,
@@ -37,7 +37,9 @@ const CoverHeader = ({
 				</div>
 				<div className="publish-date-row">
 					<span className="title">Valuation Date:</span>
-					<span>{moment(valuationDate).format('MMM DD, YYYY')}</span>
+					<span>
+						{moment(valuationDate, 'MM-DD-YYYY').format('MMM DD, YYYY')}
+					</span>
 				</div>
 			</div>
 		</div>

@@ -4,10 +4,10 @@
 	.cover-header-container {
 		grid-area: header;
 		font-size: $sub-text;
-		height: 164px;
+		height: 165px;
 		display: grid;
 		grid-template-columns: 1fr 501px;
-		grid-template-rows: 110px 1fr;
+		grid-template-rows: 104px 1fr;
 		grid-template-areas:
 			'logo information'
 			'logo publish-date';
@@ -16,7 +16,7 @@
 		.logo {
 			grid-area: logo;
 			width: 300px;
-			margin-top: 35px;
+			margin-top: 33px;
 		}
 
 		.information {
