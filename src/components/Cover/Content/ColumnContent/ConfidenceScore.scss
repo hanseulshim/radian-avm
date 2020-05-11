@@ -18,6 +18,7 @@
 							flex-direction: column;
 							font-weight: $medium-weight;
 							margin-right: 5px;
+							width: 40%;
 							.value {
 								font-size: $extra-large-text;
 							}
@@ -26,6 +27,10 @@
 							display: flex;
 							height: 47px;
 							align-items: flex-end;
+							width: 60%;
+							img {
+								width: 20%;
+							}
 						}
 					}
 				}

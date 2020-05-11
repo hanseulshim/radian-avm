@@ -29,22 +29,25 @@ const Retail = ({
 	}
 }) => {
 	return (
-		<div className="column-container retail">
-			<div className="section-title">Retail</div>
-			<PriceIndicator
-				price={price}
-				indicator={indicator}
-				pricePerSqft={pricePerSqft}
-				pricePerSqftIndicator={pricePerSqftIndicator}
-			/>
-			<ConfidenceScore confidenceScore={confidenceScore} retail />
-			<PriceRelative
-				level1Label={level1Label}
-				level1Value={level1Value}
-				level2Label={level2Label}
-				level2Value={level2Value}
-			/>
-		</div>
+		<>
+			<div className="column-container retail">
+				<div className="section-title">Retail</div>
+				<PriceIndicator
+					price={price}
+					indicator={indicator}
+					pricePerSqft={pricePerSqft}
+					pricePerSqftIndicator={pricePerSqftIndicator}
+				/>
+				<ConfidenceScore confidenceScore={confidenceScore} retail />
+				<PriceRelative
+					level1Label={level1Label}
+					level1Value={level1Value}
+					level2Label={level2Label}
+					level2Value={level2Value}
+				/>
+			</div>
+			<div>Market Sales</div>
+		</>
 	)
 }
 

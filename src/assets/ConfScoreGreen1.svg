@@ -1,22 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="26px" height="47px" viewBox="0 0 26 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
-    <title>conf_score_green1</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="0" y="0.242424242" width="26" height="47"></rect>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Cover" transform="translate(-920.000000, -520.000000)">
-            <g id="Group-2" transform="translate(920.000000, 519.000000)">
-                <g id="conf_score_green1" transform="translate(0.000000, 0.757576)">
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <use id="Mask" fill="#F0F0F0" xlink:href="#path-1"></use>
-                    <polygon id="Rectangle" fill="#E3F1EF" mask="url(#mask-2)" points="130 0.242424242 130 47.2424242 0 47.2424242"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 26 47" style="enable-background:new 0 0 26 47;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{mask:url(#mask-2_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#E3F1EF;}
+</style>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Cover" transform="translate(-920.000000, -520.000000)">
+		<g id="Group-2" transform="translate(920.000000, 519.000000)">
+			<g id="conf_score_green1" transform="translate(0.000000, 0.757576)">
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0.2" width="130" height="47">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="0" y="0.2" width="130" height="47" id="mask-2_1_">
+					<g class="st0">
+						<rect id="path-1_2_" y="0.2" class="st1" width="26" height="47"/>
+					</g>
+				</mask>
+				<polygon id="Rectangle" class="st2" points="130,0.2 130,47.2 0,47.2 				"/>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
