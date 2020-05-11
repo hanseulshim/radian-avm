@@ -4,9 +4,13 @@
 	"description": "",
 	"main": "handler.js",
 	"scripts": {
+		"start": "sls offline -s dev",
 		"deploy": "sls deploy -s dev --aws-profile boost"
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"serverless-offline": "^6.1.5"
+	}
 }

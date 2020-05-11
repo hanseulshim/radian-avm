@@ -1,28 +1,13 @@
 @import 'styles/variables.scss';
 @import './CoverHeader.scss';
-@import './CoverColumn1.scss';
-@import './CoverColumn2.scss';
 
 .cover-container {
 	display: grid;
-	grid-template-columns: 815px 1fr;
-	grid-template-rows: auto;
-	gap: 0 20px;
-	grid-template-areas:
-		'header header'
-		'sub-header sub-header'
-		'column1 column2'
-		'footer footer';
-
+	grid-template-areas: 'header' 'sub-header' 'content' 'footer';
 	.cover-sub-header {
 		grid-area: sub-header;
 		font-size: 42px;
-		font-weight: bold;
+		font-weight: $heavy-weight;
 		padding: 20px $side-spacer 31px;
-	}
-
-	.footer {
-		padding-top: 40px;
-		padding-bottom: 50px;
 	}
 }

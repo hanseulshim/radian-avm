@@ -1,4 +1,5 @@
 // Colors
+$alto: #dddddd;
 $azure: #3a62a3;
 $azure-05: rgba(58, 98, 163, 0.5);
 $black: #000000;
@@ -12,9 +13,15 @@ $wild-sand: #f4f4f4;
 $side-spacer: 100px;
 
 // Font Sizes
-$large-text: 35px;
-$medium-text: 26px;
-$chart-title: 24px;
-$default-text: 17px;
-$sub-text: 17px;
+$extra-large-text: 35px;
+$large-text: 32px;
+$medium-text: 24px;
+$medium-normal-text: 19px;
+$normal-text: 17px;
 $small-text: 16px;
+
+// Font Weights
+$heavy-weight: 700; //bold
+$medium-weight: 500;
+$normal-weight: 400;
+$light-weight: 300;

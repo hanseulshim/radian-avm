@@ -11,3 +11,8 @@ functions:
       - http:
           path: /
           method: get
+custom:
+  serverless-offline:
+    httpPort: 4000
+plugins:
+  - serverless-offline

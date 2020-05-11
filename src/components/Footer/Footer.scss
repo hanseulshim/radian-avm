@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.footer-container {
+	grid-area: footer;
+	padding: 0 $side-spacer;
+	font-size: $small-text;
+	font-weight: $medium-weight;
+	color: $gray;
+}
