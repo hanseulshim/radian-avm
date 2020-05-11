@@ -40,6 +40,7 @@ const Retail = ({
 				/>
 				<ConfidenceScore confidenceScore={confidenceScore} retail />
 				<PriceRelative
+					retail
 					level1Label={level1Label}
 					level1Value={level1Value}
 					level2Label={level2Label}

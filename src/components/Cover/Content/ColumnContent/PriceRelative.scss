@@ -14,6 +14,46 @@
 					margin-top: 20px;
 					background: $wild-sand;
 					flex: 1;
+
+					&.retail {
+						.legend-container {
+							.legend {
+								.marker {
+									background: $neptune-05;
+									&.level1 {
+										background: $neptune;
+									}
+								}
+							}
+						}
+					}
+
+					.legend-container {
+						display: flex;
+						justify-content: center;
+						margin-bottom: 20px;
+
+						.legend {
+							display: flex;
+							align-items: center;
+							&.level1 {
+								margin-right: 15px;
+							}
+
+							.marker {
+								width: $normal-text;
+								height: $normal-text;
+								margin-right: 5px;
+								background: $azure-05;
+								&.level1 {
+									background: $azure;
+								}
+							}
+							.label {
+								font-weight: $medium-weight;
+							}
+						}
+					}
 				}
 			}
 		}
