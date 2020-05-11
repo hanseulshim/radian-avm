@@ -36,34 +36,36 @@ const ConfidenceScore = ({
 					</span>
 					<span className="value">{confidenceScore}</span>
 				</div>
-				<img
-					src={retail ? ConfScoreGreen1 : ConfScoreBlue1}
-					alt="conf score 1"
-				/>
-				{confidenceScore && confidenceScore > 20 && (
+				<div className="image-container">
 					<img
-						src={retail ? ConfScoreGreen2 : ConfScoreBlue2}
-						alt="conf score 2"
+						src={retail ? ConfScoreGreen1 : ConfScoreBlue1}
+						alt="conf score 1"
 					/>
-				)}
-				{confidenceScore && confidenceScore > 40 && (
-					<img
-						src={retail ? ConfScoreGreen3 : ConfScoreBlue3}
-						alt="conf score 3"
-					/>
-				)}
-				{confidenceScore && confidenceScore > 60 && (
-					<img
-						src={retail ? ConfScoreGreen4 : ConfScoreBlue4}
-						alt="conf score 4"
-					/>
-				)}
-				{confidenceScore && confidenceScore > 80 && (
-					<img
-						src={retail ? ConfScoreGreen5 : ConfScoreBlue5}
-						alt="conf score 5"
-					/>
-				)}
+					{confidenceScore && confidenceScore > 20 && (
+						<img
+							src={retail ? ConfScoreGreen2 : ConfScoreBlue2}
+							alt="conf score 2"
+						/>
+					)}
+					{confidenceScore && confidenceScore > 40 && (
+						<img
+							src={retail ? ConfScoreGreen3 : ConfScoreBlue3}
+							alt="conf score 3"
+						/>
+					)}
+					{confidenceScore && confidenceScore > 60 && (
+						<img
+							src={retail ? ConfScoreGreen4 : ConfScoreBlue4}
+							alt="conf score 4"
+						/>
+					)}
+					{confidenceScore && confidenceScore > 80 && (
+						<img
+							src={retail ? ConfScoreGreen5 : ConfScoreBlue5}
+							alt="conf score 5"
+						/>
+					)}
+				</div>
 			</div>
 		</div>
 	)

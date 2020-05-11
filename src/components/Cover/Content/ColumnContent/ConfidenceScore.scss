@@ -11,6 +11,7 @@
 						padding: 20px 10px;
 						margin-top: 17px;
 						display: flex;
+						align-items: center;
 
 						.label-container {
 							display: flex;
@@ -20,6 +21,11 @@
 							.value {
 								font-size: $extra-large-text;
 							}
+						}
+						.image-container {
+							display: flex;
+							height: 47px;
+							align-items: flex-end;
 						}
 					}
 				}
