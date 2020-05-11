@@ -5,40 +5,26 @@ import IconHouse from 'assets/IconHouse.svg'
 import IconHouseUnavailable from 'assets/IconHouseUnavailable.png'
 import IconRuler from 'assets/IconRuler.svg'
 import IconTrees from 'assets/IconTrees.svg'
-import React from 'react'
+import { DataContext } from 'components/App'
+import React, { useContext } from 'react'
 
-const SubjectProperty = ({
-	subjectProperty: {
-		propertyAddress,
-		propertyCity,
-		propertyState,
-		propertyZip,
-		yearBuilt,
-		dwellingType,
-		imagePath,
-		beds,
-		bath,
-		sqFt,
-		garage,
-		lotSize
-	}
-}: {
-	subjectProperty: {
-		propertyAddress: string | null
-		propertyCity: string | null
-		propertyState: string | null
-		propertyZip: string | null
-		yearBuilt: number | null
-		dwellingType: string | null
-		imagePath: string | null
-		beds: number | null
-		bath: number | null
-		sqFt: number | null
-		garage: number | null
-		lotSize: number | null
-	}
-}) => {
-	console.log(imagePath)
+const SubjectProperty = () => {
+	const {
+		subjectProperty: {
+			propertyAddress,
+			propertyCity,
+			propertyState,
+			propertyZip,
+			yearBuilt,
+			dwellingType,
+			imagePath,
+			beds,
+			bath,
+			sqFt,
+			garage,
+			lotSize
+		}
+	} = useContext(DataContext)
 	return (
 		<div className="subject-property-container">
 			<div className="info-row-1">
@@ -91,5 +77,4 @@ const SubjectProperty = ({
 		</div>
 	)
 }
-
 export default SubjectProperty

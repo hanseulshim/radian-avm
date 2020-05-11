@@ -17,6 +17,30 @@ export const initialState = {
 		garage: null,
 		lotSize: null
 	},
+	retail: {
+		price: null,
+		indicator: null,
+		pricePerSqft: null,
+		pricePerSqftIndicator: null,
+		confidenceScore: null,
+		level1Label: null,
+		level1Value: null,
+		level2Label: null,
+		level2Value: null,
+		percentSales: null
+	},
+	distressed: {
+		price: null,
+		indicator: null,
+		pricePerSqft: null,
+		pricePerSqftIndicator: null,
+		confidenceScore: null,
+		level1Label: null,
+		level1Value: null,
+		level2Label: null,
+		level2Value: null,
+		percentSales: null
+	},
 	footer: null
 }
 
@@ -38,6 +62,30 @@ export interface DataInterface {
 		sqFt: number | null
 		garage: number | null
 		lotSize: number | null
+	}
+	retail: {
+		price: number | null
+		indicator: string | null
+		pricePerSqft: number | null
+		pricePerSqftIndicator: string | null
+		confidenceScore: number | null
+		level1Label: string | null
+		level1Value: number | null
+		level2Label: string | null
+		level2Value: number | null
+		percentSales: number | null
+	}
+	distressed: {
+		price: number | null
+		indicator: string | null
+		pricePerSqft: number | null
+		pricePerSqftIndicator: string | null
+		confidenceScore: number | null
+		level1Label: string | null
+		level1Value: number | null
+		level2Label: string | null
+		level2Value: number | null
+		percentSales: number | null
 	}
 	footer: string | null
 }

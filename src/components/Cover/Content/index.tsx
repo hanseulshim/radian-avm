@@ -1,17 +1,13 @@
-import { DataContext } from 'components/App'
-import React, { useContext } from 'react'
+import React from 'react'
+import ColumnContent from './ColumnContent'
 import './Content.scss'
 import SubjectProperty from './SubjectProperty'
 
-const Content = () => {
-	const data = useContext(DataContext)
-	return (
-		<div className="content-container">
-			<SubjectProperty subjectProperty={data.subjectProperty} />
-			<div>1</div>
-			<div>2</div>
-		</div>
-	)
-}
+const Content = () => (
+	<div className="content-container">
+		<SubjectProperty />
+		<ColumnContent />
+	</div>
+)
 
 export default Content

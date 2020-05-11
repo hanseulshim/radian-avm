@@ -1,0 +1,17 @@
+@import 'styles/variables.scss';
+
+.cover-container {
+	.content-container {
+		.column-content-container {
+			.column-container {
+				.price-relative-container {
+					margin-top: 70px;
+				}
+				.chart-container {
+					margin-top: 20px;
+					background: $wild-sand;
+				}
+			}
+		}
+	}
+}

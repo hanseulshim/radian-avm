@@ -1,0 +1,29 @@
+@import 'styles/variables.scss';
+
+.cover-container {
+	.content-container {
+		.column-content-container {
+			.column-container {
+				.price-row {
+					display: flex;
+					align-items: center;
+					.indicator {
+						margin-right: 15px;
+					}
+					.price {
+						font-weight: $heavy-weight;
+						font-size: $extra-large-text;
+					}
+					.price-per-sqft {
+						font-weight: $medium-weight;
+						font-size: $medium-text;
+						margin-right: 10px;
+					}
+					.price-per-sqft-label {
+						font-weight: $medium-weight;
+					}
+				}
+			}
+		}
+	}
+}

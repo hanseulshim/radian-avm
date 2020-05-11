@@ -1,0 +1,14 @@
+@import 'styles/variables.scss';
+@import './Retail.scss';
+@import './PriceIndicator.scss';
+@import './ConfidenceScore.scss';
+@import './PriceRelative.scss';
+
+.cover-container {
+	.content-container {
+		.column-content-container {
+			height: 672px;
+			display: flex;
+		}
+	}
+}

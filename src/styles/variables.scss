@@ -25,3 +25,19 @@ $heavy-weight: 700; //bold
 $medium-weight: 500;
 $normal-weight: 400;
 $light-weight: 300;
+
+// Titles
+.title {
+	font-weight: $heavy-weight;
+}
+
+.section-title {
+	font-weight: $heavy-weight;
+	border-bottom: 1px solid $black;
+	font-size: $medium-text;
+}
+
+.sub-section-title {
+	font-weight: $medium-weight;
+	border-bottom: 1px solid $black;
+}
