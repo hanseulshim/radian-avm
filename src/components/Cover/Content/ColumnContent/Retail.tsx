@@ -46,7 +46,6 @@ const Retail = ({
 					level2Value={level2Value}
 				/>
 			</div>
-			<div>Market Sales</div>
 		</>
 	)
 }

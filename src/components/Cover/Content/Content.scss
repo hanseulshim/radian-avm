@@ -11,4 +11,18 @@
 		margin-bottom: 43px;
 		grid-gap: 0 20px;
 	}
+
+	.value-defined-container {
+		margin-top: 35px;
+
+		.description {
+			margin-top: 35px;
+		}
+
+		.map-container {
+			margin-top: 35px;
+			height: 430px;
+			background: $wild-sand;
+		}
+	}
 }

@@ -41,6 +41,11 @@ export const initialState = {
 		level2Value: null,
 		percentSales: null
 	},
+	avmValueDefined: {
+		latitude: null,
+		longitude: null,
+		description: null
+	},
 	footer: null
 }
 
@@ -86,6 +91,11 @@ export interface DataInterface {
 		level2Label: string | null
 		level2Value: number | null
 		percentSales: number | null
+	}
+	avmValueDefined: {
+		latitude: number | null
+		longitude: number | null
+		description: string | null
 	}
 	footer: string | null
 }
