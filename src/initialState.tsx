@@ -46,6 +46,17 @@ export const initialState = {
 		longitude: null,
 		description: null
 	},
+	annualPriceAppreciation: {
+		level1Label: null,
+		level1Value: null,
+		level1Trend: null,
+		level1Indicator: null,
+		level2Label: null,
+		level2Value: null,
+		level2Trend: null,
+		level2Indicator: null
+	},
+	marketStrength: null,
 	footer: null
 }
 
@@ -97,5 +108,16 @@ export interface DataInterface {
 		longitude: number | null
 		description: string | null
 	}
+	annualPriceAppreciation: {
+		level1Label: string | null
+		level1Indicator: string | null
+		level1Value: number | null
+		level1Trend: number | null
+		level2Label: string | null
+		level2Indicator: string | null
+		level2Value: number | null
+		level2Trend: number | null
+	}
+	marketStrength: number | null
 	footer: string | null
 }

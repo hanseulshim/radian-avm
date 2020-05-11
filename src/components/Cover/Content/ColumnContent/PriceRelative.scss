@@ -6,10 +6,14 @@
 			.column-container {
 				.price-relative-container {
 					margin-top: 70px;
+					display: flex;
+					flex-direction: column;
+					flex: 1;
 				}
 				.chart-container {
 					margin-top: 20px;
 					background: $wild-sand;
+					flex: 1;
 				}
 			}
 		}

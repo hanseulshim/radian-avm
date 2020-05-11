@@ -48,11 +48,13 @@
 	},
 	"annualPriceAppreciation": {
 		"level1Label": "zip",
-		"level1Value": 13,
 		"level1Indicator": "up",
-		"level2Label": "cbsa",
-		"level2Value": 8,
-		"level2Indicator": "up"
+		"level1Trend": 13,
+		"level1Value": 75,
+		"level2Label": "CBSA",
+		"level2Indicator": "up",
+		"level2Trend": 8,
+		"level2Value": 45
 	},
 	"marketStrength": 65,
 	"propertyCharacteristics": {

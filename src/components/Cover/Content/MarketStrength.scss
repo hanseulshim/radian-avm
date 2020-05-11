@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+
+.cover-container {
+	.market-strength-container {
+		margin-top: 35px;
+
+		.chart-container {
+			margin: auto;
+			margin-top: 42px;
+			width: 420px;
+			height: 210px;
+			background: $wild-sand;
+		}
+	}
+}

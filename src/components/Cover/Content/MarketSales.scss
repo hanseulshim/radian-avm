@@ -1,0 +1,63 @@
+@import 'styles/variables.scss';
+
+.cover-container {
+	.market-sales-container {
+		display: flex;
+
+		.market-sales-column {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+			.title-wrapper {
+				border-right: 2px solid $black;
+				margin-right: -1px;
+			}
+
+			.sub-section-title {
+				padding-top: 35px;
+				height: 35px;
+				line-height: 35px;
+				margin-bottom: 15px;
+
+				&.retail {
+					margin-right: 12px;
+				}
+				&.distressed {
+					margin-left: 12px;
+				}
+			}
+
+			.bar-row {
+				margin-top: 10px;
+				height: 50px;
+				display: flex;
+				align-items: center;
+
+				&.retail {
+					border-right: 2px solid $black;
+					margin-right: -1px;
+					justify-content: flex-end;
+				}
+
+				.bar {
+					display: flex;
+					align-items: center;
+					font-size: $medium-text;
+					height: 42px;
+					font-weight: $heavy-weight;
+
+					&.retail {
+						background: $neptune-05;
+						justify-content: flex-end;
+						padding-right: 5px;
+					}
+					&.distressed {
+						background: $azure-05;
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}

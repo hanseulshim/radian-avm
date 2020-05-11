@@ -1,0 +1,44 @@
+@import 'styles/variables.scss';
+
+.cover-container {
+	.annual-home-price-container {
+		margin-top: 35px;
+
+		.section-title {
+			margin-bottom: 35px;
+		}
+
+		.info-row {
+			display: flex;
+			align-items: center;
+
+			&.level2 {
+				margin-top: 20px;
+			}
+
+			.label {
+				font-weight: $medium-weight;
+				text-transform: capitalize;
+				width: 15%;
+			}
+			.indicator {
+				margin-right: 10px;
+			}
+			.trend {
+				width: 60px;
+				font-size: $medium-text;
+				font-weight: $heavy-weight;
+			}
+			.bar-row {
+				flex: 1;
+				height: 42px;
+				background: $wild-sand;
+
+				.bar {
+					height: 100%;
+					background: $black;
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,8 @@
 @import 'styles/variables.scss';
 @import './SubjectProperty.scss';
+@import './MarketSales.scss';
+@import './AnnualHomePriceAppreciation.scss';
+@import './MarketStrength.scss';
 
 .cover-container {
 	.content-container {
@@ -12,8 +15,18 @@
 		grid-gap: 0 20px;
 	}
 
+	.bottom-column-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
 	.value-defined-container {
 		margin-top: 35px;
+
+		.section-title {
+			height: 35px;
+		}
 
 		.description {
 			margin-top: 35px;
