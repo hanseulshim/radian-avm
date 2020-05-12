@@ -42,8 +42,8 @@
 		"percentSales": 12
 	},
 	"avmValueDefined": {
-		"latitude": 35,
-		"longitude": 35,
+		"lat": 35,
+		"lng": 35,
 		"description": "Our model’s leverage … Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium. Nullam ut leo ac est placerat eleifend vitae et elit. Aenean euismod elit at purus feugiat blandit. Sed malesuada scelerisque leo sit amet vestibulum. Sed mattis aliquet tortor sed hendrerit. Nam id rutrum nibh. Nunc sit amet velit pretium, iaculis risus at, dignissim diam. Sed a odio ac sem porttitor sollicitudin."
 	},
 	"annualPriceAppreciation": {
@@ -121,8 +121,8 @@
 		"bedsBathGarage": "Legend values include partial room counts"
 	},
 	"propertyNeighborhoodInfo": {
-		"latitude": 35,
-		"longitude": 35,
+		"lat": 35,
+		"lng": 35,
 		"level1": {
 			"label": "Neighborhood",
 			"geoJSON": {}
@@ -1114,6 +1114,563 @@
 			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg",
 			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg",
 			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg"
+		]
+	},
+	"marketAtAGlance": {
+		"description": "Our model’s leverage ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium. Nullam ut leo ac est placerat eleifend vitae et elit. Aenean euismod elit at purus feugiat blandit. Sed malesuada scelerisque leo sit amet vestibulum. Sed mattis aliquet tortor sed hendrerit. Nam id rutrum nibh. Nunc sit amet velit pretium, iaculis risus at, dignissim diam. Sed a odio ac sem porttitor sollicitudin. Fusce ornare egestas ipsum quis pellentesque. Sed odio magna, fringilla ut ornare non, convallis condimentum orci. Suspendisse dignissim semper arcu, at vehicula ante pellentesque eget."
+	},
+	"nearbyProperties": [
+		{
+			"lat": 37.4547684,
+			"lng": 140.5368503,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": 32.92312,
+			"lng": 115.805297,
+			"category": "listed",
+			"condition": "distressed"
+		},
+		{
+			"lat": 47.395226,
+			"lng": 8.5216392,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": 51.888151,
+			"lng": -0.23924,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": -6.2167736,
+			"lng": 106.5230542,
+			"category": "sold",
+			"condition": "distressed"
+		},
+		{
+			"lat": -6.9404876,
+			"lng": 112.0863874,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": -6.4668348,
+			"lng": 108.2347863,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": 22.935289,
+			"lng": 113.670324,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": 33.999466,
+			"lng": -117.6834051,
+			"category": "listed",
+			"condition": "distressed"
+		},
+		{
+			"lat": "-6.9987",
+			"lng": "112.5755",
+			"category": "u/c",
+			"condition": "retail"
+		},
+		{
+			"lat": 28.220406,
+			"lng": 121.038129,
+			"category": "sold",
+			"condition": "distressed"
+		},
+		{
+			"lat": 14.4050979,
+			"lng": 100.464947,
+			"category": "u/c",
+			"condition": "distressed"
+		},
+		{
+			"lat": 36.854929,
+			"lng": 114.503339,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": 19.2540302,
+			"lng": -99.6000391,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": -27.1435718,
+			"lng": -56.7664844,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": 30.199688,
+			"lng": 110.674706,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": 55.9008577,
+			"lng": 28.8580531,
+			"category": "sold",
+			"condition": "distressed"
+		},
+		{
+			"lat": 13.5167584,
+			"lng": 99.9541293,
+			"category": "listed",
+			"condition": "distressed"
+		},
+		{
+			"lat": 27.953479,
+			"lng": 68.6224065,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": 22.556499,
+			"lng": 114.236875,
+			"category": "u/c",
+			"condition": "retail"
+		},
+		{
+			"lat": 38.7240446,
+			"lng": -77.1082444,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": 59.9486019,
+			"lng": 10.7309257,
+			"category": "listed",
+			"condition": "retail"
+		},
+		{
+			"lat": 24.588267,
+			"lng": 115.415276,
+			"category": "u/c",
+			"condition": "distressed"
+		},
+		{
+			"lat": 49.794097,
+			"lng": 12.5783985,
+			"category": "sold",
+			"condition": "retail"
+		},
+		{
+			"lat": 31.2303904,
+			"lng": 121.4737021,
+			"category": "listed",
+			"condition": "distressed"
+		}
+	],
+	"featuredProperties": [
+		{
+			"lat": 14.9247834,
+			"lng": -85.692279,
+			"category": "listed",
+			"condition": "distressed",
+			"distance": 3.7,
+			"status": "flip rental",
+			"featureNumber": 1,
+			"price": 4001581,
+			"address": "140 Schurz Terrace",
+			"daysOnMarket": 17,
+			"eventType": "sold",
+			"eventDate": "04/21/2013"
+		},
+		{
+			"lat": 5.4807517,
+			"lng": 10.4284178,
+			"category": "sold",
+			"condition": "retail",
+			"distance": 4.7,
+			"status": "sale",
+			"featureNumber": 2,
+			"price": 4928717,
+			"address": "15 Summit Trail",
+			"daysOnMarket": 6,
+			"eventType": "listed",
+			"eventDate": "08/02/2014"
+		},
+		{
+			"lat": 38.9190379,
+			"lng": 20.8889257,
+			"category": "sold",
+			"condition": "distressed",
+			"distance": 1.5,
+			"status": "rental",
+			"featureNumber": 3,
+			"price": 4878862,
+			"address": "645 Anderson Center",
+			"daysOnMarket": 21,
+			"eventType": "leased",
+			"eventDate": "05/31/2014"
+		},
+		{
+			"lat": 14.2157645,
+			"lng": 109.1166566,
+			"category": "sold",
+			"condition": "distressed",
+			"distance": 1.0,
+			"status": "list",
+			"featureNumber": 4,
+			"price": 4620382,
+			"address": "95 Stang Circle",
+			"daysOnMarket": 10,
+			"eventType": "leased",
+			"eventDate": "10/02/2016"
+		},
+		{
+			"lat": 26.319938,
+			"lng": 113.810157,
+			"category": "u/c",
+			"condition": "distressed",
+			"distance": 2.4,
+			"status": "sale",
+			"featureNumber": 5,
+			"price": 4972190,
+			"address": "2938 Stephen Terrace",
+			"daysOnMarket": 13,
+			"eventType": "leased",
+			"eventDate": "11/08/2013"
+		},
+		{
+			"lat": 36.826981,
+			"lng": 118.309118,
+			"category": "listed",
+			"condition": "retail",
+			"distance": 4.0,
+			"status": "flip rental",
+			"featureNumber": 6,
+			"price": 4415667,
+			"address": "5 Dawn Park",
+			"daysOnMarket": 25,
+			"eventType": "leased",
+			"eventDate": "03/02/2020"
+		}
+	],
+	"numberOfTransactions": {
+		"duration": 6,
+		"label": "zip",
+		"retail": 100,
+		"distressed": 100,
+		"rental": 80,
+		"flipSale": 50,
+		"flipRental": 30
+	},
+	"avgPrices": {
+		"rental": {
+			"avgRent": 1400,
+			"avgDom": 31
+		},
+		"retailSales": {
+			"medianSalePrice": 600000,
+			"avgDom": 67
+		},
+		"distressedSales": {
+			"medianSalePrice": 475350,
+			"distressedDiscount": -33
+		},
+		"flipSales": {
+			"saleRange1": 420000,
+			"saleRange2": 590000,
+			"grossProfitRange1": 30000,
+			"grossProfitRange2": -85000
+		},
+		"flipRental": {
+			"avgRent": 1500,
+			"rentRange1": 1600,
+			"rentRange2": 2000
+		}
+	},
+	"medianPrices": {
+		"atAGlance": "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci.",
+		"level1Label": "zip",
+		"level1Sold": [
+			{
+				"value": 713186,
+				"date": "01/01/2010"
+			},
+			{
+				"value": 857087,
+				"date": "01/01/2011"
+			},
+			{
+				"value": 797666,
+				"date": "01/01/2012"
+			},
+			{
+				"value": 949014,
+				"date": "01/01/2013"
+			},
+			{
+				"value": 699350,
+				"date": "01/01/2014"
+			},
+			{
+				"value": 912029,
+				"date": "01/01/2015"
+			},
+			{
+				"value": 916243,
+				"date": "01/01/2016"
+			},
+			{
+				"value": 863192,
+				"date": "01/01/2017"
+			},
+			{
+				"value": 841127,
+				"date": "01/01/2018"
+			},
+			{
+				"value": 735763,
+				"date": "01/01/2019"
+			},
+			{
+				"value": 829975,
+				"date": "01/01/2020"
+			}
+		],
+		"level1Listed": [
+			{
+				"value": 770805,
+				"date": "01/01/2010"
+			},
+			{
+				"value": 983480,
+				"date": "01/01/2011"
+			},
+			{
+				"value": 851457,
+				"date": "01/01/2012"
+			},
+			{
+				"value": 986265,
+				"date": "01/01/2013"
+			},
+			{
+				"value": 909618,
+				"date": "01/01/2014"
+			},
+			{
+				"value": 679213,
+				"date": "01/01/2015"
+			},
+			{
+				"value": 713727,
+				"date": "01/01/2016"
+			},
+			{
+				"value": 677264,
+				"date": "01/01/2017"
+			},
+			{
+				"value": 694388,
+				"date": "01/01/2018"
+			},
+			{
+				"value": 819993,
+				"date": "01/01/2019"
+			},
+			{
+				"value": 784024,
+				"date": "01/01/2020"
+			}
+		],
+		"level2Label": "county",
+		"level2Sold": [
+			{
+				"value": 608143,
+				"date": "01/01/2010"
+			},
+			{
+				"value": 725694,
+				"date": "01/01/2011"
+			},
+			{
+				"value": 619617,
+				"date": "01/01/2012"
+			},
+			{
+				"value": 639542,
+				"date": "01/01/2013"
+			},
+			{
+				"value": 848816,
+				"date": "01/01/2014"
+			},
+			{
+				"value": 615269,
+				"date": "01/01/2015"
+			},
+			{
+				"value": 696085,
+				"date": "01/01/2016"
+			},
+			{
+				"value": 933007,
+				"date": "01/01/2017"
+			},
+			{
+				"value": 852598,
+				"date": "01/01/2018"
+			},
+			{
+				"value": 841818,
+				"date": "01/01/2019"
+			},
+			{
+				"value": 872936,
+				"date": "01/01/2020"
+			}
+		],
+		"level2Listed": [
+			{
+				"value": 978133,
+				"date": "01/01/2010"
+			},
+			{
+				"value": 969101,
+				"date": "01/01/2011"
+			},
+			{
+				"value": 926126,
+				"date": "01/01/2012"
+			},
+			{
+				"value": 891581,
+				"date": "01/01/2013"
+			},
+			{
+				"value": 655466,
+				"date": "01/01/2014"
+			},
+			{
+				"value": 741422,
+				"date": "01/01/2015"
+			},
+			{
+				"value": 633919,
+				"date": "01/01/2016"
+			},
+			{
+				"value": 970017,
+				"date": "01/01/2017"
+			},
+			{
+				"value": 796568,
+				"date": "01/01/2018"
+			},
+			{
+				"value": 926405,
+				"date": "01/01/2019"
+			},
+			{
+				"value": 968338,
+				"date": "01/01/2020"
+			}
+		]
+	},
+	"ageOfProperties": [
+		{
+			"category": "<15",
+			"value1": 20,
+			"value2": 8
+		},
+		{
+			"category": "15-30",
+			"value1": 18,
+			"value2": 15
+		},
+		{
+			"category": "30-45",
+			"value1": 33,
+			"value2": 47
+		},
+		{
+			"category": "45-60",
+			"value1": 20,
+			"value2": 22
+		},
+		{
+			"category": ">60",
+			"value1": 18,
+			"value2": 21
+		}
+	],
+	"saleToListRatio": {
+		"level1Label": "zip code",
+		"level2Label": "county",
+		"data": [
+			{
+				"value1": 102,
+				"value2": 105,
+				"date": "01/01/2020"
+			},
+			{
+				"value1": 95,
+				"value2": 96,
+				"date": "02/01/2020"
+			},
+			{
+				"value1": 87,
+				"value2": 88,
+				"date": "03/01/2020"
+			},
+			{
+				"value1": 82,
+				"value2": 78,
+				"date": "04/01/2020"
+			},
+			{
+				"value1": 91,
+				"value2": 87,
+				"date": "05/01/2020"
+			},
+			{
+				"value1": 95,
+				"value2": 94,
+				"date": "06/01/2020"
+			},
+			{
+				"value1": 94,
+				"value2": 92,
+				"date": "07/01/2020"
+			},
+			{
+				"value1": 98,
+				"value2": 99,
+				"date": "08/01/2020"
+			},
+			{
+				"value1": 97,
+				"value2": 98,
+				"date": "09/01/2020"
+			},
+			{
+				"value1": 105,
+				"value2": 106,
+				"date": "10/01/2020"
+			},
+			{
+				"value1": 91,
+				"value2": 93,
+				"date": "11/01/2020"
+			},
+			{
+				"value1": 99,
+				"value2": 98,
+				"date": "12/01/2020"
+			}
 		]
 	},
 	"footer": "This report is not an appraisal of the market value of the subject property and is not intended to meet the Uniform Standards of Professional Appraisal Practice of the Appraisal Foundation.This information is based in whole or in part on data supplied by Metropolitan Regional Information Systems, Inc., , for the period 05/12/2014 through 11/05/2015 . California RegionalMultiple Listing Service, Inc, Sandicor, does not guarantee nor is it in any way responsible for its accuracy. Data maintained by California Regional Multiple Listing Service, Inc, Sandicor,Inc may not reflect all real estate activity in the market. No representation or warranty is made as to the accuracy or completeness of the information contained herein. If an appraisal isdesired, the services of a licensed appraiser should be obtained."

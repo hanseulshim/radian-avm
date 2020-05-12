@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 
 const ValueDefined = () => {
 	const {
-		avmValueDefined: { latitude, longitude, description }
+		avmValueDefined: { lat, lng, description }
 	} = useContext(DataContext)
 	return (
 		<div className="value-defined-container">
@@ -11,8 +11,8 @@ const ValueDefined = () => {
 			<div className="description">{description}</div>
 			<div className="map-container">
 				<div>Map Container:</div>
-				<div>{latitude}</div>
-				<div>{longitude}</div>
+				<div>{lat}</div>
+				<div>{lng}</div>
 			</div>
 		</div>
 	)

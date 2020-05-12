@@ -42,8 +42,8 @@ export const initialState = {
 		percentSales: null
 	},
 	avmValueDefined: {
-		latitude: null,
-		longitude: null,
+		lat: null,
+		lng: null,
 		description: null
 	},
 	annualPriceAppreciation: {
@@ -104,8 +104,8 @@ export interface DataInterface {
 		percentSales: number | null
 	}
 	avmValueDefined: {
-		latitude: number | null
-		longitude: number | null
+		lat: number | null
+		lng: number | null
 		description: string | null
 	}
 	annualPriceAppreciation: {
