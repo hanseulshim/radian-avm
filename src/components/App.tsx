@@ -1,6 +1,7 @@
 import { DataInterface, initialState } from 'initialState'
 import React, { createContext, useEffect, useState } from 'react'
 import Cover from './Cover'
+import SubjectPropertyDescriptionDetails from './SubjectPropertyDescriptionDetails'
 
 export const DataContext = createContext<DataInterface>(initialState)
 
@@ -23,6 +24,7 @@ const App = () => {
 		<DataContext.Provider value={data}>
 			<div className="app">
 				<Cover />
+				<SubjectPropertyDescriptionDetails />
 			</div>
 		</DataContext.Provider>
 	)

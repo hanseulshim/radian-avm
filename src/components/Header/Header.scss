@@ -1,0 +1,67 @@
+@import 'styles/variables.scss';
+
+.header-container {
+	grid-area: header;
+
+	.top-row {
+		display: flex;
+		margin-left: $side-spacer;
+		height: 110px;
+		justify-content: space-between;
+
+		.logo-container {
+			padding-top: 35px;
+			padding-bottom: 5px;
+			.logo {
+				height: 100%;
+			}
+		}
+		.information {
+			width: 501px;
+			background: $wild-sand;
+			padding-right: $side-spacer;
+			padding-left: 55px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.info-container {
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				max-width: 34%;
+
+				.text {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+
+	.color-strip {
+		height: 5px;
+		background: $neptune;
+	}
+
+	.title-row {
+		height: 80px;
+		background: $black;
+		color: $white;
+		padding: 15px $side-spacer 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.title {
+			font-size: $title-text;
+			font-weight: $normal-weight;
+		}
+
+		.address-container {
+			text-align: right;
+		}
+	}
+}

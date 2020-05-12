@@ -4,22 +4,24 @@ import moment from 'moment'
 import React, { useContext } from 'react'
 
 const CoverHeader = () => {
-	const data = useContext(DataContext)
+	const { poolName, loanNumber, orderId, valuationDate } = useContext(
+		DataContext
+	)
 	return (
 		<div className="cover-header-container">
 			<img className="logo" src={RedBellLogo} alt="Logo" />
 			<div className="information">
 				<div className="info-container">
 					<span className="title">Pool Name</span>
-					<span className="text">{data.poolName}</span>
+					<span className="text">{poolName}</span>
 				</div>
 				<div className="info-container">
 					<span className="title">Loan #</span>
-					<span className="text">{data.loanNumber}</span>
+					<span className="text">{loanNumber}</span>
 				</div>
 				<div className="info-container">
 					<span className="title">Order ID</span>
-					<span className="text">{data.orderID}</span>
+					<span className="text">{orderId}</span>
 				</div>
 			</div>
 			<div className="publish-date">
@@ -30,7 +32,7 @@ const CoverHeader = () => {
 				<div className="publish-date-row">
 					<span className="title">Valuation Date:</span>
 					<span>
-						{moment(data.valuationDate, 'MM-DD-YYYY').format('MMM DD, YYYY')}
+						{moment(valuationDate, 'MM-DD-YYYY').format('MMM DD, YYYY')}
 					</span>
 				</div>
 			</div>

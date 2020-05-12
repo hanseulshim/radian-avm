@@ -1,7 +1,7 @@
 export const initialState = {
 	poolName: null,
 	loanNumber: null,
-	orderID: null,
+	orderId: null,
 	valuationDate: null,
 	subjectProperty: {
 		propertyAddress: null,
@@ -63,7 +63,7 @@ export const initialState = {
 export interface DataInterface {
 	poolName: string | null
 	loanNumber: string | null
-	orderID: string | null
+	orderId: string | null
 	valuationDate: string | null
 	subjectProperty: {
 		propertyAddress: string | null
