@@ -27,15 +27,19 @@ img {
 // Titles
 .title {
 	font-weight: $heavy-weight;
+	white-space: nowrap;
 }
 
 .section-title {
 	font-weight: $heavy-weight;
 	border-bottom: 1px solid $black;
-	font-size: $medium-text;
+	font-size: $large-text;
+	white-space: nowrap;
 }
 
 .sub-section-title {
-	font-weight: $medium-weight;
+	white-space: nowrap;
+	font-size: $medium-text;
+	font-weight: $heavy-weight;
 	border-bottom: 1px solid $black;
 }

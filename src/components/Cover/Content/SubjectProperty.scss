@@ -26,20 +26,21 @@
 			.info-row-1 {
 				height: 100px;
 				.address {
-					font-size: $large-text;
+					font-size: $extra-large-text;
 				}
 				.city-state-zip {
-					font-size: $medium-text;
+					font-size: $large-text;
 				}
 				.dwelling-type {
 					color: $black;
 					background: $white;
-					font-size: $medium-normal-text;
+					font-size: $medium-text;
 					padding: 5px 22px;
 				}
 			}
 			.info-row-2 {
 				height: 150px;
+				font-weight: $medium-weight;
 				.info-container {
 					height: 100%;
 					display: flex;
@@ -48,7 +49,7 @@
 					justify-content: space-evenly;
 
 					.value {
-						font-size: $extra-large-text;
+						font-size: $title-text;
 						font-weight: $heavy-weight;
 					}
 				}

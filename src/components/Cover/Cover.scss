@@ -6,7 +6,7 @@
 	grid-template-areas: 'header' 'sub-header' 'content' 'footer';
 	.cover-sub-header {
 		grid-area: sub-header;
-		font-size: 42px;
+		font-size: $title-text;
 		font-weight: $heavy-weight;
 		padding: 20px $side-spacer 31px;
 	}

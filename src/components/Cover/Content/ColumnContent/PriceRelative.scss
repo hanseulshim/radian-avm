@@ -41,8 +41,8 @@
 							}
 
 							.marker {
-								width: $normal-text;
-								height: $normal-text;
+								width: $medium-text;
+								height: $medium-text;
 								margin-right: 5px;
 								background: $azure-05;
 								&.level1 {
@@ -50,6 +50,7 @@
 								}
 							}
 							.label {
+								font-size: $medium-text;
 								font-weight: $medium-weight;
 							}
 						}

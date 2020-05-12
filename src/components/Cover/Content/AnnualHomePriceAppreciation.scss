@@ -17,6 +17,7 @@
 			}
 
 			.label {
+				font-size: $medium-text;
 				font-weight: $medium-weight;
 				text-transform: capitalize;
 				width: 15%;
@@ -26,7 +27,7 @@
 			}
 			.trend {
 				width: 60px;
-				font-size: $medium-text;
+				font-size: $large-text;
 				font-weight: $heavy-weight;
 			}
 			.bar-row {
