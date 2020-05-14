@@ -1116,9 +1116,7 @@
 			"https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/mobile-manufactured-property/for-sale/MI/Standish/48658/1475-1824557-20161007-3510-Miller-8.jpg"
 		]
 	},
-	"marketAtAGlance": {
-		"description": "Our model’s leverage ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium. Nullam ut leo ac est placerat eleifend vitae et elit. Aenean euismod elit at purus feugiat blandit. Sed malesuada scelerisque leo sit amet vestibulum. Sed mattis aliquet tortor sed hendrerit. Nam id rutrum nibh. Nunc sit amet velit pretium, iaculis risus at, dignissim diam. Sed a odio ac sem porttitor sollicitudin. Fusce ornare egestas ipsum quis pellentesque. Sed odio magna, fringilla ut ornare non, convallis condimentum orci. Suspendisse dignissim semper arcu, at vehicula ante pellentesque eget."
-	},
+	"marketAtAGlance": "Our model’s leverage ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium. Nullam ut leo ac est placerat eleifend vitae et elit. Aenean euismod elit at purus feugiat blandit. Sed malesuada scelerisque leo sit amet vestibulum. Sed mattis aliquet tortor sed hendrerit. Nam id rutrum nibh. Nunc sit amet velit pretium, iaculis risus at, dignissim diam. Sed a odio ac sem porttitor sollicitudin. Fusce ornare egestas ipsum quis pellentesque. Sed odio magna, fringilla ut ornare non, convallis condimentum orci. Suspendisse dignissim semper arcu, at vehicula ante pellentesque eget.",
 	"nearbyProperties": [
 		{
 			"lat": 37.4547684,
@@ -1284,7 +1282,8 @@
 			"address": "140 Schurz Terrace",
 			"daysOnMarket": 17,
 			"eventType": "sold",
-			"eventDate": "04/21/2013"
+			"eventDate": "04/21/2013",
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg"
 		},
 		{
 			"lat": 5.4807517,
@@ -1298,7 +1297,8 @@
 			"address": "15 Summit Trail",
 			"daysOnMarket": 6,
 			"eventType": "listed",
-			"eventDate": "08/02/2014"
+			"eventDate": "08/02/2014",
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg"
 		},
 		{
 			"lat": 38.9190379,
@@ -1312,7 +1312,8 @@
 			"address": "645 Anderson Center",
 			"daysOnMarket": 21,
 			"eventType": "leased",
-			"eventDate": "05/31/2014"
+			"eventDate": "05/31/2014",
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Kutztown-Borough/19530/1159-404217-20110218-446-North-Kemp-Street-1.jpg"
 		},
 		{
 			"lat": 14.2157645,
@@ -1326,7 +1327,8 @@
 			"address": "95 Stang Circle",
 			"daysOnMarket": 10,
 			"eventType": "leased",
-			"eventDate": "10/02/2016"
+			"eventDate": "10/02/2016",
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-rent/SC/Sumter/29153/1242-102851-20100302-1-Aubrey-Circle-0.jpg"
 		},
 		{
 			"lat": 26.319938,
@@ -1340,7 +1342,8 @@
 			"address": "2938 Stephen Terrace",
 			"daysOnMarket": 13,
 			"eventType": "leased",
-			"eventDate": "11/08/2013"
+			"eventDate": "11/08/2013",
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg"
 		},
 		{
 			"lat": 36.826981,
@@ -1354,7 +1357,8 @@
 			"address": "5 Dawn Park",
 			"daysOnMarket": 25,
 			"eventType": "leased",
-			"eventDate": "03/02/2020"
+			"eventDate": "03/02/2020",
+			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg"
 		}
 	],
 	"numberOfTransactions": {
@@ -1673,5 +1677,5 @@
 			}
 		]
 	},
-	"footer": "This report is not an appraisal of the market value of the subject property and is not intended to meet the Uniform Standards of Professional Appraisal Practice of the Appraisal Foundation.This information is based in whole or in part on data supplied by Metropolitan Regional Information Systems, Inc., , for the period 05/12/2014 through 11/05/2015 . California RegionalMultiple Listing Service, Inc, Sandicor, does not guarantee nor is it in any way responsible for its accuracy. Data maintained by California Regional Multiple Listing Service, Inc, Sandicor,Inc may not reflect all real estate activity in the market. No representation or warranty is made as to the accuracy or completeness of the information contained herein. If an appraisal isdesired, the services of a licensed appraiser should be obtained."
+	"footer": "This report is not an appraisal of the market value of the subject property and is not intended to meet the Uniform Standards of Professional Appraisal Practice of the Appraisal Foundation. This information is based in whole or in part on data supplied by Multiple Listing Service, Inc. A Wholly-Owned Subsidiary of The Northwest Louisiana Association of Realtors®, Metrosearch, Inc. of The Greater Louisville Association of REALTORS Multiple Listing Service, for the period 12/21/2018 through 04/27/2020 . California Regional Multiple Listing Service, Inc, Sandicor, does not guarantee nor is it in any way responsible for its accuracy. Data maintained by California Regional Multiple Listing Service, Inc, Sandicor, Inc may not reflect all real estate activity in the market. No representation or warranty is made as to the accuracy or completeness of the information contained herein. If an appraisal is desired, the services of a licensed appraiser should be obtained."
 }
