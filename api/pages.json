@@ -125,7 +125,23 @@
 		"lng": 35,
 		"level1": {
 			"label": "Neighborhood",
-			"geoJSON": {}
+			"geoJSON": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[-77.12101936340332, 39.05638406341559],
+							[-77.12728500366211, 39.04725245248875],
+							[-77.11406707763672, 39.029519091789304],
+							[-77.09784507751465, 39.033386143839536],
+							[-77.09235191345215, 39.0525849234669],
+							[-77.10436820983887, 39.06344858720722],
+							[-77.1265983581543, 39.06571441680544],
+							[-77.12101936340332, 39.05638406341559]
+						]
+					]
+				]
+			}
 		},
 		"level2": {
 			"label": "Zip",
@@ -747,7 +763,7 @@
 						]
 					]
 				],
-				"type": "multipolygon"
+				"type": "MultiPolygon"
 			}
 		},
 		"subdivision": "Sage Creek",
@@ -1587,28 +1603,28 @@
 	"ageOfProperties": [
 		{
 			"category": "<15",
-			"value1": 20,
-			"value2": 8
+			"level1": 20,
+			"level2": 8
 		},
 		{
 			"category": "15-30",
-			"value1": 18,
-			"value2": 15
+			"level1": 18,
+			"level2": 15
 		},
 		{
 			"category": "30-45",
-			"value1": 33,
-			"value2": 47
+			"level1": 33,
+			"level2": 47
 		},
 		{
 			"category": "45-60",
-			"value1": 20,
-			"value2": 22
+			"level1": 20,
+			"level2": 22
 		},
 		{
 			"category": ">60",
-			"value1": 18,
-			"value2": 21
+			"level1": 18,
+			"level2": 21
 		}
 	],
 	"saleToListRatio": {
@@ -1616,66 +1632,607 @@
 		"level2Label": "county",
 		"data": [
 			{
-				"value1": 102,
-				"value2": 105,
+				"level1": 102,
+				"level2": 105,
 				"date": "01/01/2020"
 			},
 			{
-				"value1": 95,
-				"value2": 96,
+				"level1": 95,
+				"level2": 96,
 				"date": "02/01/2020"
 			},
 			{
-				"value1": 87,
-				"value2": 88,
+				"level1": 87,
+				"level2": 88,
 				"date": "03/01/2020"
 			},
 			{
-				"value1": 82,
-				"value2": 78,
+				"level1": 82,
+				"level2": 78,
 				"date": "04/01/2020"
 			},
 			{
-				"value1": 91,
-				"value2": 87,
+				"level1": 91,
+				"level2": 87,
 				"date": "05/01/2020"
 			},
 			{
-				"value1": 95,
-				"value2": 94,
+				"level1": 95,
+				"level2": 94,
 				"date": "06/01/2020"
 			},
 			{
-				"value1": 94,
-				"value2": 92,
+				"level1": 94,
+				"level2": 92,
 				"date": "07/01/2020"
 			},
 			{
-				"value1": 98,
-				"value2": 99,
+				"level1": 98,
+				"level2": 99,
 				"date": "08/01/2020"
 			},
 			{
-				"value1": 97,
-				"value2": 98,
+				"level1": 97,
+				"level2": 98,
 				"date": "09/01/2020"
 			},
 			{
-				"value1": 105,
-				"value2": 106,
+				"level1": 105,
+				"level2": 106,
 				"date": "10/01/2020"
 			},
 			{
-				"value1": 91,
-				"value2": 93,
+				"level1": 91,
+				"level2": 93,
 				"date": "11/01/2020"
 			},
 			{
-				"value1": 99,
-				"value2": 98,
+				"level1": 99,
+				"level2": 98,
 				"date": "12/01/2020"
 			}
 		]
 	},
+	"avgListingPrice": {
+		"description": "What can you expect over time as your property sits on the market? ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium.",
+		"level1Label": "zip",
+		"level1PriorMonth": 1370000,
+		"level1PriorYear": 1380000,
+		"level2Label": "county",
+		"level2PriorMonth": 1390000,
+		"level2PriorYear": 1370000,
+		"level3Label": "cbsa",
+		"level3PriorMonth": 1410000,
+		"level3PriorYear": 1380000
+	},
+	"listedPriceRangeByDom": [
+		{
+			"category": "0-30",
+			"level1Low": 1351074,
+			"level1Medium": 1426750,
+			"level1High": 1495916,
+			"level2Low": 1348387,
+			"level2Medium": 1447808,
+			"level2High": 1472022,
+			"level3Low": 1336842,
+			"level3Medium": 1403332,
+			"level3High": 1464341
+		},
+		{
+			"category": "31-60",
+			"level1Low": 1380899,
+			"level1Medium": 1439707,
+			"level1High": 1454434,
+			"level2Low": 1303026,
+			"level2Medium": 1427055,
+			"level2High": 1486327,
+			"level3Low": 1308148,
+			"level3Medium": 1404439,
+			"level3High": 1463560
+		},
+		{
+			"category": "61-90",
+			"level1Low": 1337848,
+			"level1Medium": 1423928,
+			"level1High": 1497386,
+			"level2Low": 1343606,
+			"level2Medium": 1445546,
+			"level2High": 1482683,
+			"level3Low": 1397929,
+			"level3Medium": 1436051,
+			"level3High": 1475666
+		},
+		{
+			"category": "91-120",
+			"level1Low": 1361801,
+			"level1Medium": 1431366,
+			"level1High": 1450557,
+			"level2Low": 1389866,
+			"level2Medium": 1439255,
+			"level2High": 1486483,
+			"level3Low": 1346562,
+			"level3Medium": 1407835,
+			"level3High": 1479298
+		},
+		{
+			"category": "121-150",
+			"level1Low": 1382156,
+			"level1Medium": 1420366,
+			"level1High": 1461840,
+			"level2Low": 1365917,
+			"level2Medium": 1413136,
+			"level2High": 1464748,
+			"level3Low": 1375185,
+			"level3Medium": 1434357,
+			"level3High": 1480319
+		},
+		{
+			"category": "150+",
+			"level1Low": 1348370,
+			"level1Medium": 1423266,
+			"level1High": 1457652,
+			"level2Low": 1330068,
+			"level2Medium": 1449776,
+			"level2High": 1468612,
+			"level3Low": 1314638,
+			"level3Medium": 1428920,
+			"level3High": 1472933
+		}
+	],
+	"inventory": {
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium. Nullam ut leo ac est placerat eleifend vitae et elit. Aenean euismod elit at purus feugiat blandit.",
+		"level1Label": "zip",
+		"level1PriorMonth": 21,
+		"level1PriorYear": 28,
+		"level2Label": "county",
+		"level2PriorMonth": 30,
+		"level2PriorYear": 28,
+		"level3Label": "cbsa",
+		"level3PriorMonth": 14,
+		"level3PriorYear": 16
+	},
+	"listedInventoryByDom": [
+		{
+			"category": "91-120",
+			"level1": 24,
+			"level2": 31,
+			"level3": 37
+		},
+		{
+			"category": "61-90",
+			"level1": 24,
+			"level2": 40,
+			"level3": 20
+		},
+		{
+			"category": "61-90",
+			"level1": 33,
+			"level2": 24,
+			"level3": 35
+		},
+		{
+			"category": "61-90",
+			"level1": 39,
+			"level2": 31,
+			"level3": 32
+		},
+		{
+			"category": "91-120",
+			"level1": 37,
+			"level2": 23,
+			"level3": 25
+		},
+		{
+			"category": "0-30",
+			"level1": 40,
+			"level2": 37,
+			"level3": 32
+		}
+	],
+	"avgDom": [
+		{
+			"date": "01/01/2006",
+			"level1": 39,
+			"level2": 38,
+			"level3": 39
+		},
+		{
+			"date": "01/01/2007",
+			"level1": 39,
+			"level2": 45,
+			"level3": 47
+		},
+		{
+			"date": "01/01/2008",
+			"level1": 29,
+			"level2": 35,
+			"level3": 50
+		},
+		{
+			"date": "01/01/2009",
+			"level1": 36,
+			"level2": 29,
+			"level3": 28
+		},
+		{
+			"date": "01/01/2010",
+			"level1": 50,
+			"level2": 48,
+			"level3": 31
+		},
+		{
+			"date": "01/01/2011",
+			"level1": 41,
+			"level2": 23,
+			"level3": 17
+		},
+		{
+			"date": "01/01/2012",
+			"level1": 40,
+			"level2": 28,
+			"level3": 44
+		},
+		{
+			"date": "01/01/2013",
+			"level1": 20,
+			"level2": 31,
+			"level3": 17
+		},
+		{
+			"date": "01/01/2014",
+			"level1": 45,
+			"level2": 37,
+			"level3": 48
+		},
+		{
+			"date": "01/01/2015",
+			"level1": 28,
+			"level2": 34,
+			"level3": 30
+		},
+		{
+			"date": "01/01/2016",
+			"level1": 22,
+			"level2": 29,
+			"level3": 26
+		},
+		{
+			"date": "01/01/2017",
+			"level1": 21,
+			"level2": 34,
+			"level3": 23
+		},
+		{
+			"date": "01/01/2018",
+			"level1": 38,
+			"level2": 33,
+			"level3": 43
+		},
+		{
+			"date": "01/01/2019",
+			"level1": 21,
+			"level2": 40,
+			"level3": 23
+		}
+	],
+	"retailVsDistressedSales": {
+		"description": "What can you expect over time as your property sits on the market? ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium.",
+		"level1Label": "retail",
+		"level1PriorMonth": 56,
+		"level1PriorYear": 42,
+		"level2Label": "distressed",
+		"level2PriorMonth": 31,
+		"level2PriorYear": 26,
+		"level3Label": "median sale price",
+		"level3PriorMonth": 1340000,
+		"level3PriorYear": 995000
+	},
+	"retailVsDistressedSalesData": [
+		{
+			"date": "01/01/2011",
+			"level1Value1": 1380097,
+			"level1Value2": 39,
+			"level2Value1": 1335460,
+			"level2Value2": 51,
+			"level3Value1": 1234175,
+			"level3Value2": 18
+		},
+		{
+			"date": "01/01/2012",
+			"level1Value1": 1064767,
+			"level1Value2": 58,
+			"level2Value1": 1284057,
+			"level2Value2": 16,
+			"level3Value1": 1349042,
+			"level3Value2": 44
+		},
+		{
+			"date": "01/01/2013",
+			"level1Value1": 1176303,
+			"level1Value2": 34,
+			"level2Value1": 983942,
+			"level2Value2": 12,
+			"level3Value1": 1364149,
+			"level3Value2": 25
+		},
+		{
+			"date": "01/01/2014",
+			"level1Value1": 1098623,
+			"level1Value2": 13,
+			"level2Value1": 1128149,
+			"level2Value2": 57,
+			"level3Value1": 1026193,
+			"level3Value2": 49
+		},
+		{
+			"date": "01/01/2015",
+			"level1Value1": 1310296,
+			"level1Value2": 34,
+			"level2Value1": 1348591,
+			"level2Value2": 37,
+			"level3Value1": 1212424,
+			"level3Value2": 33
+		},
+		{
+			"date": "01/01/2016",
+			"level1Value1": 1145331,
+			"level1Value2": 46,
+			"level2Value1": 948015,
+			"level2Value2": 14,
+			"level3Value1": 1060325,
+			"level3Value2": 15
+		},
+		{
+			"date": "01/01/2017",
+			"level1Value1": 1210634,
+			"level1Value2": 54,
+			"level2Value1": 1123473,
+			"level2Value2": 56,
+			"level3Value1": 1333276,
+			"level3Value2": 24
+		},
+		{
+			"date": "01/01/2018",
+			"level1Value1": 1086052,
+			"level1Value2": 30,
+			"level2Value1": 1233295,
+			"level2Value2": 31,
+			"level3Value1": 1123315,
+			"level3Value2": 30
+		},
+		{
+			"date": "01/01/2019",
+			"level1Value1": 1066824,
+			"level1Value2": 29,
+			"level2Value1": 1149768,
+			"level2Value2": 23,
+			"level3Value1": 989532,
+			"level3Value2": 39
+		},
+		{
+			"date": "01/01/2020",
+			"level1Value1": 1187121,
+			"level1Value2": 21,
+			"level2Value1": 1218642,
+			"level2Value2": 17,
+			"level3Value1": 1051924,
+			"level3Value2": 38
+		}
+	],
+	"neighborhoodSummary": "The residents of Money & Brains seem to have it all: high incomes, advanced degrees, and sophisticated tastes to match their credentials. Many of these city dwellers are married couples with few children who live in fashionable homes on small, manicured lots.",
+	"marketAverages": {
+		"description": "Donec ullamcorper posuere enim sit amet mollis. Nullam ac augue consectetur augue blandit porttitor. In hac habitasse platea dictumst. Nullam molestie ipsum lectus, a mollis enim accumsan at.",
+		"schoolRatings": {
+			"avg": 9.6,
+			"elementary": 10,
+			"middle": 9,
+			"high": 10
+		},
+		"transitScores": {
+			"avg": 1.9,
+			"massTransit": 2,
+			"auto": 2,
+			"bike": 1
+		}
+	},
+	"neighborhoodSummaryData": {
+		"level1GeoJSON": {
+			"type": "MultiPolygon",
+			"coordinates": [
+				[
+					[
+						[-77.12101936340332, 39.05638406341559],
+						[-77.12728500366211, 39.04725245248875],
+						[-77.11406707763672, 39.029519091789304],
+						[-77.09784507751465, 39.033386143839536],
+						[-77.09235191345215, 39.0525849234669],
+						[-77.10436820983887, 39.06344858720722],
+						[-77.1265983581543, 39.06571441680544],
+						[-77.12101936340332, 39.05638406341559]
+					]
+				]
+			]
+		},
+		"level2GeoJSON": {
+			"type": "MultiPolygon",
+			"coordinates": [
+				[
+					[
+						[-77.17826843261719, 39.30667511534216],
+						[-77.26203918457031, 39.10502164227716],
+						[-77.2119140625, 38.982897808179985],
+						[-77.04025268554688, 38.96848501741372],
+						[-77.04299926757812, 39.09090021130995],
+						[-77.06737518310547, 39.186763713882065],
+						[-77.11921691894531, 39.28648268048973],
+						[-77.17826843261719, 39.30667511534216]
+					]
+				]
+			]
+		}
+	},
+	"level1Averages": {
+		"label": "zip",
+		"avgSchoolRating": 9.6,
+		"avgSchoolDelta": 1.6,
+		"avgSchoolIndicator": "up",
+		"avgTransitRating": 1.9,
+		"avgTransitDelta": 0.4,
+		"avgTransitIndicator": "up",
+		"avgCrimeRating": "a",
+		"avgCrimeDelta": "c-",
+		"avgCrimeIndicator": ">"
+	},
+	"level2Averages": {
+		"label": "state",
+		"avgSchoolRating": 5,
+		"avgSchoolDelta": 0.4,
+		"avgSchoolIndicator": "up",
+		"avgTransitRating": 9.7,
+		"avgTransitDelta": 2.6,
+		"avgTransitIndicator": "up",
+		"avgCrimeRating": "b",
+		"avgCrimeDelta": "b+",
+		"avgCrimeIndicator": "<"
+	},
+	"familyMakeupDescription": "60% of households in this neighborhood consist of families of two parents and one child. Mauris accumsan eros eget liberoposuere vulputate.",
+	"familyMakeup": [
+		{
+			"value": 0.05,
+			"category": "single"
+		},
+		{
+			"value": 0.05,
+			"category": "single-parent"
+		},
+		{
+			"value": 0.15,
+			"category": "couple"
+		},
+		{
+			"value": 0.25,
+			"category": "1-child"
+		},
+		{
+			"value": 0.45,
+			"category": "2-child"
+		}
+	],
+	"education": {
+		"highSchool": 92,
+		"college": 85,
+		"grad": 55
+	},
+	"ageOfPopulation": [
+		{
+			"category": "<5",
+			"value": 297
+		},
+		{
+			"category": "5-9",
+			"value": 260
+		},
+		{
+			"category": "10-14",
+			"value": 100
+		},
+		{
+			"category": "15-19",
+			"value": 91
+		},
+		{
+			"category": "20-24",
+			"value": 241
+		},
+		{
+			"category": "25-34",
+			"value": 201
+		},
+		{
+			"category": "35-44",
+			"value": 127
+		},
+		{
+			"category": "45-54",
+			"value": 132
+		},
+		{
+			"category": "55-64",
+			"value": 279
+		},
+		{
+			"category": "65-74",
+			"value": 183
+		},
+		{
+			"category": "75-84",
+			"value": 214
+		},
+		{
+			"category": "85+",
+			"value": 60
+		}
+	],
+	"incomeOfPopulation": {
+		"level1Label": "neighborhood",
+		"level2Label": "zip",
+		"level3Label": "county"
+	},
+	"incomeOfPopulationData": [
+		{
+			"category": 50000,
+			"level1": 23,
+			"level2": 25,
+			"level3": 25
+		},
+		{
+			"category": 0,
+			"level1": 19,
+			"level2": 6,
+			"level3": 24
+		},
+		{
+			"category": 50000,
+			"level1": 14,
+			"level2": 13,
+			"level3": 1
+		},
+		{
+			"category": 50000,
+			"level1": 17,
+			"level2": 7,
+			"level3": 15
+		},
+		{
+			"category": 75000,
+			"level1": 6,
+			"level2": 17,
+			"level3": 10
+		},
+		{
+			"category": 75000,
+			"level1": 13,
+			"level2": 21,
+			"level3": 14
+		},
+		{
+			"category": 200000,
+			"level1": 6,
+			"level2": 18,
+			"level3": 23
+		},
+		{
+			"category": 0,
+			"level1": 23,
+			"level2": 14,
+			"level3": 4
+		},
+		{
+			"category": 200000,
+			"level1": 4,
+			"level2": 5,
+			"level3": 14
+		}
+	],
 	"footer": "This report is not an appraisal of the market value of the subject property and is not intended to meet the Uniform Standards of Professional Appraisal Practice of the Appraisal Foundation. This information is based in whole or in part on data supplied by Multiple Listing Service, Inc. A Wholly-Owned Subsidiary of The Northwest Louisiana Association of Realtors®, Metrosearch, Inc. of The Greater Louisville Association of REALTORS Multiple Listing Service, for the period 12/21/2018 through 04/27/2020 . California Regional Multiple Listing Service, Inc, Sandicor, does not guarantee nor is it in any way responsible for its accuracy. Data maintained by California Regional Multiple Listing Service, Inc, Sandicor, Inc may not reflect all real estate activity in the market. No representation or warranty is made as to the accuracy or completeness of the information contained herein. If an appraisal is desired, the services of a licensed appraiser should be obtained."
 }

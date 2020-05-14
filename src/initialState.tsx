@@ -78,7 +78,7 @@ export interface DataInterface {
 		sqFt: number | null
 		garage: number | null
 		lotSize: number | null
-	}
+	} | null
 	retail: {
 		price: number | null
 		indicator: string | null
@@ -90,7 +90,7 @@ export interface DataInterface {
 		level2Label: string | null
 		level2Value: number | null
 		percentSales: number | null
-	}
+	} | null
 	distressed: {
 		price: number | null
 		indicator: string | null
@@ -102,12 +102,12 @@ export interface DataInterface {
 		level2Label: string | null
 		level2Value: number | null
 		percentSales: number | null
-	}
+	} | null
 	avmValueDefined: {
 		lat: number | null
 		lng: number | null
 		description: string | null
-	}
+	} | null
 	annualPriceAppreciation: {
 		level1Label: string | null
 		level1Indicator: string | null
@@ -117,7 +117,7 @@ export interface DataInterface {
 		level2Indicator: string | null
 		level2Value: number | null
 		level2Trend: number | null
-	}
+	} | null
 	marketStrength: number | null
 	footer: string | null
 }
