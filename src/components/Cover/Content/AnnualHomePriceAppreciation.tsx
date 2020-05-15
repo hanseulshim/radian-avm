@@ -5,18 +5,17 @@ import { getWidth } from 'helper'
 import React, { useContext } from 'react'
 
 const AnnualHomePriceAppreciation = () => {
+	const { annualPriceAppreciation } = useContext(DataContext)
 	const {
-		annualPriceAppreciation: {
-			level1Label,
-			level1Value,
-			level1Trend,
-			level1Indicator,
-			level2Label,
-			level2Value,
-			level2Trend,
-			level2Indicator
-		}
-	} = useContext(DataContext)
+		level1Label,
+		level1Value,
+		level1Trend,
+		level1Indicator,
+		level2Label,
+		level2Value,
+		level2Trend,
+		level2Indicator
+	} = { ...annualPriceAppreciation }
 	return (
 		<div className="annual-home-price-container">
 			<div className="section-title">Annual Home Price Appreciation</div>

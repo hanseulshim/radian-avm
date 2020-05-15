@@ -9,22 +9,21 @@ import { DataContext } from 'components/App'
 import React, { useContext } from 'react'
 
 const SubjectProperty = () => {
+	const { subjectProperty } = useContext(DataContext)
 	const {
-		subjectProperty: {
-			propertyAddress,
-			propertyCity,
-			propertyState,
-			propertyZip,
-			yearBuilt,
-			dwellingType,
-			imagePath,
-			beds,
-			bath,
-			sqFt,
-			garage,
-			lotSize
-		}
-	} = useContext(DataContext)
+		propertyAddress,
+		propertyCity,
+		propertyState,
+		propertyZip,
+		yearBuilt,
+		dwellingType,
+		imagePath,
+		beds,
+		bath,
+		sqFt,
+		garage,
+		lotSize
+	} = { ...subjectProperty }
 	return (
 		<div className="subject-property-container">
 			<div className="info-row-1">

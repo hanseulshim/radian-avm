@@ -4,17 +4,12 @@ import React, { useContext } from 'react'
 import './Header.scss'
 
 const Header = ({ title }: { title: string }) => {
-	const {
-		poolName,
-		loanNumber,
-		orderId,
-		subjectProperty: {
-			propertyAddress,
-			propertyCity,
-			propertyState,
-			propertyZip
-		}
-	} = useContext(DataContext)
+	const { poolName, loanNumber, orderId, subjectProperty } = useContext(
+		DataContext
+	)
+	const { propertyAddress, propertyCity, propertyState, propertyZip } = {
+		...subjectProperty
+	}
 	return (
 		<div className="header-container">
 			<div className="top-row">

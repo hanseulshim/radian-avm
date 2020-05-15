@@ -2,9 +2,8 @@ import { DataContext } from 'components/App'
 import React, { useContext } from 'react'
 
 const ValueDefined = () => {
-	const {
-		avmValueDefined: { lat, lng, description }
-	} = useContext(DataContext)
+	const { avmValueDefined } = useContext(DataContext)
+	const { lat, lng, description } = { ...avmValueDefined }
 	return (
 		<div className="value-defined-container">
 			<div className="section-title">AVM Value Defined</div>
