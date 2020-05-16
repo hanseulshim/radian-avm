@@ -1,13 +1,8 @@
-import ConfScoreBlue1 from 'assets/ConfScoreBlue1.svg'
-import ConfScoreBlue2 from 'assets/ConfScoreBlue2.svg'
-import ConfScoreBlue3 from 'assets/ConfScoreBlue3.svg'
-import ConfScoreBlue4 from 'assets/ConfScoreBlue4.svg'
-import ConfScoreBlue5 from 'assets/ConfScoreBlue5.svg'
-import ConfScoreGreen1 from 'assets/ConfScoreGreen1.svg'
-import ConfScoreGreen2 from 'assets/ConfScoreGreen2.svg'
-import ConfScoreGreen3 from 'assets/ConfScoreGreen3.svg'
-import ConfScoreGreen4 from 'assets/ConfScoreGreen4.svg'
-import ConfScoreGreen5 from 'assets/ConfScoreGreen5.svg'
+import IconConfidenceScore1 from 'assets/IconConfidenceScore1'
+import IconConfidenceScore2 from 'assets/IconConfidenceScore2'
+import IconConfidenceScore3 from 'assets/IconConfidenceScore3'
+import IconConfidenceScore4 from 'assets/IconConfidenceScore4'
+import IconConfidenceScore5 from 'assets/IconConfidenceScore5'
 import React from 'react'
 
 const ConfidenceScore = ({
@@ -36,33 +31,18 @@ const ConfidenceScore = ({
 				<span className="value">{confidenceScore}</span>
 			</div>
 			<div className="image-container">
-				<img
-					src={retail ? ConfScoreGreen1 : ConfScoreBlue1}
-					alt="conf score 1"
-				/>
+				<IconConfidenceScore1 retail={retail} />
 				{confidenceScore && confidenceScore > 20 && (
-					<img
-						src={retail ? ConfScoreGreen2 : ConfScoreBlue2}
-						alt="conf score 2"
-					/>
+					<IconConfidenceScore2 retail={retail} />
 				)}
 				{confidenceScore && confidenceScore > 40 && (
-					<img
-						src={retail ? ConfScoreGreen3 : ConfScoreBlue3}
-						alt="conf score 3"
-					/>
+					<IconConfidenceScore3 retail={retail} />
 				)}
 				{confidenceScore && confidenceScore > 60 && (
-					<img
-						src={retail ? ConfScoreGreen4 : ConfScoreBlue4}
-						alt="conf score 4"
-					/>
+					<IconConfidenceScore4 retail={retail} />
 				)}
 				{confidenceScore && confidenceScore > 80 && (
-					<img
-						src={retail ? ConfScoreGreen5 : ConfScoreBlue5}
-						alt="conf score 5"
-					/>
+					<IconConfidenceScore5 retail={retail} />
 				)}
 			</div>
 		</div>

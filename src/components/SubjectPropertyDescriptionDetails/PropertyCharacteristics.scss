@@ -1,0 +1,44 @@
+@import 'styles/variables';
+
+.property-characteristics-container {
+	flex: 1;
+	margin-right: 20px;
+	.section-title {
+		margin-bottom: 20px;
+	}
+	.marker-container {
+		display: flex;
+		align-items: center;
+		font-size: $normal-text;
+		font-weight: $medium-weight;
+		.marker {
+			width: $normal-text;
+			height: $normal-text;
+			background: $black;
+			margin-right: 10px;
+		}
+	}
+	.chart-container {
+		background: $wild-sand;
+		height: 300px;
+	}
+
+	.table-container {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+		.row {
+			display: flex;
+			justify-content: space-between;
+
+			.column {
+				flex: 1;
+				text-align: center;
+			}
+
+			.first {
+				width: 105px;
+			}
+		}
+	}
+}

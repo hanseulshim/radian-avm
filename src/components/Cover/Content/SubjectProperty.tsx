@@ -1,10 +1,10 @@
-import IconBath from 'assets/IconBath.svg'
-import IconBed from 'assets/IconBed.svg'
-import IconCar from 'assets/IconCar.svg'
-import IconHouse from 'assets/IconHouse.svg'
+import IconBath from 'assets/IconBath'
+import IconBed from 'assets/IconBed'
+import IconCar from 'assets/IconCar'
+import IconHouse from 'assets/IconHouse'
 import IconHouseUnavailable from 'assets/IconHouseUnavailable.png'
-import IconRuler from 'assets/IconRuler.svg'
-import IconTrees from 'assets/IconTrees.svg'
+import IconRuler from 'assets/IconRuler'
+import IconTrees from 'assets/IconTrees'
 import { DataContext } from 'components/App'
 import React, { useContext } from 'react'
 
@@ -44,32 +44,32 @@ const SubjectProperty = () => {
 			<div className="info-row-2">
 				<div className="info-container">
 					<div>Beds</div>
-					<img src={IconBed} alt="Bed Icon" />
+					<IconBed />
 					<div className="value">{beds}</div>
 				</div>
 				<div className="info-container">
 					<div>Bath</div>
-					<img src={IconBath} alt="Bath Icon" />
+					<IconBath />
 					<div className="value">{bath}</div>
 				</div>
 				<div className="info-container">
 					<div>SqFt</div>
-					<img src={IconRuler} alt="SqFt Icon" />
+					<IconRuler />
 					<div className="value">{sqFt}</div>
 				</div>
 				<div className="info-container">
 					<div>Garage</div>
-					<img src={IconCar} alt="Garage Icon" />
+					<IconCar />
 					<div className="value">{garage}</div>
 				</div>
 				<div className="info-container">
 					<div>Lot Size</div>
-					<img src={IconTrees} alt="Lot Size Icon" />
+					<IconTrees />
 					<div className="value">{lotSize}</div>
 				</div>
 				<div className="info-container">
 					<div>Built</div>
-					<img src={IconHouse} alt="Built Icon" />
+					<IconHouse />
 					<div className="value">{yearBuilt}</div>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
-import IconDownRed from 'assets/IconDownRed.svg'
-import IconUpBlack from 'assets/IconUpBlack.svg'
+import IconDown from 'assets/IconDown'
+import IconUp from 'assets/IconUp'
 import { DataContext } from 'components/App'
 import { getWidth } from 'helper'
 import React, { useContext } from 'react'
@@ -21,17 +21,11 @@ const AnnualHomePriceAppreciation = () => {
 			<div className="section-title">Annual Home Price Appreciation</div>
 			<div className="info-row">
 				<div className="label">{level1Label}</div>
-				<img
-					className="indicator"
-					src={
-						level1Indicator === 'up'
-							? IconUpBlack
-							: level1Indicator === 'down'
-							? IconDownRed
-							: ''
-					}
-					alt="indicator"
-				/>
+				{level1Indicator === 'up' ? (
+					<IconUp className="black indicator" />
+				) : level1Indicator === 'down' ? (
+					<IconDown className="indicator red" />
+				) : null}
 				<div className="trend">{level1Trend}%</div>
 				<div className="bar-row">
 					<div className="bar" style={{ width: getWidth(level1Value) }} />
@@ -39,17 +33,11 @@ const AnnualHomePriceAppreciation = () => {
 			</div>
 			<div className="info-row level2">
 				<div className="label">{level2Label}</div>
-				<img
-					className="indicator"
-					src={
-						level2Indicator === 'up'
-							? IconUpBlack
-							: level2Indicator === 'down'
-							? IconDownRed
-							: ''
-					}
-					alt="indicator"
-				/>
+				{level2Indicator === 'up' ? (
+					<IconUp className="black indicator" />
+				) : level2Indicator === 'down' ? (
+					<IconDown className="indicator red" />
+				) : null}
 				<div className="trend">{level2Trend}%</div>
 				<div className="bar-row">
 					<div className="bar" style={{ width: getWidth(level2Value) }} />

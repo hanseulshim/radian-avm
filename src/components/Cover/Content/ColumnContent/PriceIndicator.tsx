@@ -1,5 +1,5 @@
-import IconDownRed from 'assets/IconDownRed.svg'
-import IconUpBlack from 'assets/IconUpBlack.svg'
+import IconDown from 'assets/IconDown'
+import IconUp from 'assets/IconUp'
 import React from 'react'
 
 const PriceIndicator = ({
@@ -15,31 +15,19 @@ const PriceIndicator = ({
 }) => (
 	<>
 		<div className="price-row">
-			<img
-				className="indicator"
-				src={
-					indicator === 'up'
-						? IconUpBlack
-						: indicator === 'down'
-						? IconDownRed
-						: ''
-				}
-				alt="indicator"
-			/>
+			{indicator === 'up' ? (
+				<IconUp className="black indicator" />
+			) : indicator === 'down' ? (
+				<IconDown className="indicator red" />
+			) : null}
 			<span className="price">${price?.toLocaleString()}</span>
 		</div>
 		<div className="price-row">
-			<img
-				className="indicator"
-				src={
-					pricePerSqftIndicator === 'up'
-						? IconUpBlack
-						: pricePerSqftIndicator === 'down'
-						? IconDownRed
-						: ''
-				}
-				alt="price per sq ft indicator"
-			/>
+			{pricePerSqftIndicator === 'up' ? (
+				<IconUp className="black indicator" />
+			) : pricePerSqftIndicator === 'down' ? (
+				<IconDown className="indicator red" />
+			) : null}
 			<span className="price-per-sqft">
 				$
 				{pricePerSqft?.toLocaleString(undefined, {

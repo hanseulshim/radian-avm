@@ -8,10 +8,11 @@
 				height: 422px;
 				display: flex;
 				justify-content: center;
+				overflow: hidden;
 				align-items: center;
 				background: $alto;
 				img {
-					height: 100%;
+					width: 100%;
 				}
 			}
 			.info-row-1,
@@ -47,6 +48,12 @@
 					flex-direction: column;
 					align-items: center;
 					justify-content: space-evenly;
+
+					.icon-bath {
+						g {
+							fill: $white;
+						}
+					}
 
 					.value {
 						font-size: $title-text;
