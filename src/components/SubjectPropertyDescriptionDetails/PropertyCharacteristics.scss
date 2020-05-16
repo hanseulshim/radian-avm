@@ -3,8 +3,10 @@
 .property-characteristics-container {
 	flex: 1;
 	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
 	.section-title {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 	.marker-container {
 		display: flex;
@@ -20,11 +22,11 @@
 	}
 	.chart-container {
 		background: $wild-sand;
-		height: 300px;
+		flex: 1;
 	}
 
 	.table-container {
-		margin-top: 15px;
+		margin-top: 10px;
 		display: flex;
 		flex-direction: column;
 		.row {
@@ -38,6 +40,27 @@
 
 			.first {
 				width: 105px;
+			}
+
+			&.icon-row {
+				margin-top: 10px;
+			}
+			&.source-1-row {
+				font-weight: $heavy-weight;
+				margin: 10px 0;
+
+				.value {
+					font-size: $large-text;
+				}
+			}
+			&.source-2-row {
+				background: $wild-sand;
+				font-size: $medium-text;
+				padding: 5px 0;
+				.first {
+					box-sizing: border-box;
+					padding-left: 10px;
+				}
 			}
 		}
 	}
