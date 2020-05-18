@@ -6,10 +6,10 @@ import IconConfidenceScore5 from 'assets/IconConfidenceScore5'
 import React from 'react'
 
 const ConfidenceScore = ({
-	confidenceScore,
+	confidenceScore = 0,
 	retail
 }: {
-	confidenceScore?: number
+	confidenceScore?: number | null
 	retail?: boolean
 }) => (
 	<div className="confidence-score-container">

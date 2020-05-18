@@ -1,727 +1,411 @@
 export const initialState = {
-	poolName: undefined,
-	loanNumber: undefined,
-	orderId: undefined,
-	valuationDate: undefined,
-	subjectProperty: {
-		propertyAddress: undefined,
-		propertyCity: undefined,
-		propertyState: undefined,
-		propertyZip: undefined,
-		yearBuilt: undefined,
-		dwellingType: undefined,
-		imagePath: undefined,
-		beds: undefined,
-		bath: undefined,
-		sqFt: undefined,
-		garage: undefined,
-		lotSize: undefined,
-		lat: undefined,
-		lng: undefined
-	},
-	retail: {
-		price: undefined,
-		indicator: undefined,
-		pricePerSqft: undefined,
-		pricePerSqftIndicator: undefined,
-		confidenceScore: undefined,
-		level1Label: undefined,
-		level1Value: undefined,
-		level2Label: undefined,
-		level2Value: undefined,
-		percentSales: undefined
-	},
-	distressed: {
-		price: undefined,
-		indicator: undefined,
-		pricePerSqft: undefined,
-		pricePerSqftIndicator: undefined,
-		confidenceScore: undefined,
-		level1Label: undefined,
-		level1Value: undefined,
-		level2Label: undefined,
-		level2Value: undefined,
-		percentSales: undefined
-	},
+	poolName: null,
+	loanNumber: null,
+	orderId: null,
+	valuationDate: null,
+	subjectProperty: null,
+	retail: null,
+	distressed: null,
 	avmValueDefined: null,
-	annualPriceAppreciation: {
-		level1Label: undefined,
-		level1Indicator: undefined,
-		level1Trend: undefined,
-		level1Value: undefined,
-		level2Label: undefined,
-		level2Indicator: undefined,
-		level2Trend: undefined,
-		level2Value: undefined
-	},
-	marketStrength: undefined,
-	propertyCharacteristics: {
-		source1: {
-			label: undefined,
-			beds: undefined,
-			baths: undefined,
-			sqFt: undefined,
-			age: undefined,
-			garage: undefined,
-			bedsPercent: undefined,
-			bathsPercent: undefined,
-			sqFtPercent: undefined,
-			agePercent: undefined,
-			garagePercent: undefined
-		},
-		source2: {
-			label: undefined,
-			beds: undefined,
-			baths: undefined,
-			sqFt: undefined,
-			age: undefined,
-			garage: undefined
-		},
-		source3: {
-			label: undefined,
-			beds: undefined,
-			baths: undefined,
-			sqFt: undefined,
-			age: undefined,
-			garage: undefined
-		},
-		other1Value: {
-			beds: undefined,
-			baths: undefined,
-			garage: undefined,
-			bedsPercent: undefined,
-			bathsPercent: undefined,
-			sqFtPercent: undefined,
-			agePercent: undefined,
-			garagePercent: undefined
-		},
-		other2Value: {
-			beds: undefined,
-			baths: undefined,
-			garage: undefined,
-			bedsPercent: undefined,
-			bathsPercent: undefined,
-			sqFtPercent: undefined,
-			agePercent: undefined,
-			garagePercent: undefined
-		},
-		atAGlance: undefined,
-		sqFt: {
-			leftBar: undefined,
-			middleBar: undefined,
-			rightBar: undefined
-		},
-		age: {
-			leftBar: undefined,
-			middleBar: undefined,
-			rightBar: undefined
-		},
-		bedsBathGarage: undefined
-	},
-	propertyNeighborhoodInfo: {
-		level1: {
-			label: undefined,
-			geoJSON: undefined
-		},
-		level2: {
-			label: undefined,
-			geoJSON: undefined
-		},
-		subdivision: undefined,
-		taxes: null,
-		taxParcelId: undefined,
-		taxYear: null,
-		zoning: null,
-		township: undefined,
-		section: undefined,
-		assessedValue: undefined,
-		mortageBank1: {
-			name: undefined,
-			amount: undefined
-		},
-		mortageBank2: {
-			name: null,
-			amount: null
-		},
-		hoa: undefined,
-		fees: undefined,
-		contact: null,
-		phone: undefined,
-		femaDesasterList: undefined,
-		floodZone: undefined
-	},
-	propertyFeatures: {
-		interiorFeatures: undefined,
-		exteriorFeatures: undefined,
-		pool: undefined,
-		patioDeck: undefined,
-		roofing: undefined,
-		exterior: undefined,
-		cooling: undefined,
-		heating: undefined,
-		garageCarport: undefined,
-		water: undefined,
-		sewer: undefined,
-		flooring: undefined,
-		basementFinished: undefined
-	},
-	subjectPropertyTransactions: undefined,
-	propertyValueTrend: {
-		averagePrice: undefined,
-		medianPriceLevel1: {
-			label: undefined,
-			data: undefined
-		},
-		medianPriceLevel2: {
-			label: undefined,
-			data: undefined
-		},
-		hpi: undefined
-	},
-	subjectPropertyTransaction1: {
-		listingStartDate: undefined,
-		listingEndDate: undefined,
-		heroImage: undefined,
-		mlsName: undefined,
-		mlsComments: undefined,
-		photos: undefined
-	},
-	subjectPropertyTransaction2: {
-		listingStartDate: undefined,
-		listingEndDate: undefined,
-		heroImage: undefined,
-		mlsName: undefined,
-		mlsComments: undefined,
-		photos: undefined
-	},
-	subjectPropertyTransaction3: {
-		listingStartDate: undefined,
-		listingEndDate: undefined,
-		heroImage: undefined,
-		mlsName: undefined,
-		mlsComments: undefined,
-		photos: undefined
-	},
-	marketAtAGlance: undefined,
-	nearbyProperties: undefined,
-	featuredProperties: undefined,
-	numberOfTransactions: {
-		duration: undefined,
-		label: undefined,
-		retail: undefined,
-		distressed: undefined,
-		rental: undefined,
-		flipSale: undefined,
-		flipRental: undefined
-	},
-	avgPrices: {
-		rental: {
-			avgRent: undefined,
-			avgDom: undefined
-		},
-		retailSales: {
-			medianSalePrice: undefined,
-			avgDom: undefined
-		},
-		distressedSales: {
-			medianSalePrice: undefined,
-			distressedDiscount: undefined
-		},
-		flipSales: {
-			saleRange1: undefined,
-			saleRange2: undefined,
-			grossProfitRange1: undefined,
-			grossProfitRange2: undefined
-		},
-		flipRental: {
-			avgRent: undefined,
-			rentRange1: undefined,
-			rentRange2: undefined
-		}
-	},
-	medianPrices: {
-		atAGlance: undefined,
-		level1Label: undefined,
-		level1Sold: undefined,
-		level1Listed: undefined,
-		level2Label: undefined,
-		level2Sold: undefined,
-		level2Listed: undefined
-	},
-	ageOfProperties: undefined,
-	saleToListRatio: {
-		level1Label: undefined,
-		level2Label: undefined,
-		data: undefined
-	},
-	avgListingPrice: {
-		description: undefined,
-		level1Label: undefined,
-		level1PriorMonth: undefined,
-		level1PriorYear: undefined,
-		level2Label: undefined,
-		level2PriorMonth: undefined,
-		level2PriorYear: undefined,
-		level3Label: undefined,
-		level3PriorMonth: undefined,
-		level3PriorYear: undefined
-	},
-	listedPriceRangeByDom: undefined,
-	inventory: {
-		description: undefined,
-		level1Label: undefined,
-		level1PriorMonth: undefined,
-		level1PriorYear: undefined,
-		level2Label: undefined,
-		level2PriorMonth: undefined,
-		level2PriorYear: undefined,
-		level3Label: undefined,
-		level3PriorMonth: undefined,
-		level3PriorYear: undefined
-	},
-	listedInventoryByDom: undefined,
-	avgDom: undefined,
-	retailVsDistressedSales: {
-		description: undefined,
-		level1Label: undefined,
-		level1PriorMonth: undefined,
-		level1PriorYear: undefined,
-		level2Label: undefined,
-		level2PriorMonth: undefined,
-		level2PriorYear: undefined,
-		level3Label: undefined,
-		level3PriorMonth: undefined,
-		level3PriorYear: undefined
-	},
-	retailVsDistressedSalesData: undefined,
-	neighborhoodSummary: undefined,
-	marketAverages: {
-		description: undefined,
-		schoolRatings: {
-			elementary: undefined,
-			middle: undefined,
-			high: undefined
-		},
-		transitScores: {
-			massTransit: undefined,
-			auto: undefined,
-			bike: undefined
-		}
-	},
-	neighborhoodSummaryData: {
-		level1GeoJSON: {
-			type: undefined,
-			coordinates: undefined
-		},
-		level2GeoJSON: {
-			type: undefined,
-			coordinates: undefined
-		}
-	},
-	level1Averages: {
-		label: undefined,
-		avgSchoolRating: undefined,
-		avgSchoolDelta: undefined,
-		avgSchoolIndicator: undefined,
-		avgTransitRating: undefined,
-		avgTransitDelta: undefined,
-		avgTransitIndicator: undefined,
-		avgCrimeRating: undefined,
-		avgCrimeDelta: undefined,
-		avgCrimeIndicator: undefined
-	},
-	level2Averages: {
-		label: undefined,
-		avgSchoolRating: undefined,
-		avgSchoolDelta: undefined,
-		avgSchoolIndicator: undefined,
-		avgTransitRating: undefined,
-		avgTransitDelta: undefined,
-		avgTransitIndicator: undefined,
-		avgCrimeRating: undefined,
-		avgCrimeDelta: undefined,
-		avgCrimeIndicator: undefined
-	},
-	familyMakeupDescription: undefined,
-	familyMakeup: undefined,
-	education: {
-		highSchool: undefined,
-		college: undefined,
-		grad: undefined
-	},
-	ageOfPopulation: {
-		label: undefined,
-		data: undefined
-	},
-	incomeOfPopulation: {
-		level1Label: undefined,
-		level2Label: undefined,
-		level3Label: undefined
-	},
-	incomeOfPopulationData: undefined,
-	footer: undefined
+	annualPriceAppreciation: null,
+	marketStrength: null,
+	propertyCharacteristics: null,
+	propertyNeighborhoodInfo: null,
+	propertyFeatures: null,
+	subjectPropertyTransactions: null,
+	propertyValueTrend: null,
+	subjectPropertyTransaction1: null,
+	subjectPropertyTransaction2: null,
+	subjectPropertyTransaction3: null,
+	marketAtAGlance: null,
+	nearbyProperties: null,
+	featuredProperties: null,
+	numberOfTransactions: null,
+	avgPrices: null,
+	medianPrices: null,
+	ageOfProperties: null,
+	saleToListRatio: null,
+	avgListingPrice: null,
+	listedPriceRangeByDom: null,
+	inventory: null,
+	listedInventoryByDom: null,
+	avgDom: null,
+	retailVsDistressedSales: null,
+	retailVsDistressedSalesData: null,
+	neighborhoodSummary: null,
+	marketAverages: null,
+	neighborhoodSummaryData: null,
+	level1Averages: null,
+	level2Averages: null,
+	familyMakeupDescription: null,
+	familyMakeup: null,
+	education: null,
+	ageOfPopulation: null,
+	incomeOfPopulation: null,
+	incomeOfPopulationData: null,
+	footer: null
 }
 
 export interface DataInterface {
-	poolName?: string
-	loanNumber?: string
-	orderId?: string
-	valuationDate?: string
+	poolName: string | null
+	loanNumber: string | null
+	orderId: string | null
+	valuationDate: string | null
 	subjectProperty: {
-		propertyAddress?: string
-		propertyCity?: string
-		propertyState?: string
-		propertyZip?: string
-		yearBuilt?: number
-		dwellingType?: string
-		imagePath?: string
-		beds?: number
-		bath?: number
-		sqFt?: number
-		garage?: number
-		lotSize?: number
-		lat?: number
-		lng?: number
-	}
+		propertyAddress: string | null
+		propertyCity: string | null
+		propertyState: string | null
+		propertyZip: string | null
+		yearBuilt: number | null
+		dwellingType: string | null
+		imagePath: string | null
+		beds: number | null
+		bath: number | null
+		sqFt: number | null
+		garage: number | null
+		lotSize: number | null
+		lat: number | null
+		lng: number | null
+	} | null
 	retail: {
-		price?: number
-		indicator?: string
-		pricePerSqft?: number
-		pricePerSqftIndicator?: string
-		confidenceScore?: number
-		level1Label?: string
-		level1Value?: number
-		level2Label?: string
-		level2Value?: number
-		percentSales?: number
-	}
+		price: number | null
+		indicator: string | null
+		pricePerSqft: number | null
+		pricePerSqftIndicator: string | null
+		confidenceScore: number | null
+		level1Label: string | null
+		level1Value: number | null
+		level2Label: string | null
+		level2Value: number | null
+		percentSales: number | null
+	} | null
 	distressed: {
-		price?: number
-		indicator?: string
-		pricePerSqft?: number
-		pricePerSqftIndicator?: string
-		confidenceScore?: number
-		level1Label?: string
-		level1Value?: number
-		level2Label?: string
-		level2Value?: number
-		percentSales?: number
-	}
+		price: number | null
+		indicator: string | null
+		pricePerSqft: number | null
+		pricePerSqftIndicator: string | null
+		confidenceScore: number | null
+		level1Label: string | null
+		level1Value: number | null
+		level2Label: string | null
+		level2Value: number | null
+		percentSales: number | null
+	} | null
 	avmValueDefined: null
 	annualPriceAppreciation: {
-		level1Label?: string
-		level1Indicator?: string
-		level1Trend?: number
-		level1Value?: number
-		level2Label?: string
-		level2Indicator?: string
-		level2Trend?: number
-		level2Value?: number
-	}
-	marketStrength?: number
+		level1Label: string | null
+		level1Indicator: string | null
+		level1Trend: number | null
+		level1Value: number | null
+		level2Label: string | null
+		level2Indicator: string | null
+		level2Trend: number | null
+		level2Value: number | null
+	} | null
+	marketStrength: number | null
 	propertyCharacteristics: {
 		source1: {
-			label?: string
-			beds?: number
-			baths?: number
-			sqFt?: number
-			age?: number
-			garage?: number
-			bedsPercent?: number
-			bathsPercent?: number
-			sqFtPercent?: number
-			agePercent?: number
-			garagePercent?: number
-		}
+			label: string | null
+			beds: number | null
+			baths: number | null
+			sqFt: number | null
+			age: number | null
+			garage: number | null
+			bedsPercent: number | null
+			bathsPercent: number | null
+			sqFtPercent: number | null
+			agePercent: number | null
+			garagePercent: number | null
+		} | null
 		source2: {
-			label?: string
-			beds?: number
-			baths?: number
-			sqFt?: number
-			age?: number
-			garage?: number
-		}
+			label: string | null
+			beds: number | null
+			baths: number | null
+			sqFt: number | null
+			age: number | null
+			garage: number | null
+		} | null
 		source3: {
-			label?: string
-			beds?: number
-			baths?: number
-			sqFt?: number
-			age?: number
-			garage?: number
-		}
+			label: string | null
+			beds: number | null
+			baths: number | null
+			sqFt: number | null
+			age: number | null
+			garage: number | null
+		} | null
 		other1Value: {
-			beds?: number
-			baths?: number
-			garage?: number
-			bedsPercent?: number
-			bathsPercent?: number
-			sqFtPercent?: number
-			agePercent?: number
-			garagePercent?: number
-		}
+			beds: number | null
+			baths: number | null
+			garage: number | null
+			bedsPercent: number | null
+			bathsPercent: number | null
+			sqFtPercent: number | null
+			agePercent: number | null
+			garagePercent: number | null
+		} | null
 		other2Value: {
-			beds?: number
-			baths?: number
-			garage?: number
-			bedsPercent?: number
-			bathsPercent?: number
-			sqFtPercent?: number
-			agePercent?: number
-			garagePercent?: number
-		}
-		atAGlance?: string
+			beds: number | null
+			baths: number | null
+			garage: number | null
+			bedsPercent: number | null
+			bathsPercent: number | null
+			sqFtPercent: number | null
+			agePercent: number | null
+			garagePercent: number | null
+		} | null
+		atAGlance: string | null
 		sqFt: {
-			leftBar?: string
-			middleBar?: string
-			rightBar?: string
-		}
+			leftBar: string | null
+			middleBar: string | null
+			rightBar: string | null
+		} | null
 		age: {
-			leftBar?: string
-			middleBar?: string
-			rightBar?: string
-		}
-		bedsBathGarage?: string
-	}
+			leftBar: string | null
+			middleBar: string | null
+			rightBar: string | null
+		} | null
+		bedsBathGarage: string | null
+	} | null
 	propertyNeighborhoodInfo: {
 		level1: {
-			label?: string
-			geoJSON?: string
-		}
+			label: string | null
+			geoJSON: string | null
+		} | null
 		level2: {
-			label?: string
-			geoJSON?: string
-		}
-		subdivision?: string
+			label: string | null
+			geoJSON: string | null
+		} | null
+		subdivision: string | null
 		taxes: null
-		taxParcelId?: string
+		taxParcelId: string | null
 		taxYear: null
 		zoning: null
-		township?: string
-		section?: string
-		assessedValue?: string
+		township: string | null
+		section: string | null
+		assessedValue: string | null
 		mortageBank1: {
-			name?: string
-			amount?: string
-		}
+			name: string | null
+			amount: string | null
+		} | null
 		mortageBank2: {
 			name: null
 			amount: null
-		}
-		hoa?: string
-		fees?: string
+		} | null
+		hoa: string | null
+		fees: string | null
 		contact: null
-		phone?: string
-		femaDesasterList?: string
-		floodZone?: string
-	}
+		phone: string | null
+		femaDesasterList: string | null
+		floodZone: string | null
+	} | null
 	propertyFeatures: {
-		interiorFeatures?: string
-		exteriorFeatures?: string
-		pool?: string
-		patioDeck?: string
-		roofing?: string
-		exterior?: string
-		cooling?: string
-		heating?: string
-		garageCarport?: string
-		water?: string
-		sewer?: string
-		flooring?: string
-		basementFinished?: string
-	}
-	subjectPropertyTransactions?: string
+		interiorFeatures: string | null
+		exteriorFeatures: string | null
+		pool: string | null
+		patioDeck: string | null
+		roofing: string | null
+		exterior: string | null
+		cooling: string | null
+		heating: string | null
+		garageCarport: string | null
+		water: string | null
+		sewer: string | null
+		flooring: string | null
+		basementFinished: string | null
+	} | null
+	subjectPropertyTransactions: string | null
 	propertyValueTrend: {
-		averagePrice?: string
+		averagePrice: string | null
 		medianPriceLevel1: {
-			label?: string
-			data?: string
-		}
+			label: string | null
+			data: string | null
+		} | null
 		medianPriceLevel2: {
-			label?: string
-			data?: string
-		}
-		hpi?: string
-	}
+			label: string | null
+			data: string | null
+		} | null
+		hpi: string | null
+	} | null
 	subjectPropertyTransaction1: {
-		listingStartDate?: string
-		listingEndDate?: string
-		heroImage?: string
-		mlsName?: string
-		mlsComments?: string
-		photos?: string
-	}
+		listingStartDate: string | null
+		listingEndDate: string | null
+		heroImage: string | null
+		mlsName: string | null
+		mlsComments: string | null
+		photos: string | null
+	} | null
 	subjectPropertyTransaction2: {
-		listingStartDate?: string
-		listingEndDate?: string
-		heroImage?: string
-		mlsName?: string
-		mlsComments?: string
-		photos?: string
-	}
+		listingStartDate: string | null
+		listingEndDate: string | null
+		heroImage: string | null
+		mlsName: string | null
+		mlsComments: string | null
+		photos: string | null
+	} | null
 	subjectPropertyTransaction3: {
-		listingStartDate?: string
-		listingEndDate?: string
-		heroImage?: string
-		mlsName?: string
-		mlsComments?: string
-		photos?: string
-	}
-	marketAtAGlance?: string
-	nearbyProperties?: string
-	featuredProperties?: string
+		listingStartDate: string | null
+		listingEndDate: string | null
+		heroImage: string | null
+		mlsName: string | null
+		mlsComments: string | null
+		photos: string | null
+	} | null
+	marketAtAGlance: string | null
+	nearbyProperties: string | null
+	featuredProperties: string | null
 	numberOfTransactions: {
-		duration?: string
-		label?: string
-		retail?: string
-		distressed?: string
-		rental?: string
-		flipSale?: string
-		flipRental?: string
-	}
+		duration: string | null
+		label: string | null
+		retail: string | null
+		distressed: string | null
+		rental: string | null
+		flipSale: string | null
+		flipRental: string | null
+	} | null
 	avgPrices: {
 		rental: {
-			avgRent?: string
-			avgDom?: string
-		}
+			avgRent: string | null
+			avgDom: string | null
+		} | null
 		retailSales: {
-			medianSalePrice?: string
-			avgDom?: string
-		}
+			medianSalePrice: string | null
+			avgDom: string | null
+		} | null
 		distressedSales: {
-			medianSalePrice?: string
-			distressedDiscount?: string
-		}
+			medianSalePrice: string | null
+			distressedDiscount: string | null
+		} | null
 		flipSales: {
-			saleRange1?: string
-			saleRange2?: string
-			grossProfitRange1?: string
-			grossProfitRange2?: string
-		}
+			saleRange1: string | null
+			saleRange2: string | null
+			grossProfitRange1: string | null
+			grossProfitRange2: string | null
+		} | null
 		flipRental: {
-			avgRent?: string
-			rentRange1?: string
-			rentRange2?: string
-		}
-	}
+			avgRent: string | null
+			rentRange1: string | null
+			rentRange2: string | null
+		} | null
+	} | null
 	medianPrices: {
-		atAGlance?: string
-		level1Label?: string
-		level1Sold?: string
-		level1Listed?: string
-		level2Label?: string
-		level2Sold?: string
-		level2Listed?: string
-	}
-	ageOfProperties?: string
+		atAGlance: string | null
+		level1Label: string | null
+		level1Sold: string | null
+		level1Listed: string | null
+		level2Label: string | null
+		level2Sold: string | null
+		level2Listed: string | null
+	} | null
+	ageOfProperties: string | null
 	saleToListRatio: {
-		level1Label?: string
-		level2Label?: string
-		data?: string
-	}
+		level1Label: string | null
+		level2Label: string | null
+		data: string | null
+	} | null
 	avgListingPrice: {
-		description?: string
-		level1Label?: string
-		level1PriorMonth?: string
-		level1PriorYear?: string
-		level2Label?: string
-		level2PriorMonth?: string
-		level2PriorYear?: string
-		level3Label?: string
-		level3PriorMonth?: string
-		level3PriorYear?: string
-	}
-	listedPriceRangeByDom?: string
+		description: string | null
+		level1Label: string | null
+		level1PriorMonth: string | null
+		level1PriorYear: string | null
+		level2Label: string | null
+		level2PriorMonth: string | null
+		level2PriorYear: string | null
+		level3Label: string | null
+		level3PriorMonth: string | null
+		level3PriorYear: string | null
+	} | null
+	listedPriceRangeByDom: string | null
 	inventory: {
-		description?: string
-		level1Label?: string
-		level1PriorMonth?: string
-		level1PriorYear?: string
-		level2Label?: string
-		level2PriorMonth?: string
-		level2PriorYear?: string
-		level3Label?: string
-		level3PriorMonth?: string
-		level3PriorYear?: string
-	}
-	listedInventoryByDom?: string
-	avgDom?: string
+		description: string | null
+		level1Label: string | null
+		level1PriorMonth: string | null
+		level1PriorYear: string | null
+		level2Label: string | null
+		level2PriorMonth: string | null
+		level2PriorYear: string | null
+		level3Label: string | null
+		level3PriorMonth: string | null
+		level3PriorYear: string | null
+	} | null
+	listedInventoryByDom: string | null
+	avgDom: string | null
 	retailVsDistressedSales: {
-		description?: string
-		level1Label?: string
-		level1PriorMonth?: string
-		level1PriorYear?: string
-		level2Label?: string
-		level2PriorMonth?: string
-		level2PriorYear?: string
-		level3Label?: string
-		level3PriorMonth?: string
-		level3PriorYear?: string
-	}
-	retailVsDistressedSalesData?: string
-	neighborhoodSummary?: string
+		description: string | null
+		level1Label: string | null
+		level1PriorMonth: string | null
+		level1PriorYear: string | null
+		level2Label: string | null
+		level2PriorMonth: string | null
+		level2PriorYear: string | null
+		level3Label: string | null
+		level3PriorMonth: string | null
+		level3PriorYear: string | null
+	} | null
+	retailVsDistressedSalesData: string | null
+	neighborhoodSummary: string | null
 	marketAverages: {
-		description?: string
+		description: string | null
 		schoolRatings: {
-			elementary?: string
-			middle?: string
-			high?: string
-		}
+			elementary: string | null
+			middle: string | null
+			high: string | null
+		} | null
 		transitScores: {
-			massTransit?: string
-			auto?: string
-			bike?: string
-		}
-	}
+			massTransit: string | null
+			auto: string | null
+			bike: string | null
+		} | null
+	} | null
 	neighborhoodSummaryData: {
 		level1GeoJSON: {
-			type?: string
-			coordinates?: string
-		}
+			type: string | null
+			coordinates: string | null
+		} | null
 		level2GeoJSON: {
-			type?: string
-			coordinates?: string
-		}
-	}
+			type: string | null
+			coordinates: string | null
+		} | null
+	} | null
 	level1Averages: {
-		label?: string
-		avgSchoolRating?: string
-		avgSchoolDelta?: string
-		avgSchoolIndicator?: string
-		avgTransitRating?: string
-		avgTransitDelta?: string
-		avgTransitIndicator?: string
-		avgCrimeRating?: string
-		avgCrimeDelta?: string
-		avgCrimeIndicator?: string
-	}
+		label: string | null
+		avgSchoolRating: string | null
+		avgSchoolDelta: string | null
+		avgSchoolIndicator: string | null
+		avgTransitRating: string | null
+		avgTransitDelta: string | null
+		avgTransitIndicator: string | null
+		avgCrimeRating: string | null
+		avgCrimeDelta: string | null
+		avgCrimeIndicator: string | null
+	} | null
 	level2Averages: {
-		label?: string
-		avgSchoolRating?: string
-		avgSchoolDelta?: string
-		avgSchoolIndicator?: string
-		avgTransitRating?: string
-		avgTransitDelta?: string
-		avgTransitIndicator?: string
-		avgCrimeRating?: string
-		avgCrimeDelta?: string
-		avgCrimeIndicator?: string
-	}
-	familyMakeupDescription?: string
-	familyMakeup?: string
+		label: string | null
+		avgSchoolRating: string | null
+		avgSchoolDelta: string | null
+		avgSchoolIndicator: string | null
+		avgTransitRating: string | null
+		avgTransitDelta: string | null
+		avgTransitIndicator: string | null
+		avgCrimeRating: string | null
+		avgCrimeDelta: string | null
+		avgCrimeIndicator: string | null
+	} | null
+	familyMakeupDescription: string | null
+	familyMakeup: string | null
 	education: {
-		highSchool?: string
-		college?: string
-		grad?: string
-	}
+		highSchool: string | null
+		college: string | null
+		grad: string | null
+	} | null
 	ageOfPopulation: {
-		label?: string
-		data?: string
-	}
+		label: string | null
+		data: string | null
+	} | null
 	incomeOfPopulation: {
-		level1Label?: string
-		level2Label?: string
-		level3Label?: string
-	}
-	incomeOfPopulationData?: string
-	footer?: string
+		level1Label: string | null
+		level2Label: string | null
+		level3Label: string | null
+	} | null
+	incomeOfPopulationData: string | null
+	footer: string | null
 }

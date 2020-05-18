@@ -17,15 +17,15 @@ const AtAGlance = () => {
 			<div className="bar-row">
 				<div>
 					<div>Left Bar:</div>
-					<div>{sqFt.leftBar}</div>
+					<div>{sqFt?.leftBar}</div>
 				</div>
 				<div>
 					<div>Middle Bar:</div>
-					<div>{sqFt.middleBar}</div>
+					<div>{sqFt?.middleBar}</div>
 				</div>
 				<div>
 					<div>Right Bar:</div>
-					<div>{sqFt.rightBar}</div>
+					<div>{sqFt?.rightBar}</div>
 				</div>
 			</div>
 			<div className="title">
@@ -34,15 +34,15 @@ const AtAGlance = () => {
 			<div className="bar-row">
 				<div>
 					<div>Left Bar:</div>
-					<div>{age.leftBar}</div>
+					<div>{age?.leftBar}</div>
 				</div>
 				<div>
 					<div>Middle Bar:</div>
-					<div>{age.middleBar}</div>
+					<div>{age?.middleBar}</div>
 				</div>
 				<div>
 					<div>Right Bar:</div>
-					<div>{age.rightBar}</div>
+					<div>{age?.rightBar}</div>
 				</div>
 			</div>
 			<div className="title">

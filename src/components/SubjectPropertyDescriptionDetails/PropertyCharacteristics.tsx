@@ -59,57 +59,57 @@ const PropertyCharacteristics = () => {
 					</div>
 				</div>
 				<div className="row source-1-row">
-					<div className="first">{source1.label}</div>
+					<div className="first">{source1?.label}</div>
 					<div className="column">
-						<span className="value">{source1.beds}</span>
+						<span className="value">{source1?.beds}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1.baths}</span>
+						<span className="value">{source1?.baths}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1.sqFt}</span>
+						<span className="value">{source1?.sqFt}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1.age}</span>
+						<span className="value">{source1?.age}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1.garage}</span>
-					</div>
-				</div>
-				<div className="row source-2-row">
-					<div className="first">{source2.label}</div>
-					<div className="column">
-						<span className="value">{source2.beds}</span>
-					</div>
-					<div className="column">
-						<span className="value">{source2.baths}</span>
-					</div>
-					<div className="column">
-						<span className="value">{source2.sqFt}</span>
-					</div>
-					<div className="column">
-						<span className="value">{source2.age}</span>
-					</div>
-					<div className="column">
-						<span className="value">{source2.garage}</span>
+						<span className="value">{source1?.garage}</span>
 					</div>
 				</div>
 				<div className="row source-2-row">
-					<div className="first">{source3.label}</div>
+					<div className="first">{source2?.label}</div>
 					<div className="column">
-						<span className="value">{source3.beds}</span>
+						<span className="value">{source2?.beds}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3.baths}</span>
+						<span className="value">{source2?.baths}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3.sqFt}</span>
+						<span className="value">{source2?.sqFt}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3.age}</span>
+						<span className="value">{source2?.age}</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3.garage}</span>
+						<span className="value">{source2?.garage}</span>
+					</div>
+				</div>
+				<div className="row source-2-row">
+					<div className="first">{source3?.label}</div>
+					<div className="column">
+						<span className="value">{source3?.beds}</span>
+					</div>
+					<div className="column">
+						<span className="value">{source3?.baths}</span>
+					</div>
+					<div className="column">
+						<span className="value">{source3?.sqFt}</span>
+					</div>
+					<div className="column">
+						<span className="value">{source3?.age}</span>
+					</div>
+					<div className="column">
+						<span className="value">{source3?.garage}</span>
 					</div>
 				</div>
 			</div>

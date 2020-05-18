@@ -8,10 +8,10 @@ const PriceIndicator = ({
 	pricePerSqft,
 	pricePerSqftIndicator
 }: {
-	price?: number
-	indicator?: string
-	pricePerSqft?: number
-	pricePerSqftIndicator?: string
+	price?: number | null
+	indicator?: string | null
+	pricePerSqft?: number | null
+	pricePerSqftIndicator?: string | null
 }) => (
 	<>
 		<div className="price-row">
@@ -20,7 +20,7 @@ const PriceIndicator = ({
 			) : indicator === 'down' ? (
 				<IconDown className="indicator red" />
 			) : null}
-			<span className="price">${price?.toLocaleString()}</span>
+			{price && <span className="price">${price?.toLocaleString()}</span>}
 		</div>
 		<div className="price-row">
 			{pricePerSqftIndicator === 'up' ? (
@@ -28,14 +28,18 @@ const PriceIndicator = ({
 			) : pricePerSqftIndicator === 'down' ? (
 				<IconDown className="indicator red" />
 			) : null}
-			<span className="price-per-sqft">
-				$
-				{pricePerSqft?.toLocaleString(undefined, {
-					minimumFractionDigits: 2,
-					maximumFractionDigits: 2
-				})}
-			</span>
-			<span className="price-per-sqft-label">per sqft</span>
+			{pricePerSqft && (
+				<>
+					<span className="price-per-sqft">
+						$
+						{pricePerSqft?.toLocaleString(undefined, {
+							minimumFractionDigits: 2,
+							maximumFractionDigits: 2
+						})}
+					</span>
+					<span className="price-per-sqft-label">per sqft</span>
+				</>
+			)}
 		</div>
 	</>
 )

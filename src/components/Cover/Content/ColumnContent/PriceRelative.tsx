@@ -8,10 +8,10 @@ const PriceRelative = ({
 	level2Value
 }: {
 	retail?: boolean
-	level1Label?: string
-	level1Value?: number
-	level2Label?: string
-	level2Value?: number
+	level1Label?: string | null
+	level1Value?: number | null
+	level2Label?: string | null
+	level2Value?: number | null
 }) => {
 	return (
 		<div className="price-relative-container">

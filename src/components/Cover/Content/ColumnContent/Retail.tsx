@@ -6,17 +6,17 @@ import PriceRelative from './PriceRelative'
 const Retail = ({
 	retail
 }: {
-	retail?: {
-		price?: number
-		indicator?: string
-		pricePerSqft?: number
-		pricePerSqftIndicator?: string
-		confidenceScore?: number
-		level1Label?: string
-		level1Value?: number
-		level2Label?: string
-		level2Value?: number
-	}
+	retail: {
+		price: number | null
+		indicator: string | null
+		pricePerSqft: number | null
+		pricePerSqftIndicator: string | null
+		confidenceScore: number | null
+		level1Label: string | null
+		level1Value: number | null
+		level2Label: string | null
+		level2Value: number | null
+	} | null
 }) => {
 	const {
 		price,
