@@ -1,0 +1,37 @@
+@import 'styles/variables';
+
+.subject-property-description-details {
+	.content-container {
+		.property-features-container {
+			margin-top: 25px;
+
+			.layout {
+				margin-top: 30px;
+				height: 426px;
+
+				display: flex;
+				.info-container {
+					width: 316px;
+					background: $wild-sand;
+					padding: 20px 25px;
+
+					.title {
+						margin-bottom: 5px;
+					}
+
+					.info {
+						margin-top: 20px;
+					}
+				}
+
+				.image-container {
+					flex: 1;
+					position: relative;
+					img {
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
