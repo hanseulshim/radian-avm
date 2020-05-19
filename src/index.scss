@@ -35,6 +35,8 @@ img {
 	border-bottom: 1px solid $black;
 	font-size: $large-text;
 	white-space: nowrap;
+	display: flex;
+	justify-content: space-between;
 }
 
 .sub-section-title {
@@ -42,4 +44,72 @@ img {
 	font-size: $medium-text;
 	font-weight: $heavy-weight;
 	border-bottom: 1px solid $black;
+}
+
+.icon {
+	&.black {
+		#Cover {
+			fill: $black;
+		}
+	}
+	&.white {
+		#Cover {
+			fill: $white;
+		}
+	}
+	&.red {
+		#Cover {
+			fill: $thunderbird;
+		}
+	}
+	&.confidence-1 {
+		#Rectangle {
+			fill: #d3d9e4;
+		}
+		&.retail {
+			#Rectangle {
+				fill: #e3f1ef;
+			}
+		}
+	}
+	&.confidence-2 {
+		#Rectangle {
+			fill: #b0c0da;
+		}
+		&.retail {
+			#Rectangle {
+				fill: #c6e3df;
+			}
+		}
+	}
+	&.confidence-3 {
+		#Rectangle {
+			fill: #89a1c8;
+		}
+		&.retail {
+			#Rectangle {
+				fill: #aad6cf;
+			}
+		}
+	}
+	&.confidence-4 {
+		#Rectangle {
+			fill: #6181b5;
+		}
+		&.retail {
+			#Rectangle {
+				fill: #8dc8bf;
+			}
+		}
+	}
+	&.confidence-5 {
+		#Rectangle {
+			fill: #3a62a3;
+		}
+		&.retail {
+			#Rectangle {
+				fill: #71baaf;
+			}
+		}
+	}
 }

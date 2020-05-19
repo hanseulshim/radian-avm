@@ -1,0 +1,16 @@
+@import 'styles/variables';
+@import './PropertyCharacteristics.scss';
+@import './AtAGlance.scss';
+@import './PropertyMap.scss';
+@import './PropertyFeatures.scss';
+.subject-property-description-details {
+	.content-container {
+		padding: 58px $side-spacer 0;
+		margin-bottom: 20px;
+
+		.property-row {
+			display: flex;
+			height: 435px;
+		}
+	}
+}

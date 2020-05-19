@@ -4,19 +4,9 @@ import PriceIndicator from './PriceIndicator'
 import PriceRelative from './PriceRelative'
 
 const Distressed = ({
-	distressed: {
-		price,
-		indicator,
-		pricePerSqft,
-		pricePerSqftIndicator,
-		confidenceScore,
-		level1Label,
-		level1Value,
-		level2Label,
-		level2Value
-	}
+	distressed
 }: {
-	distressed: {
+	distressed?: {
 		price: number | null
 		indicator: string | null
 		pricePerSqft: number | null
@@ -26,8 +16,19 @@ const Distressed = ({
 		level1Value: number | null
 		level2Label: string | null
 		level2Value: number | null
-	}
+	} | null
 }) => {
+	const {
+		price,
+		indicator,
+		pricePerSqft,
+		pricePerSqftIndicator,
+		confidenceScore,
+		level1Label,
+		level1Value,
+		level2Label,
+		level2Value
+	} = { ...distressed }
 	return (
 		<div className="column-container distressed">
 			<div className="section-title">Distressed</div>

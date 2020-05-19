@@ -4,17 +4,7 @@ import PriceIndicator from './PriceIndicator'
 import PriceRelative from './PriceRelative'
 
 const Retail = ({
-	retail: {
-		price,
-		indicator,
-		pricePerSqft,
-		pricePerSqftIndicator,
-		confidenceScore,
-		level1Label,
-		level1Value,
-		level2Label,
-		level2Value,
-	},
+	retail,
 }: {
 	retail: {
 		price: number | null
@@ -26,8 +16,19 @@ const Retail = ({
 		level1Value: number | null
 		level2Label: string | null
 		level2Value: number | null
-	}
+	} | null
 }) => {
+	const {
+		price,
+		indicator,
+		pricePerSqft,
+		pricePerSqftIndicator,
+		confidenceScore,
+		level1Label,
+		level1Value,
+		level2Label,
+		level2Value,
+	} = { ...retail }
 	return (
 		<>
 			<div className="column-container retail">

@@ -1,0 +1,22 @@
+@import 'styles/variables';
+
+.at-a-glance-container {
+	background: $wild-sand;
+	width: 400px;
+	padding: 20px;
+
+	.title {
+		font-size: $medium-text;
+		margin-bottom: 5px;
+	}
+	.divider {
+		height: 2px;
+		background: $silver;
+		margin: 50px 0 20px 0;
+	}
+	.bar-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+}

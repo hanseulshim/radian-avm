@@ -14,9 +14,9 @@ const MarketSales = () => {
 				<div className="bar-row retail">
 					<div
 						className="bar retail"
-						style={{ width: getWidth(retail.percentSales) }}
+						style={{ width: getWidth(retail?.percentSales) }}
 					>
-						{retail.percentSales}%
+						{retail?.percentSales}%
 					</div>
 				</div>
 			</div>
@@ -27,9 +27,9 @@ const MarketSales = () => {
 				<div className="bar-row">
 					<div
 						className="bar distressed"
-						style={{ width: getWidth(distressed.percentSales) }}
+						style={{ width: getWidth(distressed?.percentSales) }}
 					>
-						{distressed.percentSales}%
+						{distressed?.percentSales}%
 					</div>
 				</div>
 			</div>
