@@ -14,6 +14,7 @@
 					width: 316px;
 					background: $wild-sand;
 					padding: 20px 25px;
+					z-index: 1;
 
 					.title {
 						margin-bottom: 5px;
@@ -27,8 +28,64 @@
 				.image-container {
 					flex: 1;
 					position: relative;
+					margin-left: -50px;
 					img {
 						height: 100%;
+					}
+					.label-container {
+						position: absolute;
+						display: flex;
+						&.pool {
+							right: -12px;
+							top: 5px;
+						}
+						&.patio {
+							right: -12px;
+							top: 33px;
+						}
+						&.roofing {
+							right: -13px;
+							top: 62px;
+						}
+						&.exterior {
+							right: -13px;
+							top: 90px;
+						}
+						&.cooling {
+							right: -14px;
+							top: 118px;
+						}
+						&.heating {
+							right: -15px;
+							top: 142px;
+						}
+						&.garage {
+							right: -14px;
+							top: 190px;
+						}
+						&.water {
+							right: -14px;
+							top: 235px;
+						}
+						&.sewer {
+							right: -14px;
+							top: 255px;
+						}
+						&.flooring {
+							right: -15px;
+							top: 323px;
+						}
+						&.basement {
+							right: -17px;
+							top: 352px;
+						}
+						.label {
+							font-weight: $heavy-weight;
+							margin-right: 15px;
+						}
+						.value {
+							width: 200px;
+						}
 					}
 				}
 			}
