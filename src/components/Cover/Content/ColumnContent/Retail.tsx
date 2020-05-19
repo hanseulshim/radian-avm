@@ -13,8 +13,8 @@ const Retail = ({
 		level1Label,
 		level1Value,
 		level2Label,
-		level2Value
-	}
+		level2Value,
+	},
 }: {
 	retail: {
 		price: number | null
