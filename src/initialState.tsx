@@ -91,7 +91,7 @@ export interface DataInterface {
 		level2Value: number | null
 		percentSales: number | null
 	} | null
-	avmValueDefined: null
+	avmValueDefined: string | null
 	annualPriceAppreciation: {
 		level1Label: string | null
 		level1Indicator: string | null
@@ -169,33 +169,39 @@ export interface DataInterface {
 	propertyNeighborhoodInfo: {
 		level1: {
 			label: string | null
-			geoJSON: string | null
+			geoJSON: {
+				type: string
+				coordinates: [[[[number, number]]]] | null
+			} | null
 		} | null
 		level2: {
 			label: string | null
-			geoJSON: string | null
+			geoJSON: {
+				type: string
+				coordinates: [[[[number, number]]]] | null
+			} | null
 		} | null
 		subdivision: string | null
-		taxes: null
+		taxes: number | null
 		taxParcelId: string | null
-		taxYear: null
-		zoning: null
+		taxYear: number | null
+		zoning: string | null
 		township: string | null
 		section: string | null
 		assessedValue: string | null
 		mortageBank1: {
 			name: string | null
-			amount: string | null
+			amount: number | null
 		} | null
 		mortageBank2: {
-			name: null
-			amount: null
+			name: string | null
+			amount: number | null
 		} | null
 		hoa: string | null
 		fees: string | null
-		contact: null
+		contact: string | null
 		phone: string | null
-		femaDesasterList: string | null
+		femaDisasters: string | null
 		floodZone: string | null
 	} | null
 	propertyFeatures: {

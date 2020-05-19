@@ -23,9 +23,9 @@
 		"build:pdf": "cd ./server && yarn start",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"deploy:dev:client": "react-scripts build && aws s3 sync  ./build s3://dev.boostlabs/radian-avm/ --profile boost",
-		"deploy:dev:server": "cd ./api && yarn deploy",
-		"deploy:dev": "yarn deploy:dev:client & yarn deploy:dev:server"
+		"deploy:client": "react-scripts build && aws s3 sync  ./build s3://dev.boostlabs/radian-avm/ --profile boost",
+		"deploy:server": "cd ./api && yarn deploy",
+		"deploy": "yarn deploy:dev:client & yarn deploy:dev:server"
 	},
 	"homepage": ".",
 	"eslintConfig": {

@@ -178,7 +178,7 @@
 		"fees": "$50mo",
 		"contact": null,
 		"phone": "480-759-4945;123-456-7890",
-		"femaDesasterList": "Flood (2009);Fire (2004)",
+		"femaDisasters": "Flood (2009);Fire (2004)",
 		"floodZone": "Zone AR/AE"
 	},
 	"propertyFeatures": {

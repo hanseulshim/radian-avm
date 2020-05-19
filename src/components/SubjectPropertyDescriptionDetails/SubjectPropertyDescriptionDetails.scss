@@ -1,12 +1,12 @@
 @import 'styles/variables';
 @import './PropertyCharacteristics.scss';
 @import './AtAGlance.scss';
-
+@import './PropertyMap.scss';
 .subject-property-description-details {
 	.content-container {
 		padding: 58px $side-spacer 0;
 
-		.info-row {
+		.property-row {
 			display: flex;
 			height: 435px;
 		}
