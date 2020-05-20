@@ -1,14 +1,43 @@
+import React, { useContext, useEffect } from 'react'
 import IconBath from 'assets/IconBath'
 import IconBed from 'assets/IconBed'
 import IconCalendar from 'assets/IconCalendar'
 import IconCar from 'assets/IconCar'
 import IconRuler from 'assets/IconRuler'
 import { DataContext } from 'components/App'
-import React, { useContext } from 'react'
+import * as am4core from '@amcharts/amcharts4/core'
+import * as am4charts from '@amcharts/amcharts4/charts'
+import { colors } from 'styles/colors.js'
 
 const PropertyCharacteristics = () => {
 	const { propertyCharacteristics } = useContext(DataContext)
-	const { source1, source2, source3 } = { ...propertyCharacteristics }
+	const { source1, source2, source3, other1Value, other2Value } = {
+		...propertyCharacteristics,
+	}
+	const charts = ['beds', 'baths', 'sqFt', 'age', 'garage']
+
+	useEffect(() => {
+		const bedsChart = am4core.create('beds', am4charts.XYChart)
+		const data = [
+			{
+				...source1,
+			},
+			{
+				...other1Value,
+			},
+			{
+				...other2Value,
+			},
+		]
+
+		let categoryAxis = bedsChart.xAxes.push(new am4charts.CategoryAxis() as any)
+		categoryAxis.dataFields.category = 'label'
+		let valueAxis = bedsChart.yAxes.push(new am4charts.ValueAxis())
+
+		let series1 = bedsChart.series.push(new am4charts.ColumnSeries())
+		series1.dataFields.valueY = 'bedsPercent'
+		series1.dataFields.categoryX = 'label'
+	}, [propertyCharacteristics])
 	return (
 		<div className="property-characteristics-container">
 			<div className="section-title">
@@ -19,7 +48,9 @@ const PropertyCharacteristics = () => {
 				</div>
 			</div>
 			<div className="chart-container">
-				property characteristics chart goes here
+				{charts.map((v) => {
+					return <div id={v} key={v} />
+				})}
 			</div>
 			<div className="table-container">
 				<div className="row">
