@@ -19,7 +19,7 @@
 		"lat": 39.00665,
 		"lng": -77.06344
 	},
-	"Retail": {
+	"retail": {
 		"price": 1437977,
 		"indicator": "up",
 		"pricePerSqft": 228.25,
@@ -31,7 +31,7 @@
 		"level2Value": 75,
 		"percentSales": 88
 	},
-	"Distressed": {
+	"distressed": {
 		"price": 1262629,
 		"indicator": "up",
 		"pricePerSqft": 200.42,

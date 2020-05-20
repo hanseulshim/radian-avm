@@ -1,6 +1,8 @@
 import { DataInterface, initialState } from 'initialState'
 import React, { createContext, useEffect, useState } from 'react'
+import Cover from './Cover'
 import MarketPerformance from './MarketPerformance'
+import SubjectPropertyDescriptionDetails from './SubjectPropertyDescriptionDetails'
 
 export const DataContext = createContext<DataInterface>(initialState)
 
@@ -22,8 +24,8 @@ const App = () => {
 	return (
 		<DataContext.Provider value={data}>
 			<div className="app">
-				{/* <Cover />
-				<SubjectPropertyDescriptionDetails /> */}
+				<Cover />
+				<SubjectPropertyDescriptionDetails />
 				<MarketPerformance />
 			</div>
 		</DataContext.Provider>
