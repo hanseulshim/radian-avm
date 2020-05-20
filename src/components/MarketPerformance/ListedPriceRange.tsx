@@ -1,3 +1,5 @@
+import IconActiveListings from 'assets/IconActiveListings'
+import IconMedians from 'assets/IconMedians'
 import { DataContext } from 'components/App'
 import numeral from 'numeral'
 import React, { useContext } from 'react'
@@ -52,11 +54,11 @@ const ListedPriceRange = () => {
 					<div>Listed Price Range by DOM (as of Prior Month)</div>
 					<div className="legend-container">
 						<div className="legend">
-							<div className="marker">line</div>
+							<IconActiveListings />
 							<div>Average listings</div>
 						</div>
 						<div className="legend">
-							<div className="marker">line</div>
+							<IconMedians />
 							<div>Medians</div>
 						</div>
 					</div>

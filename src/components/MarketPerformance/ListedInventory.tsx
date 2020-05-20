@@ -1,3 +1,5 @@
+import IconMedians from 'assets/IconMedians'
+import IconSold from 'assets/IconSold'
 import { DataContext } from 'components/App'
 import React, { useContext } from 'react'
 
@@ -43,11 +45,11 @@ const ListedInventory = () => {
 					<div>Average DOM</div>
 					<div className="legend-container">
 						<div className="legend">
-							<div className="marker">line</div>
+							<IconMedians />
 							<div>Average listings</div>
 						</div>
 						<div className="legend">
-							<div className="marker">line</div>
+							<IconSold />
 							<div>Sold</div>
 						</div>
 					</div>
