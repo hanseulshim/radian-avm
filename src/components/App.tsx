@@ -2,6 +2,7 @@ import { DataInterface, initialState } from 'initialState'
 import React, { createContext, useEffect, useState } from 'react'
 import Cover from './Cover'
 import MarketPerformance1 from './MarketPerformance1'
+import MarketPerformance2 from './MarketPerformance2'
 import SubjectPropertyDescriptionDetails from './SubjectPropertyDescriptionDetails'
 
 export const DataContext = createContext<DataInterface>(initialState)
@@ -22,12 +23,21 @@ const App = () => {
 		getData()
 	}, [])
 
+	const test = true
+
 	return (
 		<DataContext.Provider value={data}>
 			<div className="app">
-				<Cover />
-				<SubjectPropertyDescriptionDetails />
-				<MarketPerformance1 />
+				{test ? (
+					<MarketPerformance2 />
+				) : (
+					<>
+						<Cover />
+						<SubjectPropertyDescriptionDetails />
+						<MarketPerformance1 />
+						<MarketPerformance2 />
+					</>
+				)}
 			</div>
 		</DataContext.Provider>
 	)
