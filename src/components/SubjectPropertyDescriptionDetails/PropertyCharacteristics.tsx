@@ -15,22 +15,76 @@ const PropertyCharacteristics = () => {
 		...propertyCharacteristics,
 	}
 	const charts = ['beds', 'baths', 'sqFt', 'age', 'garage']
-	const data = [
+	const data: Array<{
+		label: string | null
+		beds: number | null
+		baths: number | null
+		sqFt: number | null
+		age: number | null
+		garage: number | null
+		bedsPercent: number | null
+		bathsPercent: number | null
+		sqFtPercent: number | null
+		agePercent: number | null
+		garagePercent: number | null
+	}> = [
 		{
-			...source1,
+			label: source1?.label ? source1?.label : null,
+			beds: source1?.beds ? source1?.beds : null,
+			baths: source1?.baths ? source1?.baths : null,
+			sqFt: source1?.sqFt ? source1?.sqFt : null,
+			age: source1?.age ? source1?.age : null,
+			garage: source1?.garage ? source1?.garage : null,
+			bedsPercent: source1?.bedsPercent ? source1?.bedsPercent : null,
+			bathsPercent: source1?.bathsPercent ? source1?.bathsPercent : null,
+			sqFtPercent: source1?.sqFtPercent ? source1?.sqFtPercent : null,
+			agePercent: source1?.agePercent ? source1?.agePercent : null,
+			garagePercent: source1?.garagePercent ? source1?.garagePercent : null,
 		},
 		{
-			...other1Value,
+			label: null,
+			beds: other1Value?.beds ? other1Value?.beds : null,
+			baths: other1Value?.baths ? other1Value?.baths : null,
+			sqFt: null,
+			age: null,
+			garage: other1Value?.garage ? other1Value?.garage : null,
+			bedsPercent: other1Value?.bedsPercent ? other1Value?.bedsPercent : null,
+			bathsPercent: other1Value?.bathsPercent
+				? other1Value?.bathsPercent
+				: null,
+			sqFtPercent: other1Value?.sqFtPercent ? other1Value?.sqFtPercent : null,
+			agePercent: other1Value?.agePercent ? other1Value?.agePercent : null,
+			garagePercent: other1Value?.garagePercent
+				? other1Value?.garagePercent
+				: null,
 		},
 		{
-			...other2Value,
+			label: null,
+			beds: other2Value?.beds ? other2Value?.beds : null,
+			baths: other2Value?.baths ? other2Value?.baths : null,
+			sqFt: null,
+			age: null,
+			garage: other2Value?.garage ? other2Value?.garage : null,
+			bedsPercent: other2Value?.bedsPercent ? other2Value?.bedsPercent : null,
+			bathsPercent: other2Value?.bathsPercent
+				? other2Value?.bathsPercent
+				: null,
+			sqFtPercent: other2Value?.sqFtPercent ? other2Value?.sqFtPercent : null,
+			agePercent: other2Value?.agePercent ? other2Value?.agePercent : null,
+			garagePercent: other2Value?.garagePercent
+				? other2Value?.garagePercent
+				: null,
 		},
 	]
 
 	useEffect(() => {
 		charts.map((chartId) => {
 			const chart = am4core.create(chartId, am4charts.XYChart)
-			// chart.data = data.sort((a: Object, b: Object) => b.beds - a.beds)
+			chart.data = data.sort((a, b) => {
+				if (a.beds === null || b.beds === null) {
+					return -1
+				} else return b.beds - a.beds
+			})
 			chart.data = [...data]
 
 			let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis() as any)
