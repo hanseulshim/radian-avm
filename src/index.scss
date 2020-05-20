@@ -44,6 +44,9 @@ img {
 	font-size: $medium-text;
 	font-weight: $heavy-weight;
 	border-bottom: 1px solid $black;
+	white-space: nowrap;
+	display: flex;
+	justify-content: space-between;
 }
 
 .icon {
