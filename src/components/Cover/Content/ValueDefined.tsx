@@ -1,12 +1,7 @@
 import { DataContext } from 'components/App'
 import React, { useContext, useEffect, useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-import IconMapMarker from 'assets/IconMapMarker'
-import { colors } from 'styles/colors.js'
-
-const Marker = ({ lat, lng, text }: any) => {
-	return <IconMapMarker color={'#BADA55'} />
-}
+import MapMarker from 'components/Common/MapMarker'
 
 const ValueDefined = () => {
 	const { subjectProperty, avmValueDefined } = useContext(DataContext)
@@ -18,7 +13,6 @@ const ValueDefined = () => {
 	}, [subjectProperty])
 
 	const handleApiLoaded = (map: any, maps: any) => {
-		console.log(map, maps)
 		map.mapTypeId = 'satellite'
 		map.tilt = 45
 	}
@@ -38,7 +32,11 @@ const ValueDefined = () => {
 						yesIWantToUseGoogleMapApiInternals
 						onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
 					>
-						<Marker lat={lat} lng={lng} text="My Marker" />
+						<MapMarker
+							lat={lat}
+							lng={lng}
+							text={subjectProperty?.propertyAddress}
+						/>
 					</GoogleMapReact>
 				)}
 			</div>

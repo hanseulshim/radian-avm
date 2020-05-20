@@ -8,4 +8,5 @@ export const colors = {
 	neptune05: 'rgba(113, 186, 175, 0.5)',
 	white: '#ffffff',
 	wildSand: '#f4f4f4',
+	markerRed: '#C6401E',
 }

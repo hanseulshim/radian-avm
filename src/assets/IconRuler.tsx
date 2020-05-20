@@ -8,7 +8,7 @@ const IconRuler = ({ className = 'white' }: { className?: string }) => (
 		version="1.1"
 		className={`icon ${className}`}
 	>
-		<g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+		<g id="Page-1" stroke="none" strokeWidth="1" fill="red" fillRule="evenodd">
 			<g
 				id="Cover"
 				transform="translate(-363.000000, -844.000000)"
