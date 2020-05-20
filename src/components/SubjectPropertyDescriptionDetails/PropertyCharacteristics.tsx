@@ -15,29 +15,92 @@ const PropertyCharacteristics = () => {
 		...propertyCharacteristics,
 	}
 	const charts = ['beds', 'baths', 'sqFt', 'age', 'garage']
+	const data = [
+		{
+			...source1,
+		},
+		{
+			...other1Value,
+		},
+		{
+			...other2Value,
+		},
+	]
 
 	useEffect(() => {
-		const bedsChart = am4core.create('beds', am4charts.XYChart)
-		const data = [
-			{
-				...source1,
-			},
-			{
-				...other1Value,
-			},
-			{
-				...other2Value,
-			},
-		]
+		charts.map((chartId) => {
+			const chart = am4core.create(chartId, am4charts.XYChart)
+			// chart.data = data.sort((a: Object, b: Object) => b.beds - a.beds)
+			chart.data = [...data]
 
-		let categoryAxis = bedsChart.xAxes.push(new am4charts.CategoryAxis() as any)
-		categoryAxis.dataFields.category = 'label'
-		let valueAxis = bedsChart.yAxes.push(new am4charts.ValueAxis())
+			let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis() as any)
+			categoryAxis.dataFields.category = chartId
+			categoryAxis.renderer.labels.template.fontSize = 12
+			let valueAxis = chart.yAxes.push(new am4charts.ValueAxis() as any)
+			valueAxis.renderer.minGridDistance = 20
+			if (chartId === 'beds') {
+				let label = valueAxis.renderer.labels.template
+				label.fontSize = 12
+			} else {
+				valueAxis.renderer.labels.template.disabled = true
+			}
 
-		let series1 = bedsChart.series.push(new am4charts.ColumnSeries())
-		series1.dataFields.valueY = 'bedsPercent'
-		series1.dataFields.categoryX = 'label'
-	}, [propertyCharacteristics])
+			let series1 = chart.series.push(new am4charts.ColumnSeries() as any)
+			series1.dataFields.valueY = chartId + 'Percent'
+			series1.dataFields.categoryX = chartId
+			series1.columns.template.adapter.add(
+				'fill',
+				(text: string, target: any): any => {
+					const ctx = target?.dataItem?.dataContext as any
+					if (ctx && ctx.label === 'Radian AVM') {
+						return colors.black
+					} else return colors.neptune05
+				}
+			)
+			series1.columns.template.adapter.add(
+				'stroke',
+				(text: string, target: any): any => {
+					const ctx = target?.dataItem?.dataContext as any
+					if (ctx && ctx.label === 'Radian AVM') {
+						return colors.black
+					} else return colors.neptune05
+				}
+			)
+		})
+
+		// const bedsChart = am4core.create('beds', am4charts.XYChart)
+		// // bedsChart.data = data.sort((a: Object, b: Object) => b.beds - a.beds)
+		// bedsChart.data = [...data]
+
+		// let categoryAxis = bedsChart.xAxes.push(new am4charts.CategoryAxis() as any)
+		// categoryAxis.dataFields.category = 'beds'
+		// let valueAxis = bedsChart.yAxes.push(new am4charts.ValueAxis() as any)
+		// valueAxis.renderer.minGridDistance = 20
+		// let label = valueAxis.renderer.labels.template
+		// label.fontSize = 12
+
+		// let series1 = bedsChart.series.push(new am4charts.ColumnSeries() as any)
+		// series1.dataFields.valueY = 'bedsPercent'
+		// series1.dataFields.categoryX = 'beds'
+		// series1.columns.template.adapter.add(
+		// 	'fill',
+		// 	(text: string, target: any): any => {
+		// 		const ctx = target?.dataItem?.dataContext as any
+		// 		if (ctx && ctx.label === 'Radian AVM') {
+		// 			return colors.black
+		// 		} else return colors.neptune05
+		// 	}
+		// )
+		// series1.columns.template.adapter.add(
+		// 	'stroke',
+		// 	(text: string, target: any): any => {
+		// 		const ctx = target?.dataItem?.dataContext as any
+		// 		if (ctx && ctx.label === 'Radian AVM') {
+		// 			return colors.black
+		// 		} else return colors.neptune05
+		// 	}
+		// )
+	}, [source1, other1Value, other2Value])
 	return (
 		<div className="property-characteristics-container">
 			<div className="section-title">
