@@ -1,0 +1,10 @@
+@import 'styles/variables';
+@import './CostTimeMarket.scss';
+@import './RetailDistressedSales.scss';
+
+.market-performance {
+	.content-container {
+		padding: 40px $side-spacer 0;
+		margin-bottom: 160px;
+	}
+}

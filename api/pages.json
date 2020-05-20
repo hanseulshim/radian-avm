@@ -19,7 +19,7 @@
 		"lat": 39.00665,
 		"lng": -77.06344
 	},
-	"retail": {
+	"Retail": {
 		"price": 1437977,
 		"indicator": "up",
 		"pricePerSqft": 228.25,
@@ -31,7 +31,7 @@
 		"level2Value": 75,
 		"percentSales": 88
 	},
-	"distressed": {
+	"Distressed": {
 		"price": 1262629,
 		"indicator": "up",
 		"pricePerSqft": 200.42,
@@ -198,7 +198,7 @@
 	},
 	"subjectPropertyTransactions": [
 		{
-			"type": "retail",
+			"type": "Retail",
 			"daysOnMarket": 30,
 			"listedDate": "3/9/2020",
 			"listedAmount": 1299990,
@@ -222,7 +222,7 @@
 			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/PA/Centre-Township/19533/1159-418344-20111002-826-Bossler-Road-0.jpg"
 		},
 		{
-			"type": "distressed",
+			"type": "Distressed",
 			"daysOnMarket": 39,
 			"listedDate": "11/25/2011",
 			"listedAmount": 919990,
@@ -234,7 +234,7 @@
 			"imagePath": "https://rbimages.blob.core.windows.net/rb-images/US/real-estate/mls-homes/single-family-property/for-sale/MI/Mancelona/49659/1475-1819634-20160627-8002-Twin-Lake-Road,-NE-1.jpg"
 		},
 		{
-			"type": "retail",
+			"type": "Retail",
 			"daysOnMarket": 36,
 			"listedDate": "12/9/1994",
 			"listedAmount": 785999,
@@ -258,7 +258,7 @@
 			"imagePath": null
 		},
 		{
-			"type": "retail",
+			"type": "Retail",
 			"daysOnMarket": 0,
 			"listedDate": "7/12/1978",
 			"listedAmount": 249999,
@@ -274,53 +274,53 @@
 		"averagePrice": [
 			{
 				"date": "04/05/2020",
-				"retail": 1250000,
-				"distressed": 800000
+				"Retail": 1250000,
+				"Distressed": 800000
 			},
 			{
 				"date": "02/01/2019",
-				"retail": 1180000,
-				"distressed": 500000
+				"Retail": 1180000,
+				"Distressed": 500000
 			},
 			{
 				"date": "03/01/2018",
-				"retail": 1170000,
-				"distressed": 450000
+				"Retail": 1170000,
+				"Distressed": 450000
 			},
 			{
 				"date": "02/01/2017",
-				"retail": 1250000,
-				"distressed": 375000
+				"Retail": 1250000,
+				"Distressed": 375000
 			},
 			{
 				"date": "04/01/2016",
-				"retail": 1230000,
-				"distressed": 350000
+				"Retail": 1230000,
+				"Distressed": 350000
 			},
 			{
 				"date": "06/01/2015",
-				"retail": 1080000,
-				"distressed": 300000
+				"Retail": 1080000,
+				"Distressed": 300000
 			},
 			{
 				"date": "07/01/2014",
-				"retail": 1210000,
-				"distressed": 370000
+				"Retail": 1210000,
+				"Distressed": 370000
 			},
 			{
 				"date": "08/01/2013",
-				"retail": 1150000,
-				"distressed": 325000
+				"Retail": 1150000,
+				"Distressed": 325000
 			},
 			{
 				"date": "10/01/2012",
-				"retail": 1160000,
-				"distressed": 500000
+				"Retail": 1160000,
+				"Distressed": 500000
 			},
 			{
 				"date": "01/01/2010",
-				"retail": 110000,
-				"distressed": 370000
+				"Retail": 110000,
+				"Distressed": 370000
 			}
 		],
 		"medianPriceLevel1": {
@@ -534,91 +534,91 @@
 			"lng": -77.06814765930176,
 			"lat": 39.00527852499497,
 			"category": "sold",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.06643104553223,
 			"lat": 39.003144156914,
 			"category": "listed",
-			"condition": "distressed"
+			"condition": "Distressed"
 		},
 		{
 			"lng": -77.0725679397583,
 			"lat": 39.001810144163095,
 			"category": "listed",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.07029342651367,
 			"lat": 38.998408297796715,
 			"category": "listed",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.07527160644531,
 			"lat": 38.99804142224161,
 			"category": "sold",
-			"condition": "distressed"
+			"condition": "Distressed"
 		},
 		{
 			"lng": -77.06557273864746,
 			"lat": 38.999475561322946,
 			"category": "listed",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.07132339477539,
 			"lat": 38.995206410630544,
 			"category": "listed",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.07419872283936,
 			"lat": 38.99580677550996,
 			"category": "sold",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.06849098205565,
 			"lat": 38.997441076321095,
 			"category": "listed",
-			"condition": "distressed"
+			"condition": "Distressed"
 		},
 		{
 			"lng": -77.0696496963501,
 			"lat": 39.00077626698007,
 			"category": "u/c",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.07600116729736,
 			"lat": 39.0019435465701,
 			"category": "sold",
-			"condition": "distressed"
+			"condition": "Distressed"
 		},
 		{
 			"lng": -77.07763195037842,
 			"lat": 39.00034270108453,
 			"category": "u/c",
-			"condition": "distressed"
+			"condition": "Distressed"
 		},
 		{
 			"lng": -77.07497119903564,
 			"lat": 39.00034270108453,
 			"category": "sold",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.071795463562,
 			"lat": 39.003077456873825,
 			"category": "sold",
-			"condition": "retail"
+			"condition": "Retail"
 		},
 		{
 			"lng": -77.0771598815918,
 			"lat": 38.99844165002557,
 			"category": "sold",
-			"condition": "retail"
+			"condition": "Retail"
 		}
 	],
 	"featuredProperties": [
@@ -626,7 +626,7 @@
 			"lng": -77.07359790802002,
 			"lat": 38.99580677550996,
 			"category": "listed",
-			"condition": "distressed",
+			"condition": "Distressed",
 			"distance": 3.7,
 			"status": "flip rental",
 			"featureNumber": 1,
@@ -641,7 +641,7 @@
 			"lng": -77.07188129425049,
 			"lat": 38.99587348240438,
 			"category": "sold",
-			"condition": "retail",
+			"condition": "Retail",
 			"distance": 4.7,
 			"status": "sale",
 			"featureNumber": 2,
@@ -656,7 +656,7 @@
 			"lng": -77.06969261169434,
 			"lat": 38.996840725307116,
 			"category": "sold",
-			"condition": "distressed",
+			"condition": "Distressed",
 			"distance": 1.5,
 			"status": "rental",
 			"featureNumber": 3,
@@ -671,7 +671,7 @@
 			"lng": -77.0674180984497,
 			"lat": 38.996373782108165,
 			"category": "sold",
-			"condition": "distressed",
+			"condition": "Distressed",
 			"distance": 1.0,
 			"status": "list",
 			"featureNumber": 4,
@@ -686,7 +686,7 @@
 			"lng": -77.07544326782227,
 			"lat": 38.99904198745693,
 			"category": "u/c",
-			"condition": "distressed",
+			"condition": "Distressed",
 			"distance": 2.4,
 			"status": "sale",
 			"featureNumber": 5,
@@ -701,7 +701,7 @@
 			"lng": -77.07308292388916,
 			"lat": 38.997641192193875,
 			"category": "listed",
-			"condition": "retail",
+			"condition": "Retail",
 			"distance": 4.0,
 			"status": "flip rental",
 			"featureNumber": 6,
@@ -715,9 +715,9 @@
 	],
 	"numberOfTransactions": {
 		"duration": 6,
-		"label": "zip",
-		"retail": 100,
-		"distressed": 100,
+		"label": "Zip",
+		"Retail": 100,
+		"Distressed": 100,
 		"rental": 80,
 		"flipSale": 50,
 		"flipRental": 30
@@ -749,7 +749,7 @@
 	},
 	"medianPrices": {
 		"atAGlance": "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci.",
-		"level1Label": "zip",
+		"level1Label": "Zip",
 		"level1Sold": [
 			{
 				"value": 713186,
@@ -842,7 +842,7 @@
 				"date": "01/01/2020"
 			}
 		],
-		"level2Label": "county",
+		"level2Label": "County",
 		"level2Sold": [
 			{
 				"value": 608143,
@@ -965,7 +965,7 @@
 	],
 	"saleToListRatio": {
 		"level1Label": "zip code",
-		"level2Label": "county",
+		"level2Label": "County",
 		"data": [
 			{
 				"level1": 102,
@@ -1031,13 +1031,13 @@
 	},
 	"avgListingPrice": {
 		"description": "What can you expect over time as your property sits on the market? ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium.",
-		"level1Label": "zip",
+		"level1Label": "Zip",
 		"level1PriorMonth": 1370000,
 		"level1PriorYear": 1380000,
-		"level2Label": "county",
+		"level2Label": "County",
 		"level2PriorMonth": 1390000,
 		"level2PriorYear": 1370000,
-		"level3Label": "cbsa",
+		"level3Label": "CBSA",
 		"level3PriorMonth": 1410000,
 		"level3PriorYear": 1380000
 	},
@@ -1117,13 +1117,13 @@
 	],
 	"inventory": {
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium. Nullam ut leo ac est placerat eleifend vitae et elit. Aenean euismod elit at purus feugiat blandit.",
-		"level1Label": "zip",
+		"level1Label": "Zip",
 		"level1PriorMonth": 21,
 		"level1PriorYear": 28,
-		"level2Label": "county",
+		"level2Label": "County",
 		"level2PriorMonth": 30,
 		"level2PriorYear": 28,
-		"level3Label": "cbsa",
+		"level3Label": "CBSA",
 		"level3PriorMonth": 14,
 		"level3PriorYear": 16
 	},
@@ -1253,13 +1253,13 @@
 	],
 	"retailVsDistressedSales": {
 		"description": "What can you expect over time as your property sits on the market? ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit erat non erat pharetra, sit amet euismod urna pretium.",
-		"level1Label": "retail",
+		"level1Label": "Retail",
 		"level1PriorMonth": 56,
 		"level1PriorYear": 42,
-		"level2Label": "distressed",
+		"level2Label": "Distressed",
 		"level2PriorMonth": 31,
 		"level2PriorYear": 26,
-		"level3Label": "median sale price",
+		"level3Label": "Median Sale Price",
 		"level3PriorMonth": 1340000,
 		"level3PriorYear": 995000
 	},
@@ -1405,7 +1405,7 @@
 		}
 	},
 	"level1Averages": {
-		"label": "zip",
+		"label": "Zip",
 		"avgSchoolRating": 9.6,
 		"avgSchoolDelta": 1.6,
 		"avgSchoolIndicator": "up",
@@ -1457,7 +1457,7 @@
 		"grad": 55
 	},
 	"ageOfPopulation": {
-		"label": "zip",
+		"label": "Zip",
 		"data": [
 			{
 				"category": "<5",
@@ -1511,8 +1511,8 @@
 	},
 	"incomeOfPopulation": {
 		"level1Label": "neighborhood",
-		"level2Label": "zip",
-		"level3Label": "county"
+		"level2Label": "Zip",
+		"level3Label": "County"
 	},
 	"incomeOfPopulationData": [
 		{
