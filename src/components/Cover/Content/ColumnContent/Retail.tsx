@@ -4,7 +4,7 @@ import PriceIndicator from './PriceIndicator'
 import PriceRelative from './PriceRelative'
 
 const Retail = ({
-	retail
+	retail,
 }: {
 	retail: {
 		price: number | null
@@ -27,7 +27,7 @@ const Retail = ({
 		level1Label,
 		level1Value,
 		level2Label,
-		level2Value
+		level2Value,
 	} = { ...retail }
 	return (
 		<>

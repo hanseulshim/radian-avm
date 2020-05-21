@@ -43,7 +43,7 @@ export const initialState = {
 	ageOfPopulation: null,
 	incomeOfPopulation: null,
 	incomeOfPopulationData: null,
-	footer: null
+	footer: null,
 }
 
 export interface DataInterface {
@@ -365,7 +365,7 @@ export interface DataInterface {
 	neighborhoodSummaryData: {
 		level1GeoJSON: {
 			type: string | null
-			coordinates: string | null
+			coordinates: [[[[number, number]]]] | null
 		} | null
 		level2GeoJSON: {
 			type: string | null
