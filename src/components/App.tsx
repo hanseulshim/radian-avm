@@ -5,8 +5,10 @@ import Demographics from './Demographics'
 import MarketPerformance2 from './MarketPerformance2'
 import SubjectPropertyDescriptionDetails from './SubjectPropertyDescriptionDetails'
 import MarketPerformance1 from './MarketPerformance1'
+import * as am4core from '@amcharts/amcharts4/core'
 
 export const DataContext = createContext<DataInterface>(initialState)
+am4core.options.commercialLicense = true
 
 const App = () => {
 	const [data, setData] = useState<DataInterface>(initialState)
