@@ -27,6 +27,7 @@ const PropertyCharacteristics = () => {
 		sqFtPercent: number | null
 		agePercent: number | null
 		garagePercent: number | null
+		name?: string | null
 	}> = [
 		{
 			label: source1?.label ? source1?.label : null,
@@ -57,6 +58,7 @@ const PropertyCharacteristics = () => {
 			garagePercent: other1Value?.garagePercent
 				? other1Value?.garagePercent
 				: null,
+			name: 'other1Value',
 		},
 		{
 			label: null,
@@ -74,34 +76,59 @@ const PropertyCharacteristics = () => {
 			garagePercent: other2Value?.garagePercent
 				? other2Value?.garagePercent
 				: null,
+			name: 'other2Value',
 		},
 	]
 
 	useEffect(() => {
 		charts.map((chartId) => {
 			const chart = am4core.create(chartId, am4charts.XYChart)
-			chart.data = data.sort((a, b) => {
-				if (a.beds === null || b.beds === null) {
-					return -1
-				} else return b.beds - a.beds
-			})
-			chart.data = [...data]
+			chart.paddingLeft = 0
+			chart.paddingRight = 0
+			chart.height = 230
+			chart.width = 130
+
+			// Sort data if its a chart with labels
+			if (chartId === 'beds' || chartId === 'baths' || chartId === 'garage') {
+				chart.data = data.sort((a, b) => {
+					if (a[chartId] === null || b[chartId] === null) {
+						return -1
+					} else return (a[chartId] as any) - (b[chartId] as any)
+				})
+			} else chart.data = [...data]
 
 			let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis() as any)
-			categoryAxis.dataFields.category = chartId
-			categoryAxis.renderer.labels.template.fontSize = 12
+			if (chartId === 'beds' || chartId === 'baths' || chartId === 'garage') {
+				categoryAxis.dataFields.category = chartId
+			} else {
+				categoryAxis.dataFields.category = 'agePercent'
+				categoryAxis.renderer.labels.template.adapter.add('text', function () {
+					return ''
+				})
+			}
+			categoryAxis.renderer.labels.template.fontSize = 14
+			categoryAxis.renderer.grid.template.disabled = true
+			categoryAxis.renderer.minGridDistance = 20
+
 			let valueAxis = chart.yAxes.push(new am4charts.ValueAxis() as any)
 			valueAxis.renderer.minGridDistance = 20
+			valueAxis.renderer.labels.template.location = 0
+			valueAxis.min = 0
+			valueAxis.max = 100
 			if (chartId === 'beds') {
 				let label = valueAxis.renderer.labels.template
 				label.fontSize = 12
+				label.dx = -10
 			} else {
 				valueAxis.renderer.labels.template.disabled = true
 			}
 
 			let series1 = chart.series.push(new am4charts.ColumnSeries() as any)
 			series1.dataFields.valueY = chartId + 'Percent'
-			series1.dataFields.categoryX = chartId
+			series1.dataFields.categoryX =
+				chartId === 'beds' || chartId === 'baths' || chartId === 'garage'
+					? chartId
+					: 'agePercent'
 			series1.columns.template.adapter.add(
 				'fill',
 				(text: string, target: any): any => {
@@ -121,39 +148,6 @@ const PropertyCharacteristics = () => {
 				}
 			)
 		})
-
-		// const bedsChart = am4core.create('beds', am4charts.XYChart)
-		// // bedsChart.data = data.sort((a: Object, b: Object) => b.beds - a.beds)
-		// bedsChart.data = [...data]
-
-		// let categoryAxis = bedsChart.xAxes.push(new am4charts.CategoryAxis() as any)
-		// categoryAxis.dataFields.category = 'beds'
-		// let valueAxis = bedsChart.yAxes.push(new am4charts.ValueAxis() as any)
-		// valueAxis.renderer.minGridDistance = 20
-		// let label = valueAxis.renderer.labels.template
-		// label.fontSize = 12
-
-		// let series1 = bedsChart.series.push(new am4charts.ColumnSeries() as any)
-		// series1.dataFields.valueY = 'bedsPercent'
-		// series1.dataFields.categoryX = 'beds'
-		// series1.columns.template.adapter.add(
-		// 	'fill',
-		// 	(text: string, target: any): any => {
-		// 		const ctx = target?.dataItem?.dataContext as any
-		// 		if (ctx && ctx.label === 'Radian AVM') {
-		// 			return colors.black
-		// 		} else return colors.neptune05
-		// 	}
-		// )
-		// series1.columns.template.adapter.add(
-		// 	'stroke',
-		// 	(text: string, target: any): any => {
-		// 		const ctx = target?.dataItem?.dataContext as any
-		// 		if (ctx && ctx.label === 'Radian AVM') {
-		// 			return colors.black
-		// 		} else return colors.neptune05
-		// 	}
-		// )
 	}, [source1, other1Value, other2Value])
 	return (
 		<div className="property-characteristics-container">
