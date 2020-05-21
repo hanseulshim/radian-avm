@@ -3,7 +3,7 @@
 .subject-property-description-details {
 	.content-container {
 		.property-map-container {
-			margin-top: 40px;
+			margin-top: 25px;
 
 			.legend-container {
 				display: flex;
@@ -11,8 +11,18 @@
 
 				.legend {
 					margin-left: 20px;
+					display: flex;
+					align-items: center;
 					.line {
 						margin-right: 5px;
+						width: 17px;
+						height: 2px;
+						&.level1 {
+							background: $azure;
+						}
+						&.level2 {
+							background: $neptune;
+						}
 					}
 					.label {
 						font-weight: $medium-weight;
@@ -22,7 +32,7 @@
 
 			.map-container {
 				margin-top: 10px;
-				height: 411px;
+				height: 400px;
 				background: $wild-sand;
 				position: relative;
 
@@ -71,17 +81,17 @@
 					.panel-2 {
 						bottom: $panel-vertical;
 						left: $panel-horizontal;
-						height: 115px;
+						height: 105px;
 					}
 					.panel-3 {
 						top: $panel-vertical;
 						right: $panel-horizontal;
-						height: 155px;
+						height: 145px;
 					}
 					.panel-4 {
 						bottom: $panel-vertical;
 						right: $panel-horizontal;
-						height: 200px;
+						height: 195px;
 					}
 				}
 			}

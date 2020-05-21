@@ -108,11 +108,11 @@ const PropertyMap = () => {
 		<div className="property-map-container">
 			<div className="legend-container">
 				<div className="legend">
-					<span className="line">line</span>
+					<span className="line level1" />
 					<span className="label">{level1?.label}</span>
 				</div>
 				<div className="legend">
-					<span className="line">line</span>
+					<span className="line level2" />
 					<span className="label">{level2?.label}</span>
 				</div>
 			</div>

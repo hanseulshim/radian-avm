@@ -22,6 +22,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
+		"start:local": "REACT_APP_STAGE=local react-scripts start",
 		"server": "cd ./api && yarn start",
 		"build": "react-scripts build",
 		"build:pdf": "cd ./server && yarn start",
