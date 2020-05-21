@@ -31,6 +31,7 @@ const ValueDefined = () => {
 						defaultZoom={18}
 						yesIWantToUseGoogleMapApiInternals
 						onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+						distanceToMouse={(): any => {}}
 					>
 						<MapMarker
 							lat={lat}

@@ -126,6 +126,7 @@ const PropertyMap = () => {
 						defaultZoom={14}
 						yesIWantToUseGoogleMapApiInternals
 						onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+						distanceToMouse={(): any => {}}
 					>
 						<MapMarker
 							lat={lat}
