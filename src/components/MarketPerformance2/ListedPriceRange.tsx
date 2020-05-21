@@ -27,7 +27,6 @@ const ListedPriceRange = () => {
 		categoryAxis.renderer.cellEndLocation = 0.9
 		categoryAxis.renderer.grid.template.location = 0
 		categoryAxis.renderer.grid.template.strokeOpacity = 0.1
-		categoryAxis.renderer.labels.template.fontSize = 14
 
 		const valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
 		valueAxis.width = 75
@@ -35,7 +34,7 @@ const ListedPriceRange = () => {
 
 		valueAxis.renderer.minGridDistance = 50
 		valueAxis.renderer.labels.template.width = 100
-		valueAxis.renderer.labels.template.fontSize = 14
+
 		valueAxis.renderer.labels.template.maxWidth = 100
 		valueAxis.renderer.labels.template.dx = -25
 		valueAxis.renderer.labels.template.truncate = true
@@ -54,8 +53,8 @@ const ListedPriceRange = () => {
 		level1LineSeries.dataFields.valueY = 'level1Medium'
 		level1LineSeries.stroke = am4core.color(colors.neptune)
 		level1LineSeries.strokeWidth = 3
-		level1LineSeries.startLocation = 0.1
-		level1LineSeries.endLocation = 0.37
+		level1LineSeries.startLocation = 0.075
+		level1LineSeries.endLocation = 0.385
 		level1LineSeries.noRisers = true
 
 		const level2Series = chart.series.push(new am4charts.ColumnSeries())
@@ -70,8 +69,8 @@ const ListedPriceRange = () => {
 		level2LineSeries.dataFields.valueY = 'level2Medium'
 		level2LineSeries.stroke = am4core.color(colors.azure)
 		level2LineSeries.strokeWidth = 3
-		level2LineSeries.startLocation = 0.37
-		level2LineSeries.endLocation = 0.625
+		level2LineSeries.startLocation = 0.35
+		level2LineSeries.endLocation = 0.65
 		level2LineSeries.noRisers = true
 
 		const level3Series = chart.series.push(new am4charts.ColumnSeries())
@@ -86,8 +85,8 @@ const ListedPriceRange = () => {
 		level3LineSeries.dataFields.valueY = 'level3Medium'
 		level3LineSeries.stroke = am4core.color(colors.black)
 		level3LineSeries.strokeWidth = 3
-		level3LineSeries.startLocation = 0.625
-		level3LineSeries.endLocation = 0.9
+		level3LineSeries.startLocation = 0.62
+		level3LineSeries.endLocation = 0.925
 		level3LineSeries.noRisers = true
 
 		return () => {
@@ -151,9 +150,7 @@ const ListedPriceRange = () => {
 						</div>
 					</div>
 				</div>
-				<div className="chart price-range" id="listedPriceRangeChart">
-					chart
-				</div>
+				<div className="chart price-range" id="listedPriceRangeChart"></div>
 			</div>
 		</div>
 	)
