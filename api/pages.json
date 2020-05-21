@@ -1417,7 +1417,7 @@
 		"avgCrimeIndicator": ">"
 	},
 	"level2Averages": {
-		"label": "state",
+		"label": "State",
 		"avgSchoolRating": 5,
 		"avgSchoolDelta": 0.4,
 		"avgSchoolIndicator": "up",
@@ -1431,24 +1431,24 @@
 	"familyMakeupDescription": "{PERCENT}% of households in this {GEOGRAPHY} consist of families of {FAMILY_MAKEUP}. Mauris accumsan eros eget liberoposuere vulputate.",
 	"familyMakeup": [
 		{
-			"value": 0.05,
-			"category": "single"
+			"value": 5,
+			"category": "singles"
 		},
 		{
-			"value": 0.05,
-			"category": "single-parent"
+			"value": 5,
+			"category": "single parents"
 		},
 		{
-			"value": 0.15,
-			"category": "couple"
+			"value": 15,
+			"category": "couples"
 		},
 		{
-			"value": 0.25,
-			"category": "1-child"
+			"value": 25,
+			"category": "one child"
 		},
 		{
-			"value": 0.45,
-			"category": "2-child"
+			"value": 45,
+			"category": "two children"
 		}
 	],
 	"education": {
@@ -1510,7 +1510,7 @@
 		]
 	},
 	"incomeOfPopulation": {
-		"level1Label": "neighborhood",
+		"level1Label": "Neighborhood",
 		"level2Label": "Zip",
 		"level3Label": "County"
 	},

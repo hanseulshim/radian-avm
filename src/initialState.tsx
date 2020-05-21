@@ -352,14 +352,14 @@ export interface DataInterface {
 	marketAverages: {
 		description: string | null
 		schoolRatings: {
-			elementary: string | null
-			middle: string | null
-			high: string | null
+			elementary: number | null
+			middle: number | null
+			high: number | null
 		} | null
 		transitScores: {
-			massTransit: string | null
-			auto: string | null
-			bike: string | null
+			massTransit: number | null
+			auto: number | null
+			bike: number | null
 		} | null
 	} | null
 	neighborhoodSummaryData: {
@@ -374,34 +374,37 @@ export interface DataInterface {
 	} | null
 	level1Averages: {
 		label: string | null
-		avgSchoolRating: string | null
-		avgSchoolDelta: string | null
+		avgSchoolRating: number | null
+		avgSchoolDelta: number | null
 		avgSchoolIndicator: string | null
-		avgTransitRating: string | null
-		avgTransitDelta: string | null
+		avgTransitRating: number | null
+		avgTransitDelta: number | null
 		avgTransitIndicator: string | null
-		avgCrimeRating: string | null
-		avgCrimeDelta: string | null
+		avgCrimeRating: number | null
+		avgCrimeDelta: number | null
 		avgCrimeIndicator: string | null
 	} | null
 	level2Averages: {
 		label: string | null
-		avgSchoolRating: string | null
-		avgSchoolDelta: string | null
+		avgSchoolRating: number | null
+		avgSchoolDelta: number | null
 		avgSchoolIndicator: string | null
-		avgTransitRating: string | null
-		avgTransitDelta: string | null
+		avgTransitRating: number | null
+		avgTransitDelta: number | null
 		avgTransitIndicator: string | null
-		avgCrimeRating: string | null
-		avgCrimeDelta: string | null
+		avgCrimeRating: number | null
+		avgCrimeDelta: number | null
 		avgCrimeIndicator: string | null
 	} | null
 	familyMakeupDescription: string | null
-	familyMakeup: string | null
+	familyMakeup: Array<{
+		value: number | null
+		category: string | null
+	}> | null
 	education: {
-		highSchool: string | null
-		college: string | null
-		grad: string | null
+		highSchool: number | null
+		college: number | null
+		grad: number | null
 	} | null
 	ageOfPopulation: {
 		label: string | null
