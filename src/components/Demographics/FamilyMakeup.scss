@@ -1,0 +1,17 @@
+@import 'styles/variables';
+
+.demographics {
+	.map-container {
+		.family-makeup-container {
+			.chart-container {
+				width: 200px;
+				height: 200px;
+				background: $wild-sand;
+				margin: 20px auto;
+			}
+			.description {
+				text-align: center;
+			}
+		}
+	}
+}

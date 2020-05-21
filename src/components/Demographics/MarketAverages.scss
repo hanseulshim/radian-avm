@@ -1,0 +1,60 @@
+@import 'styles/variables';
+
+.demographics {
+	.map-container {
+		.market-averages-container {
+			.ratings-container {
+				margin-top: 18px;
+				padding: 12px 15px;
+				background: $white;
+				.title {
+					font-size: $medium-text;
+					margin-bottom: 10px;
+				}
+				.rating {
+					display: flex;
+					height: 124px;
+					.average {
+						width: 100px;
+						background: $neptune;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						font-size: $medium-text;
+						.value {
+							font-size: $extra-large-text;
+							font-weight: $heavy-weight;
+						}
+					}
+					.value-container {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						.value-row {
+							display: flex;
+							align-items: center;
+							.value {
+								font-weight: $heavy-weight;
+								font-size: $medium-text;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 45px;
+								height: 40px;
+								margin-left: 2px;
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+			.description {
+				margin-top: 35px;
+				height: 176px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}

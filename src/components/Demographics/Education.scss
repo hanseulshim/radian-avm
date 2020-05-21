@@ -1,0 +1,39 @@
+@import 'styles/variables';
+
+.demographics {
+	.map-container {
+		.education-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.section-title {
+				margin-bottom: 20px;
+			}
+			.education-row {
+				display: flex;
+				align-items: center;
+				height: 40px;
+				.label {
+					width: 120px;
+				}
+				.bar-row {
+					display: flex;
+					background: $wild-sand;
+					flex: 1;
+					height: 100%;
+
+					.bar {
+						display: flex;
+						align-items: center;
+						padding-left: 10px;
+						background: $black;
+						color: $white;
+						font-size: $medium-text;
+						font-weight: $heavy-weight;
+						box-sizing: border-box;
+					}
+				}
+			}
+		}
+	}
+}

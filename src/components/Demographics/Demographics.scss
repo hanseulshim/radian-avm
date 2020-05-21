@@ -1,0 +1,107 @@
+@import 'styles/variables';
+@import './MarketAverages.scss';
+@import './FamilyMakeup.scss';
+@import './Education.scss';
+@import './LevelAverage.scss';
+
+.demographics {
+	.summary-container {
+		padding: 45px $side-spacer 0;
+
+		.header {
+			font-size: $extra-large-text;
+			margin-bottom: 12px;
+		}
+		.description-container {
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 12px;
+
+			.description {
+				width: 716px;
+				height: 107px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+	.map-container {
+		height: 800px;
+		background: $wild-sand;
+		position: relative;
+
+		.panel {
+			position: absolute;
+			background: $white-08;
+			padding: 30px 20px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+
+			&.market-averages-container {
+				width: 315px;
+				height: 733px;
+				left: 80px;
+				top: 30px;
+			}
+			&.family-makeup-container {
+				width: 317px;
+				height: 450px;
+				right: 80px;
+				top: 30px;
+			}
+			&.education-container {
+				width: 317px;
+				height: 265px;
+				right: 80px;
+				bottom: 30px;
+			}
+		}
+	}
+
+	.chart-row {
+		display: flex;
+		padding: 50px $side-spacer;
+		.age-of-population-container {
+			margin-right: 20px;
+		}
+		.age-of-population-container,
+		.income-of-population-container {
+			flex: 1;
+			.section-title {
+				margin-bottom: 40px;
+			}
+			.chart-container {
+				height: 250px;
+				background: $wild-sand;
+			}
+		}
+		.income-of-population-container {
+			.legend-container {
+				display: flex;
+				align-items: flex-end;
+				font-size: $normal-text;
+				font-weight: $normal-weight;
+				.legend {
+					display: flex;
+					align-items: center;
+					margin-left: 20px;
+					.marker {
+						width: 17px;
+						height: 3px;
+						margin-right: 10px;
+						&.level-1 {
+							background: $black;
+						}
+						&.level-2 {
+							background: $azure;
+						}
+						&.level-3 {
+							background: $neptune;
+						}
+					}
+				}
+			}
+		}
+	}
+}
