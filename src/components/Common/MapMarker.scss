@@ -1,10 +1,9 @@
 .marker-container {
-	display: 'flex';
-	svg {
-		display: inline;
-	}
+	display: flex;
+	align-items: center;
+	min-width: 200px;
+
 	span {
-		color: white;
 		font-weight: 700;
 	}
 }

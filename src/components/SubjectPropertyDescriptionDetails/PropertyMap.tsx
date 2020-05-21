@@ -2,6 +2,7 @@ import { DataContext } from 'components/App'
 import React, { useContext, useState, useEffect } from 'react'
 import GoogleMapReact from 'google-map-react'
 import MapMarker from 'components/Common/MapMarker'
+import { colors } from 'styles/colors'
 
 const getText = (text?: string | null): string => {
 	return text ? text.split(';').slice(0, 2).join(',\n') : '--'
@@ -71,19 +72,36 @@ const PropertyMap = () => {
 	const handleApiLoaded = (map: any, maps: any) => {
 		const geoJson1 = {
 			type: 'FeatureCollection',
-			features: [{ type: 'Feature', geometry: level1Coords }],
+			features: [
+				{
+					type: 'Feature',
+					properties: { name: 'level1' },
+					geometry: level1Coords,
+				},
+			],
 		}
 
 		const geoJson2 = {
 			type: 'FeatureCollection',
-			features: [{ type: 'Feature', geometry: level2Coords }],
+			features: [
+				{
+					type: 'Feature',
+					properties: { name: 'level2' },
+					geometry: level2Coords,
+				},
+			],
 		}
 
 		map.data.addGeoJson(geoJson1)
 		map.data.addGeoJson(geoJson2)
-		maps.Data.StyleOptions = {
-			fillColor: 'red',
-		}
+		map.data.setStyle(function (feature: any) {
+			const name = feature.getProperty('name')
+			return {
+				fillOpacity: 0,
+				strokeColor: name === 'level2' ? colors.azure05 : colors.azure,
+				strokeWeight: name === 'level2' ? 5 : 3,
+			}
+		})
 	}
 
 	return (
@@ -113,6 +131,8 @@ const PropertyMap = () => {
 							lat={lat}
 							lng={lng}
 							text={subjectProperty?.propertyAddress}
+							color={colors.markerRed}
+							size={14}
 						/>
 					</GoogleMapReact>
 				)}
