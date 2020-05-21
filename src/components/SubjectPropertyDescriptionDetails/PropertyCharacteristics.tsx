@@ -83,10 +83,10 @@ const PropertyCharacteristics = () => {
 	useEffect(() => {
 		charts.map((chartId) => {
 			const chart = am4core.create(chartId, am4charts.XYChart)
-			chart.paddingLeft = 0
+			chart.paddingLeft = chartId == 'beds' ? 10 : 0
 			chart.paddingRight = 0
-			chart.height = 230
-			chart.width = 130
+			chart.height = am4core.percent(100)
+			chart.width = am4core.percent(95)
 
 			// Sort data if its a chart with labels
 			if (chartId === 'beds' || chartId === 'baths' || chartId === 'garage') {
@@ -118,10 +118,16 @@ const PropertyCharacteristics = () => {
 			if (chartId === 'beds') {
 				let label = valueAxis.renderer.labels.template
 				label.fontSize = 12
-				label.dx = -10
+				label.dx = -20
 			} else {
 				valueAxis.renderer.labels.template.disabled = true
 			}
+			valueAxis.renderer.labels.template.adapter.add(
+				'text',
+				(text: string, label: any) => {
+					return label.dataItem.value + '%'
+				}
+			)
 
 			let series1 = chart.series.push(new am4charts.ColumnSeries() as any)
 			series1.dataFields.valueY = chartId + 'Percent'
@@ -160,7 +166,13 @@ const PropertyCharacteristics = () => {
 			</div>
 			<div className="chart-container">
 				{charts.map((v) => {
-					return <div id={v} key={v} />
+					return (
+						<div
+							id={v}
+							key={v}
+							style={{ width: v === 'beds' ? '180px' : '130px' }}
+						/>
+					)
 				})}
 			</div>
 			<div className="table-container">
