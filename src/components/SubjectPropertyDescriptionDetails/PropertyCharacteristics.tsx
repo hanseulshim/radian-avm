@@ -1,12 +1,12 @@
-import React, { useContext, useEffect } from 'react'
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import IconBath from 'assets/IconBath'
 import IconBed from 'assets/IconBed'
 import IconCalendar from 'assets/IconCalendar'
 import IconCar from 'assets/IconCar'
 import IconRuler from 'assets/IconRuler'
 import { DataContext } from 'components/App'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
+import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors.js'
 
 const PropertyCharacteristics = () => {
@@ -83,7 +83,7 @@ const PropertyCharacteristics = () => {
 	useEffect(() => {
 		charts.map((chartId) => {
 			const chart = am4core.create(chartId, am4charts.XYChart)
-			chart.paddingLeft = chartId == 'beds' ? 10 : 0
+			chart.paddingLeft = chartId === 'beds' ? 10 : 0
 			chart.paddingRight = 0
 			chart.height = am4core.percent(100)
 			chart.width = am4core.percent(95)
@@ -153,11 +153,9 @@ const PropertyCharacteristics = () => {
 					} else return colors.neptune05
 				}
 			)
-			return () => {
-				chart.dispose()
-			}
+			return null
 		})
-	}, [source1, other1Value, other2Value])
+	}, [source1, other1Value, other2Value, charts, data])
 	return (
 		<div className="property-characteristics-container">
 			<div className="section-title">

@@ -1,7 +1,7 @@
 import { DataContext } from 'components/App'
-import React, { useContext, useEffect, useState } from 'react'
-import GoogleMapReact from 'google-map-react'
 import MapMarker from 'components/Common/MapMarker'
+import GoogleMapReact from 'google-map-react'
+import React, { useContext, useEffect, useState } from 'react'
 
 const ValueDefined = () => {
 	const { subjectProperty, avmValueDefined } = useContext(DataContext)
@@ -10,9 +10,9 @@ const ValueDefined = () => {
 
 	useEffect(() => {
 		setCoords({ lat: lat ? lat : 0, lng: lng ? lng : 0 })
-	}, [subjectProperty])
+	}, [lat, lng])
 
-	const handleApiLoaded = (map: any, maps: any) => {
+	const handleApiLoaded = (map: any) => {
 		map.mapTypeId = 'satellite'
 		map.tilt = 45
 	}
@@ -25,12 +25,12 @@ const ValueDefined = () => {
 				{lat && lng && (
 					<GoogleMapReact
 						bootstrapURLKeys={{
-							key: 'AIzaSyCDqsUhKCXYQ3T_ErIXnVt0xoQa4wo_KOE',
+							key: 'AIzaSyCDqsUhKCXYQ3T_ErIXnVt0xoQa4wo_KOE'
 						}}
 						center={coords}
 						defaultZoom={18}
 						yesIWantToUseGoogleMapApiInternals
-						onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+						onGoogleApiLoaded={({ map }) => handleApiLoaded(map)}
 						distanceToMouse={(): any => {}}
 					>
 						<MapMarker

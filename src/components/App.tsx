@@ -1,11 +1,10 @@
+import * as am4core from '@amcharts/amcharts4/core'
 import { DataInterface, initialState } from 'initialState'
 import React, { createContext, useEffect, useState } from 'react'
 import Cover from './Cover'
 import Demographics from './Demographics'
 import MarketPerformance2 from './MarketPerformance2'
 import SubjectPropertyDescriptionDetails from './SubjectPropertyDescriptionDetails'
-import MarketPerformance1 from './MarketPerformance1'
-import * as am4core from '@amcharts/amcharts4/core'
 
 export const DataContext = createContext<DataInterface>(initialState)
 am4core.options.commercialLicense = true
@@ -37,7 +36,7 @@ const App = () => {
 					<>
 						<Cover />
 						<SubjectPropertyDescriptionDetails />
-						<MarketPerformance1 />
+						{/* <MarketPerformance1 /> */}
 						<MarketPerformance2 />
 						<Demographics />
 					</>
