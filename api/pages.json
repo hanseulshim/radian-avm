@@ -1280,93 +1280,63 @@
 	"retailVsDistressedSalesData": [
 		{
 			"date": "01/01/2011",
-			"level1Value1": 1380097,
-			"level1Value2": 39,
-			"level2Value1": 1335460,
-			"level2Value2": 51,
-			"level3Value1": 1234175,
-			"level3Value2": 18
+			"level1": 51,
+			"level2": 39,
+			"level3": 1335460
 		},
 		{
 			"date": "01/01/2012",
-			"level1Value1": 1064767,
-			"level1Value2": 58,
-			"level2Value1": 1284057,
-			"level2Value2": 16,
-			"level3Value1": 1349042,
-			"level3Value2": 44
+			"level1": 45,
+			"level2": 35,
+			"level3": 1235460
 		},
 		{
 			"date": "01/01/2013",
-			"level1Value1": 1176303,
-			"level1Value2": 34,
-			"level2Value1": 983942,
-			"level2Value2": 12,
-			"level3Value1": 1364149,
-			"level3Value2": 25
+			"level1": 42,
+			"level2": 39,
+			"level3": 1135460
 		},
 		{
 			"date": "01/01/2014",
-			"level1Value1": 1098623,
-			"level1Value2": 13,
-			"level2Value1": 1128149,
-			"level2Value2": 57,
-			"level3Value1": 1026193,
-			"level3Value2": 49
+			"level1": 51,
+			"level2": 39,
+			"level3": 1335460
 		},
 		{
 			"date": "01/01/2015",
-			"level1Value1": 1310296,
-			"level1Value2": 34,
-			"level2Value1": 1348591,
-			"level2Value2": 37,
-			"level3Value1": 1212424,
-			"level3Value2": 33
+			"level1": 48,
+			"level2": 41,
+			"level3": 1355460
 		},
 		{
 			"date": "01/01/2016",
-			"level1Value1": 1145331,
-			"level1Value2": 46,
-			"level2Value1": 948015,
-			"level2Value2": 14,
-			"level3Value1": 1060325,
-			"level3Value2": 15
+			"level1": 52,
+			"level2": 39,
+			"level3": 1135460
 		},
 		{
 			"date": "01/01/2017",
-			"level1Value1": 1210634,
-			"level1Value2": 54,
-			"level2Value1": 1123473,
-			"level2Value2": 56,
-			"level3Value1": 1333276,
-			"level3Value2": 24
+			"level1": 50,
+			"level2": 37,
+			"level3": 1335460
 		},
 		{
 			"date": "01/01/2018",
-			"level1Value1": 1086052,
-			"level1Value2": 30,
-			"level2Value1": 1233295,
-			"level2Value2": 31,
-			"level3Value1": 1123315,
-			"level3Value2": 30
+			"level1": 54,
+			"level2": 42,
+			"level3": 1405460
 		},
 		{
 			"date": "01/01/2019",
-			"level1Value1": 1066824,
-			"level1Value2": 29,
-			"level2Value1": 1149768,
-			"level2Value2": 23,
-			"level3Value1": 989532,
-			"level3Value2": 39
+			"level1": 57,
+			"level2": 46,
+			"level3": 1505460
 		},
 		{
 			"date": "01/01/2020",
-			"level1Value1": 1187121,
-			"level1Value2": 21,
-			"level2Value1": 1218642,
-			"level2Value2": 17,
-			"level3Value1": 1051924,
-			"level3Value2": 38
+			"level1": 60,
+			"level2": 48,
+			"level3": 1555460
 		}
 	],
 	"neighborhoodSummary": "The residents of Money & Brains seem to have it all: high incomes, advanced degrees, and sophisticated tastes to match their credentials. Many of these city dwellers are married couples with few children who live in fashionable homes on small, manicured lots.",
