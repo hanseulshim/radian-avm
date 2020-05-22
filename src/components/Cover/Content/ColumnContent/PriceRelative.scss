@@ -12,7 +12,7 @@
 				}
 				.chart-container {
 					margin-top: 20px;
-					background: $wild-sand;
+
 					flex: 1;
 
 					&.retail {
@@ -31,7 +31,8 @@
 					.legend-container {
 						display: flex;
 						justify-content: center;
-						margin-bottom: 20px;
+						margin-bottom: 10px;
+						margin-top: 10px;
 
 						.legend {
 							display: flex;
