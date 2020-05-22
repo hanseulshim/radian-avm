@@ -22,7 +22,6 @@ const FamilyMakeup = () => {
 			if (a.value === null || b.value === null) return -1
 			return b.value - a.value
 		})[0]
-		console.log(largestMakeup)
 		if (largestMakeup.value) returnObj.percent = largestMakeup.value.toString()
 		if (largestMakeup.category) returnObj.makeup = largestMakeup.category
 		if (level1Averages?.label) returnObj.geography = level1Averages.label

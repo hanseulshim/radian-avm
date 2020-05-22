@@ -1,18 +1,18 @@
-import React, { useContext, useEffect } from 'react'
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import IconBath from 'assets/IconBath'
 import IconBed from 'assets/IconBed'
 import IconCalendar from 'assets/IconCalendar'
 import IconCar from 'assets/IconCar'
 import IconRuler from 'assets/IconRuler'
 import { DataContext } from 'components/App'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
+import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors.js'
 
 const PropertyCharacteristics = () => {
 	const { propertyCharacteristics } = useContext(DataContext)
 	const { source1, source2, source3, other1Value, other2Value } = {
-		...propertyCharacteristics,
+		...propertyCharacteristics
 	}
 	const charts = ['beds', 'baths', 'sqFt', 'age', 'garage']
 	const data: Array<{
@@ -40,7 +40,7 @@ const PropertyCharacteristics = () => {
 			bathsPercent: source1?.bathsPercent ? source1?.bathsPercent : null,
 			sqFtPercent: source1?.sqFtPercent ? source1?.sqFtPercent : null,
 			agePercent: source1?.agePercent ? source1?.agePercent : null,
-			garagePercent: source1?.garagePercent ? source1?.garagePercent : null,
+			garagePercent: source1?.garagePercent ? source1?.garagePercent : null
 		},
 		{
 			label: null,
@@ -58,7 +58,7 @@ const PropertyCharacteristics = () => {
 			garagePercent: other1Value?.garagePercent
 				? other1Value?.garagePercent
 				: null,
-			name: 'other1Value',
+			name: 'other1Value'
 		},
 		{
 			label: null,
@@ -76,14 +76,14 @@ const PropertyCharacteristics = () => {
 			garagePercent: other2Value?.garagePercent
 				? other2Value?.garagePercent
 				: null,
-			name: 'other2Value',
-		},
+			name: 'other2Value'
+		}
 	]
 
 	useEffect(() => {
 		charts.map((chartId) => {
 			const chart = am4core.create(chartId, am4charts.XYChart)
-			chart.paddingLeft = chartId == 'beds' ? 10 : 0
+			chart.paddingLeft = chartId === 'beds' ? 10 : 0
 			chart.paddingRight = 0
 			chart.height = am4core.percent(100)
 			chart.width = am4core.percent(95)
@@ -153,8 +153,9 @@ const PropertyCharacteristics = () => {
 					} else return colors.neptune05
 				}
 			)
+			return null
 		})
-	}, [source1, other1Value, other2Value])
+	}, [source1, other1Value, other2Value, charts, data])
 	return (
 		<div className="property-characteristics-container">
 			<div className="section-title">

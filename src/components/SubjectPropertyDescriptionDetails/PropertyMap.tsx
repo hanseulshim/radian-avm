@@ -1,7 +1,7 @@
 import { DataContext } from 'components/App'
-import React, { useContext, useState, useEffect } from 'react'
-import GoogleMapReact from 'google-map-react'
 import MapMarker from 'components/Common/MapMarker'
+import GoogleMapReact from 'google-map-react'
+import React, { useContext, useEffect, useState } from 'react'
 import { colors } from 'styles/colors'
 
 const getText = (text?: string | null): string => {
@@ -12,32 +12,23 @@ const getNum = (text?: number | null, dollar?: boolean): string => {
 	return num ? (dollar ? `$${num.toLocaleString()}` : `${num}`) : '--'
 }
 
+interface geoJSON {
+	type: string | null
+	coordinates: [[[[number, number]]]] | null
+}
+
 const PropertyMap = () => {
 	const { propertyNeighborhoodInfo, subjectProperty } = useContext(DataContext)
 	const { lat, lng } = { ...subjectProperty }
 	const [subjectCoords, setSubjectCoords] = useState({ lat: 0, lng: 0 })
-	const [level1Coords, setlevel1Coords] = useState<
-		| {
-				type: string | null
-				coordinates: [[[[number, number]]]] | null
-		  }
-		| null
-		| undefined
-	>({
+	const [level1Coords, setlevel1Coords] = useState<geoJSON | null | undefined>({
 		type: '',
-		coordinates: [[[[0, 0]]]],
+		coordinates: [[[[0, 0]]]]
 	})
 
-	const [level2Coords, setlevel2Coords] = useState<
-		| {
-				type: string | null
-				coordinates: [[[[number, number]]]] | null
-		  }
-		| null
-		| undefined
-	>({
+	const [level2Coords, setlevel2Coords] = useState<geoJSON | null | undefined>({
 		type: '',
-		coordinates: [[[[0, 0]]]],
+		coordinates: [[[[0, 0]]]]
 	})
 
 	const {
@@ -58,27 +49,27 @@ const PropertyMap = () => {
 		hoa,
 		contact,
 		fees,
-		phone,
+		phone
 	} = {
-		...propertyNeighborhoodInfo,
+		...propertyNeighborhoodInfo
 	}
 
 	useEffect(() => {
 		setSubjectCoords({ lat: lat ? lat : 0, lng: lng ? lng : 0 })
 		setlevel1Coords(level1?.geoJSON)
 		setlevel2Coords(level2?.geoJSON)
-	}, [subjectProperty, propertyNeighborhoodInfo])
+	}, [lat, lng, level1, level2])
 
-	const handleApiLoaded = (map: any, maps: any) => {
+	const handleApiLoaded = (map: any) => {
 		const geoJson1 = {
 			type: 'FeatureCollection',
 			features: [
 				{
 					type: 'Feature',
 					properties: { name: 'level1' },
-					geometry: level1Coords,
-				},
-			],
+					geometry: level1Coords
+				}
+			]
 		}
 
 		const geoJson2 = {
@@ -87,9 +78,9 @@ const PropertyMap = () => {
 				{
 					type: 'Feature',
 					properties: { name: 'level2' },
-					geometry: level2Coords,
-				},
-			],
+					geometry: level2Coords
+				}
+			]
 		}
 
 		map.data.addGeoJson(geoJson1)
@@ -99,7 +90,7 @@ const PropertyMap = () => {
 			return {
 				fillOpacity: 0,
 				strokeColor: name === 'level2' ? colors.azure05 : colors.azure,
-				strokeWeight: name === 'level2' ? 5 : 3,
+				strokeWeight: name === 'level2' ? 5 : 3
 			}
 		})
 	}
@@ -120,12 +111,12 @@ const PropertyMap = () => {
 				{lat && lng && (
 					<GoogleMapReact
 						bootstrapURLKeys={{
-							key: 'AIzaSyCDqsUhKCXYQ3T_ErIXnVt0xoQa4wo_KOE',
+							key: 'AIzaSyCDqsUhKCXYQ3T_ErIXnVt0xoQa4wo_KOE'
 						}}
 						center={subjectCoords}
 						defaultZoom={14}
 						yesIWantToUseGoogleMapApiInternals
-						onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+						onGoogleApiLoaded={({ map }) => handleApiLoaded(map)}
 						distanceToMouse={(): any => {}}
 					>
 						<MapMarker
