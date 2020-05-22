@@ -1,10 +1,9 @@
-import IconMedians from 'assets/IconMedians'
-import IconSold from 'assets/IconSold'
 import { DataContext } from 'components/App'
 import React, { useContext, useEffect } from 'react'
 import * as am4core from '@amcharts/amcharts4/core'
 import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
+import AverageDom from './AverageDom'
 
 const ListedInventory = () => {
 	const { inventory, listedInventoryByDom } = useContext(DataContext)
@@ -92,20 +91,7 @@ const ListedInventory = () => {
 					Listed Inventory by DOM (as of Prior Month)
 				</div>
 				<div className="chart inventory" id="listedInventoryByDomChart" />
-				<div className="sub-section-title second">
-					<div>Average DOM</div>
-					<div className="legend-container">
-						<div className="legend">
-							<IconMedians />
-							<div>Average listings</div>
-						</div>
-						<div className="legend">
-							<IconSold />
-							<div>Sold</div>
-						</div>
-					</div>
-				</div>
-				<div className="chart inventory"></div>
+				<AverageDom />
 			</div>
 		</div>
 	)

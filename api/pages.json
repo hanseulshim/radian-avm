@@ -1129,13 +1129,13 @@
 	},
 	"listedInventoryByDom": [
 		{
-			"category": "91-120",
-			"level1": 24,
-			"level2": 31,
-			"level3": 37
+			"category": "0-30",
+			"level1": 40,
+			"level2": 37,
+			"level3": 32
 		},
 		{
-			"category": "61-90",
+			"category": "31-60",
 			"level1": 24,
 			"level2": 40,
 			"level3": 20
@@ -1147,22 +1147,22 @@
 			"level3": 35
 		},
 		{
-			"category": "61-90",
+			"category": "91-120",
+			"level1": 24,
+			"level2": 31,
+			"level3": 37
+		},
+		{
+			"category": "121-150",
 			"level1": 39,
 			"level2": 31,
 			"level3": 32
 		},
 		{
-			"category": "91-120",
+			"category": "150+",
 			"level1": 37,
 			"level2": 23,
 			"level3": 25
-		},
-		{
-			"category": "0-30",
-			"level1": 40,
-			"level2": 37,
-			"level3": 32
 		}
 	],
 	"avgDom": [

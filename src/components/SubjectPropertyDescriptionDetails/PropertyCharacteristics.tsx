@@ -153,6 +153,9 @@ const PropertyCharacteristics = () => {
 					} else return colors.neptune05
 				}
 			)
+			return () => {
+				chart.dispose()
+			}
 		})
 	}, [source1, other1Value, other2Value])
 	return (
