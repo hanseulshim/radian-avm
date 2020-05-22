@@ -13,7 +13,6 @@ const RetailDistressedSales = () => {
 	useEffect(() => {
 		const chart = am4core.create('retailVsDistressedChart', am4charts.XYChart)
 		chart.data = retailVsDistressedSalesData as any
-		console.log(chart.data)
 
 		const dateAxis = chart.xAxes.push(new am4charts.DateAxis())
 		dateAxis.startLocation = 0.5
@@ -67,26 +66,6 @@ const RetailDistressedSales = () => {
 		level3Series.strokeWidth = 3
 		level3Series.fill = am4core.color(colors.gray)
 		level3Series.fillOpacity = 0.05
-
-		// const comparable1Series = chart.series.push(new am4charts.LineSeries())
-		// comparable1Series.data = inventory.comparable1
-		// comparable1Series.config = config.line('comparable1')
-
-		// const comparable2Series = chart.series.push(new am4charts.LineSeries())
-		// comparable2Series.data = inventory.comparable2
-		// comparable2Series.config = config.line('comparable2')
-
-		// const selectedSoldSeries = chart.series.push(new am4charts.LineSeries())
-		// selectedSoldSeries.data = inventory.selectedSold
-		// selectedSoldSeries.config = config.line('selected', 'dash')
-
-		// const comparable1SoldSeries = chart.series.push(new am4charts.LineSeries())
-		// comparable1SoldSeries.data = inventory.comparable1Sold
-		// comparable1SoldSeries.config = config.line('comparable1', 'dash')
-
-		// const comparable2SoldSeries = chart.series.push(new am4charts.LineSeries())
-		// comparable2SoldSeries.data = inventory.comparable2Sold
-		// comparable2SoldSeries.config = config.line('comparable2', 'dash')
 
 		return () => {
 			chart.dispose()
