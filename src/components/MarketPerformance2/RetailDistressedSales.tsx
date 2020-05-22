@@ -12,7 +12,8 @@ const RetailDistressedSales = () => {
 
 	useEffect(() => {
 		const chart = am4core.create('retailVsDistressedChart', am4charts.XYChart)
-		chart.data = retailVsDistressedSales as any
+		chart.data = retailVsDistressedSalesData as any
+		console.log(chart.data)
 
 		const dateAxis = chart.xAxes.push(new am4charts.DateAxis())
 		dateAxis.startLocation = 0.5
@@ -21,23 +22,51 @@ const RetailDistressedSales = () => {
 		dateAxis.renderer.labels.template.truncate = true
 
 		const valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
-		valueAxis.min = 0
+		// valueAxis.min = 0
 		valueAxis.width = 75
 		valueAxis.strokeWidth = 0
-		valueAxis.renderer.minGridDistance = 25
+		valueAxis.renderer.minGridDistance = 50
 		valueAxis.renderer.labels.template.width = 100
 		valueAxis.renderer.labels.template.maxWidth = 100
 		valueAxis.renderer.labels.template.dx = -25
 		valueAxis.renderer.labels.template.truncate = true
 		valueAxis.renderer.labels.template.textAlign = 'end'
+		valueAxis.numberFormatter.numberFormat = '$#a'
 
 		const valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis())
+
 		valueAxis2.renderer.opposite = true
+		valueAxis2.renderer.minGridDistance = 50
+		valueAxis2.min = 0
+		valueAxis2.renderer.labels.template.adapter.add(
+			'text',
+			(text: string | undefined, label: any) => {
+				return label.dataItem.value
+			}
+		)
+		valueAxis2.syncWithAxis = valueAxis
 
 		const level1Series = chart.series.push(new am4charts.LineSeries())
-		level1Series.dataFields.valueY = 'level1Value1'
+		level1Series.dataFields.valueY = 'level1'
 		level1Series.dataFields.dateX = 'date'
 		level1Series.yAxis = valueAxis2
+		level1Series.stroke = am4core.color(colors.neptune)
+		level1Series.strokeWidth = 3
+
+		const level2Series = chart.series.push(new am4charts.LineSeries())
+		level2Series.dataFields.valueY = 'level2'
+		level2Series.dataFields.dateX = 'date'
+		level2Series.yAxis = valueAxis2
+		level2Series.stroke = am4core.color(colors.azure)
+		level2Series.strokeWidth = 3
+
+		const level3Series = chart.series.push(new am4charts.LineSeries())
+		level3Series.dataFields.valueY = 'level3'
+		level3Series.dataFields.dateX = 'date'
+		level3Series.stroke = am4core.color(colors.black)
+		level3Series.strokeWidth = 3
+		level3Series.fill = am4core.color(colors.gray)
+		level3Series.fillOpacity = 0.05
 
 		// const comparable1Series = chart.series.push(new am4charts.LineSeries())
 		// comparable1Series.data = inventory.comparable1
