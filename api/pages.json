@@ -1170,85 +1170,99 @@
 			"date": "01/01/2006",
 			"level1": 39,
 			"level2": 38,
-			"level3": 39
+			"level3": 39,
+			"sold": 32
 		},
 		{
 			"date": "01/01/2007",
 			"level1": 39,
 			"level2": 45,
-			"level3": 47
+			"level3": 47,
+			"sold": 42
 		},
 		{
 			"date": "01/01/2008",
 			"level1": 29,
 			"level2": 35,
-			"level3": 50
+			"level3": 50,
+			"sold": 52
 		},
 		{
 			"date": "01/01/2009",
 			"level1": 36,
 			"level2": 29,
-			"level3": 28
+			"level3": 28,
+			"sold": 22
 		},
 		{
 			"date": "01/01/2010",
 			"level1": 50,
 			"level2": 48,
-			"level3": 31
+			"level3": 31,
+			"sold": 32
 		},
 		{
 			"date": "01/01/2011",
 			"level1": 41,
 			"level2": 23,
-			"level3": 17
+			"level3": 17,
+			"sold": 12
 		},
 		{
 			"date": "01/01/2012",
 			"level1": 40,
 			"level2": 28,
-			"level3": 44
+			"level3": 44,
+			"sold": 42
 		},
 		{
 			"date": "01/01/2013",
 			"level1": 20,
 			"level2": 31,
-			"level3": 17
+			"level3": 17,
+			"sold": 12
 		},
 		{
 			"date": "01/01/2014",
 			"level1": 45,
 			"level2": 37,
-			"level3": 48
+			"level3": 48,
+			"sold": 42
 		},
 		{
 			"date": "01/01/2015",
 			"level1": 28,
 			"level2": 34,
-			"level3": 30
+			"level3": 30,
+			"sold": 32
 		},
 		{
 			"date": "01/01/2016",
 			"level1": 22,
 			"level2": 29,
-			"level3": 26
+			"level3": 26,
+			"sold": 22
 		},
 		{
 			"date": "01/01/2017",
 			"level1": 21,
 			"level2": 34,
-			"level3": 23
+			"level3": 23,
+			"sold": 22
 		},
 		{
 			"date": "01/01/2018",
 			"level1": 38,
 			"level2": 33,
-			"level3": 43
+			"level3": 43,
+			"sold": 42
 		},
 		{
 			"date": "01/01/2019",
 			"level1": 21,
 			"level2": 40,
-			"level3": 23
+			"level3": 23,
+			"sold": 22
 		}
 	],
 	"retailVsDistressedSales": {
