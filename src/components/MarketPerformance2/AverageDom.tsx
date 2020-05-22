@@ -53,6 +53,13 @@ const AverageDom = () => {
 		level3Series.stroke = am4core.color(colors.black)
 		level3Series.strokeWidth = 3
 
+		const soldSeries = chart.series.push(new am4charts.LineSeries())
+		soldSeries.dataFields.dateX = 'date'
+		soldSeries.dataFields.valueY = 'sold'
+		soldSeries.stroke = am4core.color(colors.black)
+		soldSeries.strokeWidth = 3
+		soldSeries.strokeDasharray = '5,5'
+
 		return () => {
 			chart.dispose()
 		}
