@@ -18,13 +18,11 @@ const AverageDom = () => {
 			timeUnit: 'year',
 			count: 1,
 		}
-		dateAxis.startLocation = 0.5
-		dateAxis.endLocation = 0.5
+
 		dateAxis.renderer.minGridDistance = 10
 		dateAxis.renderer.labels.template.truncate = true
 
 		const valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
-		valueAxis.min = 0
 		valueAxis.width = 75
 		valueAxis.strokeWidth = 0
 		valueAxis.renderer.minGridDistance = 25
@@ -33,6 +31,9 @@ const AverageDom = () => {
 		valueAxis.renderer.labels.template.dx = -25
 		valueAxis.renderer.labels.template.truncate = true
 		valueAxis.renderer.labels.template.textAlign = 'end'
+		dateAxis.renderer.labels.template.location = 0.0001
+
+		valueAxis.renderer.labels.template.truncate = true
 
 		const level1Series = chart.series.push(new am4charts.LineSeries())
 		level1Series.dataFields.dateX = 'date'
