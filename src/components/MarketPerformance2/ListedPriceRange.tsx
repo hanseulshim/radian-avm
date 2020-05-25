@@ -12,7 +12,7 @@ const ListedPriceRange = () => {
 
 	useEffect(() => {
 		const chart = am4core.create('listedPriceRangeChart', am4charts.XYChart)
-		//TO DO what does 'as any' do here?
+
 		chart.data = listedPriceRangeByDom as any
 		chart.paddingLeft = 0
 		chart.paddingRight = 0
