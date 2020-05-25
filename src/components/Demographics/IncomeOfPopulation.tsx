@@ -17,6 +17,7 @@ const IncomeOfPopulation = () => {
 		categoryAxis.dataFields.category = 'category'
 		categoryAxis.renderer.minGridDistance = 10
 		categoryAxis.startLocation = 0.5
+		categoryAxis.endLocation = 0.5
 
 		const valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
 		valueAxis.numberFormatter.numberFormat = '#%'
