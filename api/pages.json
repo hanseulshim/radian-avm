@@ -1500,55 +1500,55 @@
 	},
 	"incomeOfPopulationData": [
 		{
-			"category": 50000,
-			"level1": 23,
-			"level2": 25,
-			"level3": 25
+			"category": "0",
+			"level1": 6,
+			"level2": 10,
+			"level3": 5
 		},
 		{
-			"category": 0,
+			"category": "$25k",
 			"level1": 19,
 			"level2": 6,
 			"level3": 24
 		},
 		{
-			"category": 50000,
-			"level1": 14,
+			"category": "$50k",
+			"level1": 28,
 			"level2": 13,
-			"level3": 1
+			"level3": 20
 		},
 		{
-			"category": 50000,
+			"category": "$75k",
 			"level1": 17,
 			"level2": 7,
 			"level3": 15
 		},
 		{
-			"category": 75000,
+			"category": "$100k",
 			"level1": 6,
 			"level2": 17,
-			"level3": 10
+			"level3": 18
 		},
 		{
-			"category": 75000,
+			"category": "$125k",
 			"level1": 13,
 			"level2": 21,
 			"level3": 14
 		},
 		{
-			"category": 200000,
+			"category": "$150k",
 			"level1": 6,
 			"level2": 18,
 			"level3": 23
 		},
 		{
-			"category": 0,
-			"level1": 23,
+			"category": "$175k",
+			"level1": 10,
 			"level2": 14,
 			"level3": 4
 		},
 		{
-			"category": 200000,
+			"category": "$200k",
 			"level1": 4,
 			"level2": 5,
 			"level3": 14

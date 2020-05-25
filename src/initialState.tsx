@@ -429,6 +429,11 @@ export interface DataInterface {
 		level2Label: string | null
 		level3Label: string | null
 	} | null
-	incomeOfPopulationData: string | null
+	incomeOfPopulationData: Array<{
+		category: string | null
+		level1: number | null
+		level2: number | null
+		level3: number | null
+	}> | null
 	footer: string | null
 }
