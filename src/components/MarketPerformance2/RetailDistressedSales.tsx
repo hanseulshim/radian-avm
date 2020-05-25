@@ -21,7 +21,7 @@ const RetailDistressedSales = () => {
 		dateAxis.renderer.labels.template.truncate = true
 
 		const valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
-		// valueAxis.min = 0
+
 		valueAxis.width = 75
 		valueAxis.strokeWidth = 0
 		valueAxis.renderer.minGridDistance = 50
