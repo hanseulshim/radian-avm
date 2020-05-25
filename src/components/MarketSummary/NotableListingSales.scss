@@ -1,0 +1,12 @@
+@import 'styles/variables';
+
+.market-summary {
+	.notable-listing-sales {
+		padding: 30px $side-spacer 125px;
+		background: $wild-sand;
+
+		.section-title {
+			margin-bottom: 30px;
+		}
+	}
+}

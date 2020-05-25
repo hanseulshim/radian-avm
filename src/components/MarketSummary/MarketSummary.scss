@@ -1,0 +1,10 @@
+@import 'styles/variables';
+@import './MarketAtAGlance.scss';
+@import './NotableListingSales.scss';
+
+.market-summary {
+	.footer-container {
+		background: $wild-sand;
+		padding-bottom: 60px;
+	}
+}
