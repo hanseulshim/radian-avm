@@ -9,4 +9,5 @@ export const colors = {
 	white: '#ffffff',
 	wildSand: '#f4f4f4',
 	markerRed: '#C6401E',
+	brandyPunch: '#F79226',
 }

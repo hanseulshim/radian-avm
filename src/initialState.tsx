@@ -419,7 +419,10 @@ export interface DataInterface {
 	} | null
 	ageOfPopulation: {
 		label: string | null
-		data: string | null
+		data: Array<{
+			value: number | null
+			category: string | null
+		}> | null
 	} | null
 	incomeOfPopulation: {
 		level1Label: string | null
