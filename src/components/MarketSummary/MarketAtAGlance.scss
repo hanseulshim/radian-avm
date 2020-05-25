@@ -1,0 +1,70 @@
+@import 'styles/variables';
+
+.market-summary {
+	.market-at-a-glance {
+		padding: 20px $side-spacer 70px;
+
+		.section-title {
+			margin-bottom: 25px;
+			align-items: flex-end;
+		}
+
+		.legend-container {
+			display: flex;
+			align-items: flex-end;
+			font-size: $normal-text;
+			font-weight: $medium-weight;
+
+			.legend {
+				display: flex;
+				align-items: center;
+
+				&.house {
+					margin-bottom: 10px;
+					margin-right: 35px;
+				}
+
+				&.table {
+					flex-direction: column;
+				}
+
+				.description {
+					margin-left: 10px;
+				}
+
+				.row {
+					display: flex;
+					flex: 1;
+					align-items: flex-end;
+
+					.first {
+						width: 100px;
+					}
+					.column {
+						display: flex;
+						justify-content: center;
+						width: 70px;
+					}
+				}
+			}
+		}
+
+		.content-container {
+			display: flex;
+			justify-content: space-between;
+
+			.description {
+				width: 358px;
+				max-height: 382px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.map-container {
+				width: 820px;
+				height: 520px;
+				background: $wild-sand;
+			}
+		}
+	}
+}

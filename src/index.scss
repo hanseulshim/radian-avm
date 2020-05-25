@@ -65,6 +65,22 @@ img {
 			fill: $thunderbird;
 		}
 	}
+	&.green {
+		#Cover {
+			fill: $neptune;
+		}
+	}
+	&.legend-icon {
+		box-shadow: 0 1px 1px 0 $black-05;
+	}
+	&.house-round {
+		width: 30px;
+		height: 29px;
+		box-shadow: 0 1px 2px 0 $black-05;
+		padding: 5px;
+		border-radius: 100%;
+		box-sizing: border-box;
+	}
 	&.confidence-1 {
 		#Rectangle {
 			fill: #d3d9e4;
