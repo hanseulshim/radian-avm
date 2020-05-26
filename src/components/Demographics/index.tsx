@@ -10,8 +10,9 @@ import IncomeOfPopulation from './IncomeOfPopulation'
 import Level1Average from './Level1Average'
 import Level2Average from './Level2Average'
 import MarketAverages from './MarketAverages'
+import NeighborhoodSummaryMap from './NeighborhoodSummaryMap'
 
-const MarketPerformance1 = () => {
+const Demographics = () => {
 	const { neighborhoodSummary } = useContext(DataContext)
 	return (
 		<div className="demographics page">
@@ -24,6 +25,7 @@ const MarketPerformance1 = () => {
 				</div>
 			</div>
 			<div className="map-container">
+				<NeighborhoodSummaryMap />
 				<div className="panel market-averages-container">
 					<MarketAverages />
 				</div>
@@ -45,4 +47,4 @@ const MarketPerformance1 = () => {
 	)
 }
 
-export default MarketPerformance1
+export default Demographics

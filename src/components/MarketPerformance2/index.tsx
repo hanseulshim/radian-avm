@@ -2,10 +2,10 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
 import CostTimeMarket from './CostTimeMarket'
-import './MarketPerformance1.scss'
+import './MarketPerformance2.scss'
 import RetailDistressedSales from './RetailDistressedSales'
 
-const MarketPerformance1 = () => {
+const MarketPerformance2 = () => {
 	return (
 		<div className="market-performance page">
 			<Header title="Market Performance" />
@@ -18,4 +18,4 @@ const MarketPerformance1 = () => {
 	)
 }
 
-export default MarketPerformance1
+export default MarketPerformance2

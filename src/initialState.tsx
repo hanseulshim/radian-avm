@@ -334,7 +334,18 @@ export interface DataInterface {
 		level3PriorMonth: string | null
 		level3PriorYear: string | null
 	} | null
-	listedPriceRangeByDom: string | null
+	listedPriceRangeByDom: Array<{
+		category: string | null
+		level1Low: number | null
+		level1Medium: number | null
+		level1High: number | null
+		level2Low: number | null
+		level2Medium: number | null
+		level2High: number | null
+		level3Low: number | null
+		level3Medium: number | null
+		level3High: number | null
+	}> | null
 	inventory: {
 		description: string | null
 		level1Label: string | null
@@ -422,13 +433,21 @@ export interface DataInterface {
 	} | null
 	ageOfPopulation: {
 		label: string | null
-		data: string | null
+		data: Array<{
+			value: number | null
+			category: string | null
+		}> | null
 	} | null
 	incomeOfPopulation: {
 		level1Label: string | null
 		level2Label: string | null
 		level3Label: string | null
 	} | null
-	incomeOfPopulationData: string | null
+	incomeOfPopulationData: Array<{
+		category: string | null
+		level1: number | null
+		level2: number | null
+		level3: number | null
+	}> | null
 	footer: string | null
 }
