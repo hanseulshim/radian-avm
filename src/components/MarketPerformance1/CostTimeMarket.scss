@@ -74,7 +74,6 @@
 						}
 						.legend-container {
 							display: flex;
-							// align-items: flex-end;
 							.legend {
 								margin-left: 40px;
 								display: flex;
@@ -90,7 +89,6 @@
 
 					.chart {
 						margin-top: 10px;
-						// background: $wild-sand;
 						&.price-range {
 							height: 300px;
 						}
