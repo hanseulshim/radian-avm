@@ -69,6 +69,17 @@ img {
 		#Cover {
 			fill: $neptune;
 		}
+		#Line {
+			stroke: $neptune;
+		}
+	}
+	&.blue {
+		#Cover {
+			fill: $azure;
+		}
+		#Line {
+			stroke: $azure;
+		}
 	}
 	&.legend-icon {
 		box-shadow: 0 1px 1px 0 $black-05;

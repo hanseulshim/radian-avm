@@ -1,10 +1,18 @@
 @import 'styles/variables';
-@import './CostTimeMarket.scss';
-@import './RetailDistressedSales.scss';
+@import './Transactions.scss';
+@import './MedianPrices.scss';
+@import './AgeOfProperties.scss';
+@import './SaleToListRatio.scss';
 
-.market-performance {
+.market-performance-1 {
 	.content-container {
-		padding: 40px $side-spacer 0;
-		margin-bottom: 160px;
+		padding: 60px $side-spacer 0;
+		margin-bottom: 50px;
+
+		.chart-row {
+			margin-top: 25px;
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 }

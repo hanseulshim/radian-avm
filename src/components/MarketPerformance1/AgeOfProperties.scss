@@ -1,0 +1,19 @@
+@import 'styles/variables';
+
+.market-performance-1 {
+	.content-container {
+		.age-of-properties {
+			width: 450px;
+			margin-right: 15px;
+
+			.section-title {
+				margin-bottom: 20px;
+			}
+
+			.chart-container {
+				background: $wild-sand;
+				height: 300px;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+@import 'styles/variables';
+
+.market-performance-1 {
+	.content-container {
+		.sale-to-list-ratio {
+			flex: 1;
+
+			.section-title {
+				margin-bottom: 20px;
+
+				.legend-container {
+					display: flex;
+					font-weight: $normal-weight;
+					font-size: $normal-text;
+					justify-content: space-between;
+					width: 200px;
+
+					.legend {
+						display: flex;
+						align-items: center;
+
+						.marker {
+							width: 17px;
+							height: 17px;
+							margin-right: 10px;
+
+							&.level1 {
+								background: $azure;
+							}
+							&.level2 {
+								background: $neptune;
+							}
+						}
+					}
+				}
+			}
+
+			.chart-container {
+				background: $wild-sand;
+				height: 300px;
+			}
+		}
+	}
+}

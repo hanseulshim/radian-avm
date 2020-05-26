@@ -1,17 +1,23 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
-import CostTimeMarket from './CostTimeMarket'
+import AgeOfProperties from './AgeOfProperties'
 import './MarketPerformance1.scss'
-import RetailDistressedSales from './RetailDistressedSales'
+import MedianPrices from './MedianPrices'
+import SaleToListRatio from './SaleToListRatio'
+import Transactions from './Transactions'
 
 const MarketPerformance1 = () => {
 	return (
-		<div className="market-performance page">
+		<div className="market-performance-1 page">
 			<Header title="Market Performance" />
 			<div className="content-container">
-				<CostTimeMarket />
-				<RetailDistressedSales />
+				<Transactions />
+				<MedianPrices />
+				<div className="chart-row">
+					<AgeOfProperties />
+					<SaleToListRatio />
+				</div>
 			</div>
 			<Footer />
 		</div>

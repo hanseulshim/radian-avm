@@ -749,7 +749,7 @@
 	},
 	"medianPrices": {
 		"atAGlance": "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci.",
-		"level1Label": "Zip",
+		"level1Label": "ZIP",
 		"level1Sold": [
 			{
 				"value": 713186,
@@ -964,7 +964,7 @@
 		}
 	],
 	"saleToListRatio": {
-		"level1Label": "zip code",
+		"level1Label": "ZIP Code",
 		"level2Label": "County",
 		"data": [
 			{
