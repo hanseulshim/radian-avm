@@ -54,7 +54,10 @@ const NotableListingSales = () => {
 						) => (
 							<div key={index} className="listing">
 								<div className="image-container">
-									<img src={imagePath ? imagePath : IconHouseUnavailable} />
+									<img
+										alt="house"
+										src={imagePath ? imagePath : IconHouseUnavailable}
+									/>
 									<div className="row">
 										<div className="distance">{distance} miles</div>
 										<div className={getStatus(status)}>{status}</div>

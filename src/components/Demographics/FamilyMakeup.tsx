@@ -1,14 +1,13 @@
-import { DataContext } from 'components/App'
-import React, { useContext, useEffect } from 'react'
 import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import * as am4plugins_forceDirected from '@amcharts/amcharts4/plugins/forceDirected'
-import { colors } from 'styles/colors'
-import single from 'assets/icon_fam_1.svg'
 import singleParent from 'assets/icon_fam_1-1.svg'
-import couple from 'assets/icon_fam_2.svg'
+import single from 'assets/icon_fam_1.svg'
 import singleChild from 'assets/icon_fam_2-1.svg'
 import twoChild from 'assets/icon_fam_2-2.svg'
+import couple from 'assets/icon_fam_2.svg'
+import { DataContext } from 'components/App'
+import React, { useContext, useEffect } from 'react'
+import { colors } from 'styles/colors'
 
 const FamilyMakeup = () => {
 	const { familyMakeupDescription, familyMakeup, level1Averages } = useContext(
@@ -40,7 +39,6 @@ const FamilyMakeup = () => {
 			if (ctx && ctx.value > 10) {
 				return ctx.value * 1.5
 			} else return 20
-			return 20
 		})
 
 		icon.adapter.add('href', (href, target) => {
@@ -77,7 +75,7 @@ const FamilyMakeup = () => {
 		const returnObj = {
 			percent: '',
 			geography: '',
-			makeup: '',
+			makeup: ''
 		}
 		if (!familyMakeup) return returnObj
 
