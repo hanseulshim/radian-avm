@@ -37,6 +37,7 @@ const App = () => {
 					<>
 						<Cover />
 						<SubjectPropertyDescriptionDetails />
+						<MarketSummary />
 						{/* <MarketPerformance1 /> */}
 						<MarketPerformance2 />
 						<Demographics />

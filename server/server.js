@@ -6,7 +6,8 @@ const server = async () => {
 	const page = await browser.newPage()
 	await page.setViewport({ width: 1440, height: 768 })
 	await page.goto(
-		'https://s3.amazonaws.com/dev.boostlabs/radian-avm/index.html',
+		// 'https://s3.amazonaws.com/dev.boostlabs/radian-avm/index.html',
+		'http://localhost:3000/',
 		{ waitUntil: 'networkidle2' }
 	)
 	const pdfConfig = {
