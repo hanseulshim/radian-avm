@@ -43,7 +43,7 @@ export const initialState = {
 	ageOfPopulation: null,
 	incomeOfPopulation: null,
 	incomeOfPopulationData: null,
-	footer: null,
+	footer: null
 }
 
 export interface DataInterface {
@@ -258,7 +258,21 @@ export interface DataInterface {
 	} | null
 	marketAtAGlance: string | null
 	nearbyProperties: string | null
-	featuredProperties: string | null
+	featuredProperties: Array<{
+		lng: number | null
+		lat: number | null
+		category: string | null
+		condition: string | null
+		distance: number | null
+		status: string | null
+		featureNumber: number | null
+		price: number | null
+		address: string | null
+		daysOnMarket: number | null
+		eventType: string | null
+		eventDate: string | null
+		imagePath: string | null
+	}> | null
 	numberOfTransactions: {
 		duration: string | null
 		label: string | null

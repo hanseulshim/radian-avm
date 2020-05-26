@@ -1,9 +1,15 @@
 import React from 'react'
 
-const IconCircle = ({ className = 'green' }: { className?: string }) => (
+const IconCircle = ({
+	className = 'green',
+	children
+}: {
+	className?: string
+	children?: number | null
+}) => (
 	<svg
-		width="22px"
-		height="22px"
+		width={children ? '40px' : '22px'}
+		height={children ? '40px' : '22px'}
 		viewBox="0 0 22 22"
 		className={`icon ${className}`}
 	>
@@ -58,7 +64,7 @@ const IconCircle = ({ className = 'green' }: { className?: string }) => (
 					)}
 					<circle
 						stroke="#FFFFFF"
-						strokeWidth="4"
+						strokeWidth={children ? '2' : '4'}
 						strokeLinejoin="round"
 						id="Cover"
 						fillRule="evenodd"
@@ -66,6 +72,9 @@ const IconCircle = ({ className = 'green' }: { className?: string }) => (
 						cy="269"
 						r="8"
 					/>
+					<text x="1195.5" y="272" fontWeight="bold" fontSize="9px" fill="#FFF">
+						{children}
+					</text>
 				</g>
 			</g>
 		</g>

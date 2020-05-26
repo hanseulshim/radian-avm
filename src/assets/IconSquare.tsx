@@ -1,9 +1,15 @@
 import React from 'react'
 
-const IconSquare = ({ className = 'green' }: { className?: string }) => (
+const IconSquare = ({
+	className = 'green',
+	children
+}: {
+	className?: string
+	children?: number | null
+}) => (
 	<svg
-		width="20px"
-		height="20px"
+		width={children ? '38px' : '20px'}
+		height={children ? '38px' : '20px'}
 		viewBox="0 0 20 20"
 		className={`icon ${className}`}
 	>
@@ -58,7 +64,7 @@ const IconSquare = ({ className = 'green' }: { className?: string }) => (
 					)}
 					<rect
 						stroke="#FFFFFF"
-						strokeWidth="4"
+						strokeWidth={children ? '2' : '4'}
 						strokeLinejoin="round"
 						id="Cover"
 						fillRule="evenodd"
@@ -67,6 +73,9 @@ const IconSquare = ({ className = 'green' }: { className?: string }) => (
 						width="14"
 						height="14"
 					></rect>
+					<text x="1258.5" y="271" fontWeight="bold" fontSize="9px" fill="#FFF">
+						{children}
+					</text>
 				</g>
 			</g>
 		</g>

@@ -8,5 +8,87 @@
 		.section-title {
 			margin-bottom: 30px;
 		}
+
+		.listing-container {
+			display: grid;
+			grid-template-columns: 400px 400px 400px;
+			grid-template-rows: 280px 280px;
+			gap: 20px;
+
+			.listing {
+				border: 1px solid $black;
+				display: flex;
+				flex-direction: column;
+
+				.image-container {
+					height: 210px;
+					overflow: hidden;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.row {
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: flex;
+						color: $white;
+
+						.distance {
+							padding: 3px 10px;
+							background: $black;
+							width: 98px;
+							box-sizing: border-box;
+						}
+						.status {
+							padding: 3px 10px;
+							background: $black-06;
+							text-transform: capitalize;
+
+							&.rental {
+								background: $azure-08;
+							}
+							&.flip {
+								background: $neptune-08;
+								color: $black;
+							}
+						}
+					}
+
+					.feature-number {
+						position: absolute;
+						top: 5px;
+						right: 5px;
+					}
+
+					img {
+						width: 100%;
+					}
+				}
+				.info-container {
+					flex: 1;
+					background: $black;
+					color: $white;
+					padding: 10px 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					.row {
+						display: flex;
+						justify-content: space-between;
+
+						.price {
+							font-weight: $heavy-weight;
+						}
+						.right {
+							text-transform: capitalize;
+							text-align: right;
+						}
+					}
+				}
+			}
+		}
 	}
 }

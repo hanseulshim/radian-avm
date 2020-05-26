@@ -1,9 +1,15 @@
 import React from 'react'
 
-const IconTriangle = ({ className = 'green' }: { className?: string }) => (
+const IconTriangle = ({
+	className = 'green',
+	children
+}: {
+	className?: string
+	children?: number | null
+}) => (
 	<svg
-		width="23px"
-		height="23px"
+		width={children ? '40px' : '23px'}
+		height={children ? '40px' : '23px'}
 		viewBox="0 0 23 23"
 		className={`icon ${className}`}
 	>
@@ -57,12 +63,15 @@ const IconTriangle = ({ className = 'green' }: { className?: string }) => (
 					)}
 					<path
 						stroke="#FFFFFF"
-						strokeWidth="3"
+						strokeWidth={children ? '1.5' : '3'}
 						d="M1321.5,259.354102 L1313.42705,275.5 L1329.57295,275.5 L1321.5,259.354102 Z"
 						strokeLinejoin="round"
 						id="Cover"
 						fillRule="evenodd"
 					></path>
+					<text x="1319" y="273" fontWeight="bold" fontSize="9px" fill="#FFF">
+						{children}
+					</text>
 				</g>
 			</g>
 		</g>
