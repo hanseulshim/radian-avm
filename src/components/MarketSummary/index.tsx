@@ -8,7 +8,7 @@ import NotableListingSales from './NotableListingSales'
 const MarketSummary = () => {
 	return (
 		<div className="market-summary page">
-			<Header title="Demographics" />
+			<Header title="Market Summary" />
 			<MarketAtAGlance />
 			<NotableListingSales />
 			<Footer />
