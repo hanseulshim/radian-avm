@@ -1,0 +1,45 @@
+@import 'styles/variables';
+
+.subject-property-history {
+	.active-property {
+		padding: 0 $side-spacer;
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: space-between;
+		height: 500px;
+
+		.info-column {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+
+			.date {
+				font-size: $extra-large-text;
+			}
+
+			.info {
+				background: $wild-sand;
+				padding: 20px;
+				margin-top: 10px;
+				height: 100%;
+
+				.comment {
+					margin-top: 35px;
+				}
+			}
+		}
+
+		.image-container {
+			width: 820px;
+			margin-left: 20px;
+			display: flex;
+			justify-content: center;
+			overflow: hidden;
+			align-items: center;
+			background: $alto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
+import ActiveProperty from './ActiveProperty'
 import MostRecentListings from './MostRecentListings'
 import PropertyValueTrend from './PropertyValueTrend'
 import './SubjectPropertyHistory.scss'
@@ -13,6 +14,7 @@ const SubjectPropertyHistory = () => {
 				<PropertyValueTrend />
 			</div>
 			<MostRecentListings />
+			<ActiveProperty />
 			<Footer />
 		</div>
 	)
