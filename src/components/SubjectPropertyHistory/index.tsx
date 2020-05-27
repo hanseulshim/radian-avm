@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
+import MostRecentListings from './MostRecentListings'
 import PropertyValueTrend from './PropertyValueTrend'
 import './SubjectPropertyHistory.scss'
 
@@ -11,6 +12,7 @@ const SubjectPropertyHistory = () => {
 			<div className="content-container">
 				<PropertyValueTrend />
 			</div>
+			<MostRecentListings />
 			<Footer />
 		</div>
 	)

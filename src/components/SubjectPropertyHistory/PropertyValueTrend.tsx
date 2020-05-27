@@ -32,8 +32,7 @@ const PropertyValueTrend = () => {
 			action,
 			actionDate,
 			actionAmount,
-			actionSqFtPrice,
-			imagePath
+			actionSqFtPrice
 		}: {
 			type: string | null
 			daysOnMarket: number | null
@@ -44,7 +43,6 @@ const PropertyValueTrend = () => {
 			actionDate: string | null
 			actionAmount: number | null
 			actionSqFtPrice: number | null
-			imagePath: string | null
 		},
 		index: number
 	) => {
