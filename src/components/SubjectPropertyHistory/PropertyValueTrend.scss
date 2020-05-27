@@ -1,0 +1,130 @@
+@import 'styles/variables';
+
+.subject-property-history {
+	.content-container {
+		.property-value-trend {
+			.circle {
+				width: 30px;
+				height: 30px;
+				border-radius: 100%;
+				margin-right: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: $heavy-weight;
+				color: $white;
+				&.retail {
+					background-color: $black;
+				}
+				&.rental {
+					background-color: $azure;
+				}
+				&.flip {
+					background-color: $neptune;
+				}
+				&.distressed {
+					width: 27px;
+					height: 27px;
+					border: 3px solid $black;
+					color: $black;
+				}
+			}
+			.chart-row {
+				display: flex;
+				height: 400px;
+
+				.chart {
+					background: $wild-sand;
+					flex: 1;
+					margin-right: 35px;
+				}
+
+				.table {
+					display: flex;
+					flex-direction: column;
+					width: 500px;
+
+					.row {
+						display: flex;
+						&.header {
+							margin-bottom: 5px;
+						}
+						.column {
+							display: flex;
+							margin-right: 10px;
+							&.header {
+								font-weight: $heavy-weight;
+							}
+							&.event {
+								width: 50px;
+							}
+							&.days-on-market {
+								width: 180px;
+								.info {
+									font-weight: $heavy-weight;
+									text-transform: capitalize;
+								}
+								.bar-container {
+									width: 100px;
+									height: 40px;
+									background-color: #eeeeee;
+									margin-right: 10px;
+									position: relative;
+
+									.bar {
+										height: 100%;
+										box-sizing: border-box;
+
+										&.retail {
+											border: 1.5px solid $black;
+											background: $black;
+										}
+										&.distressed {
+											border: 1.5px solid $black;
+											background: $white;
+										}
+										&.rental {
+											border: 1.5px solid $azure;
+											background: $azure;
+										}
+										&.flip {
+											border: 1.5px solid $neptune;
+											background: $neptune;
+										}
+									}
+									.value {
+										position: absolute;
+										top: 7px;
+										left: 5px;
+										color: $white;
+										font-weight: $heavy-weight;
+										font-size: $medium-text;
+									}
+								}
+							}
+							&.dates {
+								flex-direction: column;
+								width: 70px;
+							}
+							&.amount {
+								flex-direction: column;
+								width: 90px;
+								text-align: right;
+							}
+							&.sqft {
+								margin-right: 0;
+								flex-direction: column;
+								width: 90px;
+								text-align: right;
+							}
+						}
+						&.content {
+							padding: 10px 0;
+							border-top: 1px solid #979797;
+						}
+					}
+				}
+			}
+		}
+	}
+}

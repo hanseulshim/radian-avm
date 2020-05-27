@@ -64,6 +64,17 @@ img {
 		#Cover {
 			fill: $thunderbird;
 		}
+		#Line {
+			stroke: $thunderbird;
+		}
+	}
+	&.yellow {
+		#Cover {
+			fill: $supernova;
+		}
+		#Line {
+			stroke: $supernova;
+		}
 	}
 	&.green {
 		#Cover {
