@@ -249,7 +249,7 @@ export interface DataInterface {
 		heroImage: string | null
 		mlsName: string | null
 		mlsComments: string | null
-		photos: string | null
+		photos: string[] | null
 	} | null
 	subjectPropertyTransaction2: {
 		listingStartDate: string | null
@@ -257,7 +257,7 @@ export interface DataInterface {
 		heroImage: string | null
 		mlsName: string | null
 		mlsComments: string | null
-		photos: string | null
+		photos: string[] | null
 	} | null
 	subjectPropertyTransaction3: {
 		listingStartDate: string | null
@@ -265,7 +265,7 @@ export interface DataInterface {
 		heroImage: string | null
 		mlsName: string | null
 		mlsComments: string | null
-		photos: string | null
+		photos: string[] | null
 	} | null
 	marketAtAGlance: string | null
 	nearbyProperties: string | null
