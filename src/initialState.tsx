@@ -399,7 +399,7 @@ export interface DataInterface {
 		} | null
 		level2GeoJSON: {
 			type: string | null
-			coordinates: string | null
+			coordinates: [[[[number, number]]]] | null
 		} | null
 	} | null
 	level1Averages: {
