@@ -10,4 +10,14 @@ export const colors = {
 	wildSand: '#f4f4f4',
 	markerRed: '#C6401E',
 	brandyPunch: '#F79226',
+	mountainMist: '#a196a6',
+	neptune08: 'rgba(113, 186, 175, 0.8)',
+	seaBuckthorn: '#f69225',
+	silver: '#cccccc',
+	slateGray: '#758297',
+	superNova: '#ffc907',
+	thunderbird: '#d04a42',
+	white08: 'rgba(255, 255, 255, 0.8)',
+	wildsand: '#f4f4f4',
+	wisteria: '#aa77bf'
 }
