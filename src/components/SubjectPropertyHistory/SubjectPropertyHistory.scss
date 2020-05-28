@@ -1,0 +1,12 @@
+@import 'styles/variables';
+@import './PropertyValueTrend.scss';
+@import './Legend.scss';
+@import './MostRecentListings.scss';
+@import './ActiveProperty.scss';
+
+.subject-property-history {
+	.content-container {
+		padding: 45px $side-spacer 0;
+		margin-bottom: 50px;
+	}
+}

@@ -1,0 +1,58 @@
+@import 'styles/variables';
+
+.subject-property-history {
+	.content-container {
+		.property-value-trend {
+			.section-title {
+				margin-bottom: 35px;
+			}
+			.legend-container {
+				margin-left: 35px;
+				display: flex;
+				flex: 1;
+				justify-content: space-between;
+				font-size: $normal-text;
+				font-weight: $normal-weight;
+				.legend {
+					display: flex;
+					align-items: center;
+
+					.row {
+						display: flex;
+						align-items: center;
+						.icon {
+							margin-right: 10px;
+						}
+					}
+					.hpi {
+						width: 24px;
+						height: 4px;
+						background: $black;
+						margin-right: 10px;
+					}
+					.retail-distressed-marker {
+						margin-right: 12px;
+						width: 32px;
+						height: 20px;
+						background-color: #eeeeee;
+						position: relative;
+						.top,
+						.bottom {
+							position: absolute;
+							width: 6px;
+							height: 1px;
+							background: #979797;
+						}
+						.top {
+							right: -6px;
+						}
+						.bottom {
+							right: -6px;
+							bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

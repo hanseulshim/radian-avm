@@ -7,6 +7,7 @@ import MarketPerformance1 from './MarketPerformance1'
 import MarketPerformance2 from './MarketPerformance2'
 import MarketSummary from './MarketSummary'
 import SubjectPropertyDescriptionDetails from './SubjectPropertyDescriptionDetails'
+import SubjectPropertyHistory from './SubjectPropertyHistory'
 
 export const DataContext = createContext<DataInterface>(initialState)
 am4core.options.commercialLicense = true
@@ -33,7 +34,7 @@ const App = () => {
 		<DataContext.Provider value={data}>
 			<div className="app">
 				{test ? (
-					<MarketPerformance1 />
+					<SubjectPropertyHistory />
 				) : (
 					<>
 						<Cover />

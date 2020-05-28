@@ -219,7 +219,18 @@ export interface DataInterface {
 		flooring: string | null
 		basementFinished: string | null
 	} | null
-	subjectPropertyTransactions: string | null
+	subjectPropertyTransactions: Array<{
+		type: string | null
+		daysOnMarket: number | null
+		listedDate: string | null
+		listedAmount: number | null
+		listedSqFtPrice: number | null
+		action: string | null
+		actionDate: string | null
+		actionAmount: number | null
+		actionSqFtPrice: number | null
+		imagePath: string | null
+	}> | null
 	propertyValueTrend: {
 		averagePrice: string | null
 		medianPriceLevel1: {
