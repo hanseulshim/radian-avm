@@ -257,7 +257,12 @@ export interface DataInterface {
 		photos: string | null
 	} | null
 	marketAtAGlance: string | null
-	nearbyProperties: string | null
+	nearbyProperties: Array<{
+		lng: number | null
+		lat: number | null
+		category: string | null
+		condition: string | null
+	}> | null
 	featuredProperties: Array<{
 		lng: number | null
 		lat: number | null
