@@ -326,11 +326,23 @@ export interface DataInterface {
 	medianPrices: {
 		atAGlance: string | null
 		level1Label: string | null
-		level1Sold: string | null
-		level1Listed: string | null
+		level1Sold: Array<{
+			date: string | null
+			value: number | null
+		}> | null
+		level1Listed: Array<{
+			date: string | null
+			value: number | null
+		}> | null
 		level2Label: string | null
-		level2Sold: string | null
-		level2Listed: string | null
+		level2Sold: Array<{
+			date: string | null
+			value: number | null
+		}> | null
+		level2Listed: Array<{
+			date: string | null
+			value: number | null
+		}> | null
 	} | null
 	ageOfProperties: string | null
 	saleToListRatio: {
