@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "handler.js",
 	"scripts": {
+		"watch": "nodemon --exec yarn start",
 		"start": "sls offline -s dev",
 		"deploy": "sls deploy -s dev --aws-profile boost"
 	},
@@ -11,6 +12,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"nodemon": "^2.0.4",
 		"serverless-offline": "^6.1.5"
 	}
 }

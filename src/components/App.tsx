@@ -36,7 +36,7 @@ const App = () => {
 		<DataContext.Provider value={data}>
 			<div className="app">
 				{test ? (
-					<AdditionalPropertyHistory2 />
+					<AdditionalPropertyHistory />
 				) : (
 					<>
 						<Cover />
