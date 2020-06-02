@@ -21,7 +21,7 @@ const AgeOfProperties = () => {
 		categoryAxis.renderer.grid.template.location = 0
 
 		let valueAxis = chart.yAxes.push(new am4charts.ValueAxis() as any)
-		valueAxis.renderer.minGridDistance = 50
+		valueAxis.renderer.minGridDistance = 40
 		valueAxis.renderer.labels.template.location = 0
 		valueAxis.renderer.labels.template.adapter.add(
 			'text',
