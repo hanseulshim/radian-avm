@@ -25,7 +25,7 @@
 		"start:single": "REACT_APP_STAGE=test react-scripts start",
 		"start:local": "REACT_APP_ENV=local react-scripts start",
 		"start:single:local": "REACT_APP_STAGE=test REACT_APP_ENV=local react-scripts start",
-		"server": "cd ./api && yarn start",
+		"server": "cd ./api && yarn watch",
 		"build": "react-scripts build",
 		"build:pdf": "cd ./server && yarn start",
 		"test": "react-scripts test",
