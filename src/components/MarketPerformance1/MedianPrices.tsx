@@ -20,6 +20,9 @@ const MedianPrices = () => {
 
 	useEffect(() => {
 		const chart = am4core.create('medianPriceChart', am4charts.XYChart)
+		chart.paddingTop = 10
+		chart.paddingLeft = 0
+		chart.paddingBottom = 0
 		chart.data = medianPrices as any
 
 		const dateAxis = chart.xAxes.push(new am4charts.DateAxis())
@@ -27,54 +30,51 @@ const MedianPrices = () => {
 			timeUnit: 'year',
 			count: 1
 		}
-
 		dateAxis.renderer.minGridDistance = 10
 		dateAxis.renderer.labels.template.truncate = true
 
 		const valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
-		valueAxis.width = 75
+		valueAxis.min = 0
 		valueAxis.strokeWidth = 0
-		valueAxis.renderer.minGridDistance = 25
-		valueAxis.renderer.labels.template.width = 100
-		valueAxis.renderer.labels.template.maxWidth = 100
-		valueAxis.renderer.labels.template.dx = -25
-		valueAxis.renderer.labels.template.truncate = true
-		valueAxis.renderer.labels.template.textAlign = 'end'
-		dateAxis.renderer.labels.template.location = 0.0001
+		valueAxis.renderer.minGridDistance = 50
+		valueAxis.renderer.labels.template.dx = -10
 		valueAxis.numberFormatter.numberFormat = '$#a'
+		valueAxis.extraMax = 0.2
 
-		valueAxis.renderer.labels.template.truncate = true
+		const level1SoldSeries = chart.series.push(new am4charts.LineSeries())
+		level1SoldSeries.data = level1Sold as any
+		level1SoldSeries.dataFields.dateX = 'date'
+		level1SoldSeries.dataFields.valueY = 'value'
+		level1SoldSeries.stroke = am4core.color(colors.neptune)
+		level1SoldSeries.strokeWidth = 3
 
-		// const level1Series = chart.series.push(new am4charts.LineSeries())
-		// level1Series.data = [...level1Sold]
-		// level1Series.dataFields.dateX = 'date'
-		// level1Series.dataFields.valueY = 'level1'
-		// level1Series.stroke = am4core.color(colors.neptune)
-		// level1Series.strokeWidth = 3
+		const level1ListedSeries = chart.series.push(new am4charts.LineSeries())
+		level1ListedSeries.data = level1Listed as any
+		level1ListedSeries.dataFields.dateX = 'date'
+		level1ListedSeries.dataFields.valueY = 'value'
+		level1ListedSeries.stroke = am4core.color(colors.neptune)
+		level1ListedSeries.strokeWidth = 3
+		level1ListedSeries.strokeDasharray = '5,5'
 
-		// const level2Series = chart.series.push(new am4charts.LineSeries())
-		// level2Series.dataFields.dateX = 'date'
-		// level2Series.dataFields.valueY = 'level2'
-		// level2Series.stroke = am4core.color(colors.azure)
-		// level2Series.strokeWidth = 3
+		const level2SoldSeries = chart.series.push(new am4charts.LineSeries())
+		level2SoldSeries.data = level2Sold as any
+		level2SoldSeries.dataFields.dateX = 'date'
+		level2SoldSeries.dataFields.valueY = 'value'
+		level2SoldSeries.stroke = am4core.color(colors.azure)
+		level2SoldSeries.strokeWidth = 3
 
-		// const level3Series = chart.series.push(new am4charts.LineSeries())
-		// level3Series.dataFields.dateX = 'date'
-		// level3Series.dataFields.valueY = 'level3'
-		// level3Series.stroke = am4core.color(colors.black)
-		// level3Series.strokeWidth = 3
-
-		// const soldSeries = chart.series.push(new am4charts.LineSeries())
-		// soldSeries.dataFields.dateX = 'date'
-		// soldSeries.dataFields.valueY = 'sold'
-		// soldSeries.stroke = am4core.color(colors.black)
-		// soldSeries.strokeWidth = 3
-		soldSeries.strokeDasharray = '5,5'
+		const level2ListedSeries = chart.series.push(new am4charts.LineSeries())
+		level2ListedSeries.data = level2Listed as any
+		level2ListedSeries.dataFields.dateX = 'date'
+		level2ListedSeries.dataFields.valueY = 'value'
+		level2ListedSeries.stroke = am4core.color(colors.azure)
+		level2ListedSeries.strokeWidth = 3
+		level2ListedSeries.strokeDasharray = '5,5'
 
 		return () => {
 			chart.dispose()
 		}
-	}, [medianPrices])
+	}, [medianPrices, level1Sold])
 
 	return (
 		<div className="median-prices">
@@ -110,9 +110,7 @@ const MedianPrices = () => {
 						</div>
 					</div>
 				</div>
-				<div className="chart" id="medianPriceChart">
-					chart
-				</div>
+				<div className="chart" id="medianPriceChart" />
 			</div>
 		</div>
 	)

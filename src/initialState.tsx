@@ -344,7 +344,11 @@ export interface DataInterface {
 			value: number | null
 		}> | null
 	} | null
-	ageOfProperties: string | null
+	ageOfProperties: Array<{
+		category: string | null
+		level1: number | null
+		level2: number | null
+	}> | null
 	saleToListRatio: {
 		level1Label: string | null
 		level2Label: string | null
