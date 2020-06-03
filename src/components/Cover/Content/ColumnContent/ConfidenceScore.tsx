@@ -6,7 +6,7 @@ import IconConfidenceScore5 from 'assets/IconConfidenceScore5'
 import React from 'react'
 
 const ConfidenceScore = ({
-	confidenceScore = 0,
+	confidenceScore,
 	retail
 }: {
 	confidenceScore?: number | null
@@ -15,36 +15,40 @@ const ConfidenceScore = ({
 	<div className="confidence-score-container">
 		<div className="sub-section-title">Confidence Score</div>
 		<div className="score-container">
-			<div className="label-container">
-				<span className="label">
-					{confidenceScore &&
-						(confidenceScore > 80
-							? 'Very High'
-							: confidenceScore > 60
-							? 'High'
-							: confidenceScore > 40
-							? 'Medium'
-							: confidenceScore > 20
-							? 'Low'
-							: 'Very Low')}
-				</span>
-				<span className="value">{confidenceScore}</span>
-			</div>
-			<div className="image-container">
-				<IconConfidenceScore1 retail={retail} />
-				{confidenceScore && confidenceScore > 20 && (
-					<IconConfidenceScore2 retail={retail} />
-				)}
-				{confidenceScore && confidenceScore > 40 && (
-					<IconConfidenceScore3 retail={retail} />
-				)}
-				{confidenceScore && confidenceScore > 60 && (
-					<IconConfidenceScore4 retail={retail} />
-				)}
-				{confidenceScore && confidenceScore > 80 && (
-					<IconConfidenceScore5 retail={retail} />
-				)}
-			</div>
+			{confidenceScore && (
+				<>
+					<div className="label-container">
+						<span className="label">
+							{confidenceScore &&
+								(confidenceScore > 80
+									? 'Very High'
+									: confidenceScore > 60
+									? 'High'
+									: confidenceScore > 40
+									? 'Medium'
+									: confidenceScore > 20
+									? 'Low'
+									: 'Very Low')}
+						</span>
+						<span className="value">{confidenceScore}</span>
+					</div>
+					<div className="image-container">
+						<IconConfidenceScore1 retail={retail} />
+						{confidenceScore && confidenceScore > 20 && (
+							<IconConfidenceScore2 retail={retail} />
+						)}
+						{confidenceScore && confidenceScore > 40 && (
+							<IconConfidenceScore3 retail={retail} />
+						)}
+						{confidenceScore && confidenceScore > 60 && (
+							<IconConfidenceScore4 retail={retail} />
+						)}
+						{confidenceScore && confidenceScore > 80 && (
+							<IconConfidenceScore5 retail={retail} />
+						)}
+					</div>
+				</>
+			)}
 		</div>
 	</div>
 )

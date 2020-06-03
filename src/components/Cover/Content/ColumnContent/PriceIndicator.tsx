@@ -1,5 +1,6 @@
 import IconDown from 'assets/IconDown'
 import IconUp from 'assets/IconUp'
+import numeral from 'numeral'
 import React from 'react'
 
 const PriceIndicator = ({
@@ -15,30 +16,38 @@ const PriceIndicator = ({
 }) => (
 	<>
 		<div className="price-row">
-			{indicator === 'up' ? (
-				<IconUp className="black indicator" />
-			) : indicator === 'down' ? (
-				<IconDown className="indicator red" />
-			) : null}
-			{price && <span className="price">${price?.toLocaleString()}</span>}
+			{price ? (
+				<>
+					{indicator === 'up' ? (
+						<IconUp className="black indicator" />
+					) : indicator === 'down' ? (
+						<IconDown className="indicator red" />
+					) : (
+						<div className="indicator">&nbsp;</div>
+					)}
+					<span className="price">{numeral(price).format('$0,')}</span>
+				</>
+			) : (
+				<div className="price">&nbsp;</div>
+			)}
 		</div>
 		<div className="price-row">
-			{pricePerSqftIndicator === 'up' ? (
-				<IconUp className="black indicator" />
-			) : pricePerSqftIndicator === 'down' ? (
-				<IconDown className="indicator red" />
-			) : null}
-			{pricePerSqft && (
+			{pricePerSqft ? (
 				<>
+					{pricePerSqftIndicator === 'up' ? (
+						<IconUp className="black indicator" />
+					) : pricePerSqftIndicator === 'down' ? (
+						<IconDown className="indicator red" />
+					) : (
+						<div className="indicator">&nbsp;</div>
+					)}
 					<span className="price-per-sqft">
-						$
-						{pricePerSqft?.toLocaleString(undefined, {
-							minimumFractionDigits: 2,
-							maximumFractionDigits: 2
-						})}
+						{numeral(pricePerSqft).format('$0,0.00')}
 					</span>
 					<span className="price-per-sqft-label">per sqft</span>
 				</>
+			) : (
+				<div className="price-per-sqft">&nbsp;</div>
 			)}
 		</div>
 	</>

@@ -30,6 +30,9 @@
 
 		.description {
 			margin-top: 35px;
+			height: 100px;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.map-container {

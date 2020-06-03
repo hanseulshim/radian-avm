@@ -30,10 +30,11 @@ const SubjectProperty = () => {
 				<div>
 					<div className="address">{propertyAddress}</div>
 					<div className="city-state-zip">
-						{propertyCity}, {propertyState} {propertyZip}
+						{propertyCity}
+						{propertyCity && ','} {propertyState} {propertyZip}
 					</div>
 				</div>
-				<span className="dwelling-type">{dwellingType}</span>
+				{dwellingType && <span className="dwelling-type">{dwellingType}</span>}
 			</div>
 			<div className="image-container">
 				<img

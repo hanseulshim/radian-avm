@@ -25,11 +25,15 @@ const AnnualHomePriceAppreciation = () => {
 					<IconUp className="black indicator" />
 				) : level1Indicator === 'down' ? (
 					<IconDown className="indicator red" />
-				) : null}
-				<div className="trend">{level1Trend}%</div>
-				<div className="bar-row">
-					<div className="bar" style={{ width: getWidth(level1Value) }} />
-				</div>
+				) : (
+					<div className="indicator">&nbsp;</div>
+				)}
+				<div className="trend">{level1Trend ? `${level1Trend}%` : ''}</div>
+				{level1Value && (
+					<div className="bar-row">
+						<div className="bar" style={{ width: getWidth(level1Value) }} />
+					</div>
+				)}
 			</div>
 			<div className="info-row level2">
 				<div className="label">{level2Label}</div>
@@ -37,11 +41,15 @@ const AnnualHomePriceAppreciation = () => {
 					<IconUp className="black indicator" />
 				) : level2Indicator === 'down' ? (
 					<IconDown className="indicator red" />
-				) : null}
-				<div className="trend">{level2Trend}%</div>
-				<div className="bar-row">
-					<div className="bar" style={{ width: getWidth(level2Value) }} />
-				</div>
+				) : (
+					<div className="indicator">&nbsp;</div>
+				)}
+				<div className="trend">{level2Trend ? `${level2Trend}%` : ''}</div>
+				{level2Value && (
+					<div className="bar-row">
+						<div className="bar" style={{ width: getWidth(level2Value) }} />
+					</div>
+				)}
 			</div>
 		</div>
 	)
