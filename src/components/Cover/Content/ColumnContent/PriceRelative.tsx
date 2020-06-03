@@ -8,7 +8,7 @@ const PriceRelative = ({
 	level1Label,
 	level1Value,
 	level2Label,
-	level2Value,
+	level2Value
 }: {
 	retail?: boolean
 	level1Label?: string | null
@@ -25,13 +25,13 @@ const PriceRelative = ({
 			{
 				category: level2Label,
 				value: level2Value,
-				full: 100,
+				full: 100
 			},
 			{
 				category: level1Label,
 				value: level1Value,
-				full: 100,
-			},
+				full: 100
+			}
 		]
 
 		// Make chart not full circle
@@ -47,42 +47,46 @@ const PriceRelative = ({
 		// Set number format
 		chart.numberFormatter.numberFormat = "#.#'%'"
 
-		// Absolutely positioned level 1 value label
-		let level1Valuelabel = chart.createChild(am4core.Label)
-		level1Valuelabel.text = `${level1Value}%`
-		level1Valuelabel.align = 'center'
-		level1Valuelabel.isMeasured = false
-		level1Valuelabel.x = 20
-		level1Valuelabel.y = 15
+		if (level1Value && level1Label) {
+			// Absolutely positioned level 1 value label
+			let level1Valuelabel = chart.createChild(am4core.Label)
+			level1Valuelabel.text = `${level1Value}%`
+			level1Valuelabel.align = 'center'
+			level1Valuelabel.isMeasured = false
+			level1Valuelabel.x = 20
+			level1Valuelabel.y = 15
 
-		//Absolutely positioned line for level 1 value label
-		let level1Line = chart.createChild(am4core.Rectangle)
-		level1Line.isMeasured = false
-		level1Line.width = 60
-		level1Line.height = 2
-		level1Line.x = 60
-		level1Line.y = 25
-		level1Line.fill = retail
-			? am4core.color(colors.neptune)
-			: am4core.color(colors.azure)
+			//Absolutely positioned line for level 1 value label
+			let level1Line = chart.createChild(am4core.Rectangle)
+			level1Line.isMeasured = false
+			level1Line.width = 60
+			level1Line.height = 2
+			level1Line.x = 60
+			level1Line.y = 25
+			level1Line.fill = retail
+				? am4core.color(colors.neptune)
+				: am4core.color(colors.azure)
+		}
 
-		// Absolutely positioned level 2 value labels
-		let level2Valuelabel = chart.createChild(am4core.Label)
-		level2Valuelabel.text = `${level2Value}%`
-		level2Valuelabel.isMeasured = false
-		level2Valuelabel.x = 10
-		level2Valuelabel.y = 40
+		if (level2Label && level2Value) {
+			// Absolutely positioned level 2 value labels
+			let level2Valuelabel = chart.createChild(am4core.Label)
+			level2Valuelabel.text = `${level2Value}%`
+			level2Valuelabel.isMeasured = false
+			level2Valuelabel.x = 10
+			level2Valuelabel.y = 40
 
-		//Absolutely positioned line for level 2 value label
-		let level2Line = chart.createChild(am4core.Rectangle)
-		level2Line.isMeasured = false
-		level2Line.width = 75
-		level2Line.height = 2
-		level2Line.x = 45
-		level2Line.y = 50
-		level2Line.fill = retail
-			? am4core.color(colors.neptune05)
-			: am4core.color(colors.azure05)
+			//Absolutely positioned line for level 2 value label
+			let level2Line = chart.createChild(am4core.Rectangle)
+			level2Line.isMeasured = false
+			level2Line.width = 75
+			level2Line.height = 2
+			level2Line.x = 45
+			level2Line.y = 50
+			level2Line.fill = retail
+				? am4core.color(colors.neptune05)
+				: am4core.color(colors.azure05)
+		}
 
 		// Create axes
 		var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis() as any)
@@ -134,12 +138,20 @@ const PriceRelative = ({
 			<div className={`chart-container ${retail && 'retail'}`}>
 				<div className="legend-container">
 					<div className="legend level1">
-						<div className="marker level1" />
-						<div className="label">{level1Label}</div>
+						{level1Label && level1Value ? (
+							<>
+								<div className="marker level1" />
+								<div className="label">{level1Label}</div>
+							</>
+						) : null}
 					</div>
 					<div className="legend">
-						<div className="marker" />
-						<div className="label">{level2Label}</div>
+						{level2Label && level2Value ? (
+							<>
+								<div className="marker" />
+								<div className="label">{level2Label}</div>
+							</>
+						) : null}
 					</div>
 				</div>
 				<div id={`priceRelative${retail && 'Retail'}`} />
