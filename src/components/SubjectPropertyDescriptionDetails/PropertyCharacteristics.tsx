@@ -12,7 +12,7 @@ import { colors } from 'styles/colors.js'
 const PropertyCharacteristics = () => {
 	const { propertyCharacteristics } = useContext(DataContext)
 	const { source1, source2, source3, other1Value, other2Value } = {
-		...propertyCharacteristics,
+		...propertyCharacteristics
 	}
 	const charts = ['beds', 'baths', 'sqFt', 'age', 'garage']
 	const data: Array<{
@@ -40,7 +40,7 @@ const PropertyCharacteristics = () => {
 			bathsPercent: source1?.bathsPercent ? source1?.bathsPercent : null,
 			sqFtPercent: source1?.sqFtPercent ? source1?.sqFtPercent : null,
 			agePercent: source1?.agePercent ? source1?.agePercent : null,
-			garagePercent: source1?.garagePercent ? source1?.garagePercent : null,
+			garagePercent: source1?.garagePercent ? source1?.garagePercent : null
 		},
 		{
 			label: null,
@@ -58,7 +58,7 @@ const PropertyCharacteristics = () => {
 			garagePercent: other1Value?.garagePercent
 				? other1Value?.garagePercent
 				: null,
-			name: 'other1Value',
+			name: 'other1Value'
 		},
 		{
 			label: null,
@@ -76,8 +76,8 @@ const PropertyCharacteristics = () => {
 			garagePercent: other2Value?.garagePercent
 				? other2Value?.garagePercent
 				: null,
-			name: 'other2Value',
-		},
+			name: 'other2Value'
+		}
 	]
 
 	useEffect(() => {
@@ -88,8 +88,14 @@ const PropertyCharacteristics = () => {
 			chart.height = am4core.percent(100)
 			chart.width = am4core.percent(95)
 
-			// Sort data if its a chart with labels
-			if (chartId === 'beds' || chartId === 'baths' || chartId === 'garage') {
+			//Sort chart data
+			if (
+				chartId === 'beds' ||
+				chartId === 'baths' ||
+				chartId === 'garage' ||
+				chartId === 'age' ||
+				chartId === 'garage'
+			) {
 				chart.data = data.sort((a, b) => {
 					if (a[chartId] === null || b[chartId] === null) {
 						return -1
