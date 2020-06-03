@@ -1,10 +1,10 @@
-import { DataContext } from 'components/App'
-import GoogleMapReact from 'google-map-react'
-import React, { useContext, useEffect, useState } from 'react'
-import HouseMarker from 'components/Common/HouseMarker'
 import IconCircle from 'assets/IconCircle'
 import IconSquare from 'assets/IconSquare'
 import IconTriangle from 'assets/IconTriangle'
+import { DataContext } from 'components/App'
+import HouseMarker from 'components/Common/HouseMarker'
+import GoogleMapReact from 'google-map-react'
+import React, { useContext, useEffect, useState } from 'react'
 
 interface nearbyProperty {
 	lat: number | null
@@ -71,7 +71,7 @@ const MarketMap = () => {
 		setCoords({ lat: lat ? lat : 0, lng: lng ? lng : 0 })
 		setNearbyPropertyCoords(nearbyProperties)
 		setFeaturePropertyCoords(featuredProperties)
-	}, [lat, lng, nearbyProperties])
+	}, [lat, lng, nearbyProperties, featuredProperties])
 
 	const handleApiLoaded = (map: any) => {
 		map.mapTypeId = 'satellite'

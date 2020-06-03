@@ -1,7 +1,7 @@
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import { DataContext } from 'components/App'
 import React, { useContext, useEffect } from 'react'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
 
 interface event {
@@ -25,7 +25,42 @@ const PropertyValueTrendChart = () => {
 		...propertyValueTrend
 	}
 
-	let event1: event, event2: event, event3: event
+	let event1: event = {
+			type: null,
+			daysOnMarket: null,
+			listedDate: null,
+			listedAmount: null,
+			listedSqFtPrice: null,
+			action: null,
+			actionDate: null,
+			actionAmount: null,
+			actionSqFtPrice: null,
+			imagePath: null
+		},
+		event2: event = {
+			type: null,
+			daysOnMarket: null,
+			listedDate: null,
+			listedAmount: null,
+			listedSqFtPrice: null,
+			action: null,
+			actionDate: null,
+			actionAmount: null,
+			actionSqFtPrice: null,
+			imagePath: null
+		},
+		event3: event = {
+			type: null,
+			daysOnMarket: null,
+			listedDate: null,
+			listedAmount: null,
+			listedSqFtPrice: null,
+			action: null,
+			actionDate: null,
+			actionAmount: null,
+			actionSqFtPrice: null,
+			imagePath: null
+		}
 
 	if (subjectPropertyTransactions) {
 		event1 = subjectPropertyTransactions[0]
@@ -150,7 +185,17 @@ const PropertyValueTrendChart = () => {
 		labelBullet3.label.stroke = am4core.color(colors.black)
 		labelBullet3.label.strokeOpacity = 10
 		labelBullet3.label.zIndex = 10
-	}, [propertyValueTrend, subjectPropertyTransactions])
+	}, [
+		propertyValueTrend,
+		subjectPropertyTransactions,
+		averagePrice,
+		event1,
+		event2,
+		event3,
+		hpi,
+		medianPriceLevel1,
+		medianPriceLevel2
+	])
 
 	return <div className="chart" id="propertyValueTrendChart"></div>
 }

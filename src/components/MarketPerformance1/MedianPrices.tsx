@@ -1,9 +1,9 @@
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import IconLine from 'assets/IconLine'
 import IconListed from 'assets/IconListed'
 import { DataContext } from 'components/App'
 import React, { useContext, useEffect } from 'react'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
 
 const MedianPrices = () => {
@@ -74,7 +74,7 @@ const MedianPrices = () => {
 		return () => {
 			chart.dispose()
 		}
-	}, [medianPrices, level1Sold])
+	}, [medianPrices, level1Sold, level1Listed, level2Sold, level2Listed])
 
 	return (
 		<div className="median-prices">

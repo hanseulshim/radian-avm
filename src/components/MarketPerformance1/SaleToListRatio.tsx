@@ -1,7 +1,7 @@
-import { DataContext } from 'components/App'
-import React, { useEffect, useContext } from 'react'
 import * as am4charts from '@amcharts/amcharts4/charts'
 import * as am4core from '@amcharts/amcharts4/core'
+import { DataContext } from 'components/App'
+import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors'
 
 const SaleToListRatio = () => {
@@ -56,7 +56,7 @@ const SaleToListRatio = () => {
 		series2.dataFields.dateX = 'date'
 		series2.columns.template.fill = am4core.color(colors.neptune)
 		series2.columns.template.stroke = am4core.color(colors.neptune)
-	}, [saleToListRatio])
+	}, [saleToListRatio, data])
 	return (
 		<div className="sale-to-list-ratio">
 			<div className="section-title">

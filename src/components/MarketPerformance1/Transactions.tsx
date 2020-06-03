@@ -1,8 +1,8 @@
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import { DataContext } from 'components/App'
 import numeral from 'numeral'
 import React, { useContext, useEffect } from 'react'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
 
 const Transactions = () => {
@@ -10,7 +10,7 @@ const Transactions = () => {
 	const { rental, retailSales, distressedSales, flipSales, flipRental } = {
 		...avgPrices
 	}
-	const { Retail, Distressed, flipSale }: any = {
+	const { retail, distressed, flipSale }: any = {
 		...numberOfTransactions
 	}
 
@@ -27,11 +27,11 @@ const Transactions = () => {
 		chart.data = [
 			{
 				transactionType: 'Retail',
-				value: Retail || null
+				value: retail || null
 			},
 			{
 				transactionType: 'Distressed',
-				value: Distressed || null
+				value: distressed || null
 			},
 			{
 				transactionType: 'Rental',
@@ -66,8 +66,8 @@ const Transactions = () => {
 
 		let sumLabel = chart.createChild(am4core.Label)
 		const values = [
-			Retail,
-			Distressed,
+			retail,
+			distressed,
 			rentalTransaction,
 			flipSale,
 			flipRentalTransaction
@@ -88,7 +88,14 @@ const Transactions = () => {
 		totalLabel.x = 135
 		totalLabel.y = 160
 		totalLabel.text = `Total`
-	}, [numberOfTransactions])
+	}, [
+		numberOfTransactions,
+		distressed,
+		flipRentalTransaction,
+		flipSale,
+		rentalTransaction,
+		retail
+	])
 	return (
 		<div className="transactions">
 			<div className="section-title">Transactions, Last 6 Months (Zip)</div>
