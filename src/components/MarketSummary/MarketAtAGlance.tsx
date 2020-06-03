@@ -4,6 +4,7 @@ import IconSquare from 'assets/IconSquare'
 import IconTriangle from 'assets/IconTriangle'
 import { DataContext } from 'components/App'
 import React, { useContext } from 'react'
+import MarketMap from './MarketMap'
 
 const MarketAtAGlance = () => {
 	const { marketAtAGlance } = useContext(DataContext)
@@ -52,7 +53,9 @@ const MarketAtAGlance = () => {
 			</div>
 			<div className="content-container">
 				<div className="description">{marketAtAGlance}</div>
-				<div className="map-container"></div>
+				<div className="map-container">
+					<MarketMap />
+				</div>
 			</div>
 		</div>
 	)

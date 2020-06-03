@@ -232,16 +232,29 @@ export interface DataInterface {
 		imagePath: string | null
 	}> | null
 	propertyValueTrend: {
-		averagePrice: string | null
+		averagePrice: Array<{
+			date: string | null
+			Retail: number | null
+			Distressed: number | null
+		}> | null
 		medianPriceLevel1: {
 			label: string | null
-			data: string | null
+			data: Array<{
+				date: string | null
+				value: number | null
+			}> | null
 		} | null
 		medianPriceLevel2: {
 			label: string | null
-			data: string | null
+			data: Array<{
+				date: string | null
+				value: number | null
+			}> | null
 		} | null
-		hpi: string | null
+		hpi: Array<{
+			date: string | null
+			value: number | null
+		}> | null
 	} | null
 	subjectPropertyTransaction1: {
 		listingStartDate: string | null
@@ -268,7 +281,12 @@ export interface DataInterface {
 		photos: string[] | null
 	} | null
 	marketAtAGlance: string | null
-	nearbyProperties: string | null
+	nearbyProperties: Array<{
+		lng: number | null
+		lat: number | null
+		category: string | null
+		condition: string | null
+	}> | null
 	featuredProperties: Array<{
 		lng: number | null
 		lat: number | null
@@ -321,17 +339,37 @@ export interface DataInterface {
 	medianPrices: {
 		atAGlance: string | null
 		level1Label: string | null
-		level1Sold: string | null
-		level1Listed: string | null
+		level1Sold: Array<{
+			date: string | null
+			value: number | null
+		}> | null
+		level1Listed: Array<{
+			date: string | null
+			value: number | null
+		}> | null
 		level2Label: string | null
-		level2Sold: string | null
-		level2Listed: string | null
+		level2Sold: Array<{
+			date: string | null
+			value: number | null
+		}> | null
+		level2Listed: Array<{
+			date: string | null
+			value: number | null
+		}> | null
 	} | null
-	ageOfProperties: string | null
+	ageOfProperties: Array<{
+		category: string | null
+		level1: number | null
+		level2: number | null
+	}> | null
 	saleToListRatio: {
 		level1Label: string | null
 		level2Label: string | null
-		data: string | null
+		data: Array<{
+			level1: number | null
+			level2: number | null
+			date: string | null
+		}> | null
 	} | null
 	avgListingPrice: {
 		description: string | null
@@ -405,7 +443,7 @@ export interface DataInterface {
 		} | null
 		level2GeoJSON: {
 			type: string | null
-			coordinates: string | null
+			coordinates: [[[[number, number]]]] | null
 		} | null
 	} | null
 	level1Averages: {
