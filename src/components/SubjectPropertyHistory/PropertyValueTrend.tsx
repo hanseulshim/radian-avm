@@ -3,6 +3,7 @@ import moment from 'moment'
 import numeral from 'numeral'
 import React, { useContext } from 'react'
 import Legend from './Legend'
+import PropertyValueTrendChart from './PropertyValueTrendChart'
 
 const getClass = (type: string | null): string =>
 	type ? type.toLowerCase() : ''
@@ -129,7 +130,7 @@ const PropertyValueTrend = () => {
 		<div className="property-value-trend">
 			<Legend />
 			<div className="chart-row">
-				<div className="chart">chart</div>
+				<PropertyValueTrendChart />
 				<div className="table">
 					<div className="row header">
 						<div className="column event header">Event</div>

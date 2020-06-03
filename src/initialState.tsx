@@ -232,16 +232,29 @@ export interface DataInterface {
 		imagePath: string | null
 	}> | null
 	propertyValueTrend: {
-		averagePrice: string | null
+		averagePrice: Array<{
+			date: string | null
+			Retail: number | null
+			Distressed: number | null
+		}> | null
 		medianPriceLevel1: {
 			label: string | null
-			data: string | null
+			data: Array<{
+				date: string | null
+				value: number | null
+			}> | null
 		} | null
 		medianPriceLevel2: {
 			label: string | null
-			data: string | null
+			data: Array<{
+				date: string | null
+				value: number | null
+			}> | null
 		} | null
-		hpi: string | null
+		hpi: Array<{
+			date: string | null
+			value: number | null
+		}> | null
 	} | null
 	subjectPropertyTransaction1: {
 		listingStartDate: string | null
