@@ -8,33 +8,35 @@ const MarketStrength = () => {
 	const { marketStrength } = useContext(DataContext)
 
 	useEffect(() => {
-		const chart = am4core.create(`marketStrength`, am4charts.GaugeChart)
-		chart.paddingBottom = 0
-		chart.paddingTop = 25
-		chart.paddingLeft = 0
-		chart.paddingRight = 0
+		if (marketStrength) {
+			const chart = am4core.create(`marketStrength`, am4charts.GaugeChart)
+			chart.paddingBottom = -10
+			chart.paddingTop = 20
+			chart.paddingLeft = 0
+			chart.paddingRight = 0
 
-		var valueAxis = chart.xAxes.push(new am4charts.ValueAxis() as any)
-		valueAxis.min = 0
-		valueAxis.max = 100
-		valueAxis.strictMinMax = true
-		valueAxis.renderer.labels.radius = 5
+			var valueAxis = chart.xAxes.push(new am4charts.ValueAxis() as any)
+			valueAxis.min = 0
+			valueAxis.max = 100
+			valueAxis.strictMinMax = true
+			valueAxis.renderer.labels.radius = 5
 
-		let range = valueAxis.axisRanges.create()
-		range.value = -1
-		range.endValue = 100
-		range.axisFill.fillOpacity = 1
-		range.axisFill.fill = am4core.color(colors.wildSand)
-		range.axisFill.y = 10
-		range.axisFill.radius = -50
+			let range = valueAxis.axisRanges.create()
+			range.value = -1
+			range.endValue = 100
+			range.axisFill.fillOpacity = 1
+			range.axisFill.fill = am4core.color(colors.wildSand)
+			range.axisFill.y = 10
+			range.axisFill.radius = -50
 
-		const hand = chart.hands.push(new am4charts.ClockHand())
-		hand.pin.radius = 7
-		hand.y = 0
-		hand.startWidth = 14
-		hand.stroke = am4core.color(colors.black)
-		hand.fill = am4core.color(colors.black)
-		hand.value = marketStrength
+			const hand = chart.hands.push(new am4charts.ClockHand())
+			hand.pin.radius = 7
+			hand.y = 0
+			hand.startWidth = 14
+			hand.stroke = am4core.color(colors.black)
+			hand.fill = am4core.color(colors.black)
+			hand.value = marketStrength
+		}
 	}, [marketStrength])
 	return (
 		<div className="market-strength-container">
