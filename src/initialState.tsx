@@ -365,7 +365,11 @@ export interface DataInterface {
 	saleToListRatio: {
 		level1Label: string | null
 		level2Label: string | null
-		data: string | null
+		data: Array<{
+			level1: number | null
+			level2: number | null
+			date: string | null
+		}> | null
 	} | null
 	avgListingPrice: {
 		description: string | null

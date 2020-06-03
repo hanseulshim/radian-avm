@@ -6,26 +6,12 @@ import { colors } from 'styles/colors'
 
 const SaleToListRatio = () => {
 	const { saleToListRatio } = useContext(DataContext)
-	const { level1Label, level2Label } = { ...saleToListRatio }
+	const { level1Label, level2Label, data } = { ...saleToListRatio }
 
 	useEffect(() => {
 		const chart = am4core.create('saleToListChart', am4charts.XYChart)
-		// chart.data = saleToListRatio?.data as any
-		const data = saleToListRatio?.data as any
-		const level1Data: { date: any; value: number }[] = []
-		const level2Data: { date: any; value: number }[] = []
-
 		if (data) {
-			chart.data = data.map((obj: any) => {
-				level1Data.push({
-					date: obj.date,
-					value: obj.level1 - 100
-				})
-				level2Data.push({
-					date: obj.date,
-					value: obj.level2 - 100
-				})
-			})
+			chart.data = [...data] as any
 		}
 
 		const dateAxis = chart.xAxes.push(new am4charts.DateAxis())
@@ -42,22 +28,32 @@ const SaleToListRatio = () => {
 		valueAxis.renderer.labels.template.adapter.add(
 			'text',
 			(text: string, label: any) => {
-				return label.dataItem.value + '%'
+				return label.dataItem.value + 100 + '%'
 			}
 		)
 		valueAxis.extraMax = 0.2
 
 		let series1 = chart.series.push(new am4charts.ColumnSeries() as any)
-		series1.data = [...level1Data] as any
-		series1.dataFields.valueY = 'value'
-		series1.dataFields.dateX = 'date`'
+		series1.data = chart.data.map((obj) => {
+			return {
+				...obj,
+				level1: obj.level1 - 100
+			}
+		})
+		series1.dataFields.valueY = 'level1'
+		series1.dataFields.dateX = 'date'
 		series1.columns.template.fill = am4core.color(colors.azure)
 		series1.columns.template.stroke = am4core.color(colors.azure)
 
 		let series2 = chart.series.push(new am4charts.ColumnSeries() as any)
-		series2.data = [...level2Data] as any
-		series2.dataFields.valueY = 'value'
-		series2.dataFields.dateX = 'date`'
+		series2.data = chart.data.map((obj) => {
+			return {
+				...obj,
+				level2: obj.level2 - 100
+			}
+		})
+		series2.dataFields.valueY = 'level2'
+		series2.dataFields.dateX = 'date'
 		series2.columns.template.fill = am4core.color(colors.neptune)
 		series2.columns.template.stroke = am4core.color(colors.neptune)
 	}, [saleToListRatio])
