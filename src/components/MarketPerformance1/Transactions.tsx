@@ -1,18 +1,100 @@
 import { DataContext } from 'components/App'
 import numeral from 'numeral'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
+import * as am4core from '@amcharts/amcharts4/core'
+import * as am4charts from '@amcharts/amcharts4/charts'
+import { colors } from 'styles/colors'
 
 const Transactions = () => {
-	const { avgPrices } = useContext(DataContext)
+	const { avgPrices, numberOfTransactions } = useContext(DataContext)
 	const { rental, retailSales, distressedSales, flipSales, flipRental } = {
 		...avgPrices
 	}
+	const { Retail, Distressed, flipSale }: any = {
+		...numberOfTransactions
+	}
+
+	const rentalTransaction = numberOfTransactions?.rental
+	const flipRentalTransaction = numberOfTransactions?.flipRental
+
+	useEffect(() => {
+		const chart = am4core.create('transactionsChart', am4charts.PieChart)
+		chart.paddingLeft = 0
+		chart.paddingRight = 0
+		chart.paddingBottom = 0
+		chart.paddingTop = 0
+
+		chart.data = [
+			{
+				transactionType: 'Retail',
+				value: Retail || null
+			},
+			{
+				transactionType: 'Distressed',
+				value: Distressed || null
+			},
+			{
+				transactionType: 'Rental',
+				value: rentalTransaction || null
+			},
+			{
+				transactionType: 'Flip Sale',
+				value: flipSale || null
+			},
+			{
+				transactionType: 'Flip Rental',
+				value: flipRentalTransaction || null
+			}
+		]
+
+		chart.legend = new am4charts.Legend()
+		chart.legend.position = 'right'
+		chart.innerRadius = am4core.percent(60)
+		chart.legend.valueLabels.template.disabled = true
+
+		const pieSeries = chart.series.push(new am4charts.PieSeries())
+		pieSeries.dataFields.value = 'value'
+		pieSeries.dataFields.category = 'transactionType'
+		pieSeries.labels.template.disabled = true
+		pieSeries.colors.list = [
+			am4core.color(colors.neptune),
+			am4core.color(colors.azure),
+			am4core.color(colors.slateGray),
+			am4core.color(colors.wisteria),
+			am4core.color(colors.mountainMist)
+		]
+
+		let sumLabel = chart.createChild(am4core.Label)
+		const values = [
+			Retail,
+			Distressed,
+			rentalTransaction,
+			flipSale,
+			flipRentalTransaction
+		]
+		const total = values.reduce((total, num) => {
+			return total + num
+		})
+		sumLabel.isMeasured = false
+		sumLabel.fontSize = 32
+		sumLabel.fontWeight = '700'
+		sumLabel.x = 125
+		sumLabel.y = 125
+		sumLabel.text = `${total}`
+		let totalLabel = chart.createChild(am4core.Label)
+		totalLabel.isMeasured = false
+		totalLabel.fontSize = 16
+		totalLabel.fontWeight = '700'
+		totalLabel.x = 135
+		totalLabel.y = 160
+		totalLabel.text = `Total`
+	}, [numberOfTransactions])
 	return (
 		<div className="transactions">
 			<div className="section-title">Transactions, Last 6 Months (Zip)</div>
 			<div className="row">
 				<div className="column">
-					<div className="chart-container">chart</div>
+					<div className="chart-container" id="transactionsChart" />
 					<div className="panel">
 						<div className="title rental">Rentals</div>
 						<div className="info-row">
