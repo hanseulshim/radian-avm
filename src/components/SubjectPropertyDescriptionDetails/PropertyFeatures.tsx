@@ -32,11 +32,11 @@ const PropertyFeatures = () => {
 			<div className="layout">
 				<div className="info-container">
 					<div>
-						<div className="title">Interior Features</div>
+						{interiorFeatures && <div className="title">Interior Features</div>}
 						<div>{getText(interiorFeatures)}</div>
 					</div>
 					<div className="info">
-						<div className="title">Exterior Features</div>
+						{exteriorFeatures && <div className="title">Exterior Features</div>}
 						<div>{getText(exteriorFeatures)}</div>
 					</div>
 				</div>
