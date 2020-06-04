@@ -12,7 +12,7 @@ import { colors } from 'styles/colors.js'
 const PropertyCharacteristics = () => {
 	const { propertyCharacteristics } = useContext(DataContext)
 	const { source1, source2, source3, other1Value, other2Value } = {
-		...propertyCharacteristics,
+		...propertyCharacteristics
 	}
 	const charts = ['beds', 'baths', 'sqFt', 'age', 'garage']
 	const data: Array<{
@@ -40,7 +40,7 @@ const PropertyCharacteristics = () => {
 			bathsPercent: source1?.bathsPercent ? source1?.bathsPercent : null,
 			sqFtPercent: source1?.sqFtPercent ? source1?.sqFtPercent : null,
 			agePercent: source1?.agePercent ? source1?.agePercent : null,
-			garagePercent: source1?.garagePercent ? source1?.garagePercent : null,
+			garagePercent: source1?.garagePercent ? source1?.garagePercent : null
 		},
 		{
 			label: null,
@@ -58,7 +58,7 @@ const PropertyCharacteristics = () => {
 			garagePercent: other1Value?.garagePercent
 				? other1Value?.garagePercent
 				: null,
-			name: 'other1Value',
+			name: 'other1Value'
 		},
 		{
 			label: null,
@@ -76,8 +76,8 @@ const PropertyCharacteristics = () => {
 			garagePercent: other2Value?.garagePercent
 				? other2Value?.garagePercent
 				: null,
-			name: 'other2Value',
-		},
+			name: 'other2Value'
+		}
 	]
 
 	useEffect(() => {
@@ -216,55 +216,55 @@ const PropertyCharacteristics = () => {
 				<div className="row source-1-row">
 					<div className="first">{source1?.label}</div>
 					<div className="column">
-						<span className="value">{source1?.beds}</span>
+						<span className="value">{source1?.beds}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1?.baths}</span>
+						<span className="value">{source1?.baths}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1?.sqFt}</span>
+						<span className="value">{source1?.sqFt}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1?.age}</span>
+						<span className="value">{source1?.age}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source1?.garage}</span>
+						<span className="value">{source1?.garage}&nbsp;</span>
 					</div>
 				</div>
 				<div className="row source-2-row">
 					<div className="first">{source2?.label}</div>
 					<div className="column">
-						<span className="value">{source2?.beds}</span>
+						<span className="value">{source2?.beds}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source2?.baths}</span>
+						<span className="value">{source2?.baths}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source2?.sqFt}</span>
+						<span className="value">{source2?.sqFt}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source2?.age}</span>
+						<span className="value">{source2?.age}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source2?.garage}</span>
+						<span className="value">{source2?.garage}&nbsp;</span>
 					</div>
 				</div>
 				<div className="row source-2-row">
 					<div className="first">{source3?.label}</div>
 					<div className="column">
-						<span className="value">{source3?.beds}</span>
+						<span className="value">{source3?.beds}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3?.baths}</span>
+						<span className="value">{source3?.baths}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3?.sqFt}</span>
+						<span className="value">{source3?.sqFt}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3?.age}</span>
+						<span className="value">{source3?.age}&nbsp;</span>
 					</div>
 					<div className="column">
-						<span className="value">{source3?.garage}</span>
+						<span className="value">{source3?.garage}&nbsp;</span>
 					</div>
 				</div>
 			</div>
