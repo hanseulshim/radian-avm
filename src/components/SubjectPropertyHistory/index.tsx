@@ -11,7 +11,7 @@ import './SubjectPropertyHistory.scss'
 const SubjectPropertyHistory = () => {
 	const { subjectPropertyTransaction1 } = useContext(DataContext)
 	const photos: string[] = subjectPropertyTransaction1?.photos
-		? subjectPropertyTransaction1.photos
+		? subjectPropertyTransaction1.photos.slice(0, 12)
 		: []
 	return (
 		<>

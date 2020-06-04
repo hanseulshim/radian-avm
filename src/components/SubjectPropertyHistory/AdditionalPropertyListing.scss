@@ -2,14 +2,15 @@
 
 .additional-property-listing {
 	.footer-container {
-		margin-bottom: 15px;
+		margin-bottom: 35px;
 	}
 	.property-listing {
-		padding: 15px $side-spacer;
+		padding: 50px $side-spacer;
+		margin-bottom: 50px;
 		display: grid;
 		grid-template-columns: 400px 400px 400px;
-		grid-template-rows: 275px 275px 275px 275px 275px;
-		gap: 15px 20px;
+		grid-template-rows: 300px 300px 300px 300px;
+		gap: 25px 12px;
 
 		.image-container {
 			overflow: hidden;

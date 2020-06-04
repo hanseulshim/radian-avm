@@ -2,7 +2,7 @@
 
 .market-summary {
 	.notable-listing-sales {
-		padding: 30px $side-spacer 75px;
+		padding: 30px $side-spacer 25px;
 		background: $wild-sand;
 
 		.section-title {
@@ -11,9 +11,9 @@
 
 		.listing-container {
 			display: grid;
-			grid-template-columns: 400px 400px 400px;
-			grid-template-rows: 280px 280px;
-			gap: 20px;
+			grid-template-columns: 402px 402px 402px;
+			grid-template-rows: 362px 362px;
+			gap: 20px 15px;
 
 			.listing {
 				border: 1px solid $black;
@@ -21,7 +21,7 @@
 				flex-direction: column;
 
 				.image-container {
-					height: 210px;
+					height: 300px;
 					overflow: hidden;
 					position: relative;
 					display: flex;

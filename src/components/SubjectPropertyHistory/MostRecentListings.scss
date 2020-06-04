@@ -8,13 +8,13 @@
 		.list-container {
 			display: grid;
 			grid-template-columns: 400px 400px 400px;
-			grid-template-rows: 205px;
-			gap: 20px;
+			grid-template-rows: 340px;
+			gap: 11px;
 			margin-top: 20px;
 
 			.panel {
 				.image-container {
-					height: 165px;
+					height: 300px;
 					display: flex;
 					justify-content: center;
 					overflow: hidden;
