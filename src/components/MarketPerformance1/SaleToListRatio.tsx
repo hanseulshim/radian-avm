@@ -37,7 +37,7 @@ const SaleToListRatio = () => {
 		series1.data = chart.data.map((obj) => {
 			return {
 				...obj,
-				level1: obj.level1 - 100
+				level1: obj.level1 ? obj.level1 - 100 : null
 			}
 		})
 		series1.dataFields.valueY = 'level1'
@@ -49,7 +49,7 @@ const SaleToListRatio = () => {
 		series2.data = chart.data.map((obj) => {
 			return {
 				...obj,
-				level2: obj.level2 - 100
+				level2: obj.level2 ? obj.level2 - 100 : null
 			}
 		})
 		series2.dataFields.valueY = 'level2'
