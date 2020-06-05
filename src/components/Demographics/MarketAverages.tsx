@@ -38,118 +38,126 @@ const MarketAverages = () => {
 	return (
 		<>
 			<div className="section-title">Market Averages</div>
-			<div className="ratings-container">
-				<div className="title">School Ratings</div>
-				<div className="rating">
-					<div
-						className="average"
-						style={{
-							background: getBackground(level1Averages?.avgSchoolRating),
-							color: getColor(level1Averages?.avgSchoolRating)
-						}}
-					>
-						<div className="value">{level1Averages?.avgSchoolRating}</div>
-						<div>Avg</div>
-					</div>
-					<div className="value-container">
-						<div className="value-row">
+			{schoolRatings && (
+				<div className="ratings-container">
+					<div className="title">School Ratings</div>
+					<div className="rating">
+						{level1Averages?.avgSchoolRating && (
 							<div
-								className="value"
+								className="average"
 								style={{
-									background: getBackground(schoolRatings?.elementary),
-									color: getColor(schoolRatings?.elementary)
+									background: getBackground(level1Averages?.avgSchoolRating),
+									color: getColor(level1Averages?.avgSchoolRating)
 								}}
 							>
-								{schoolRatings?.elementary}
+								<div className="value">{level1Averages?.avgSchoolRating}</div>
+								<div>Avg</div>
 							</div>
-							<div>Elementary</div>
-						</div>
-						<div className="value-row">
-							<div
-								className="value"
-								style={{
-									background: getBackground(schoolRatings?.middle),
-									color: getColor(schoolRatings?.middle)
-								}}
-							>
-								{schoolRatings?.middle}
+						)}
+						<div className="value-container">
+							<div className="value-row">
+								<div
+									className="value"
+									style={{
+										background: getBackground(schoolRatings?.elementary),
+										color: getColor(schoolRatings?.elementary)
+									}}
+								>
+									{schoolRatings?.elementary}
+								</div>
+								{schoolRatings?.elementary && <div>Elementary</div>}
 							</div>
-							<div>Middle</div>
-						</div>
-						<div className="value-row">
-							<div
-								className="value"
-								style={{
-									background: getBackground(schoolRatings?.high),
-									color: getColor(schoolRatings?.high)
-								}}
-							>
-								{schoolRatings?.high}
+							<div className="value-row">
+								<div
+									className="value"
+									style={{
+										background: getBackground(schoolRatings?.middle),
+										color: getColor(schoolRatings?.middle)
+									}}
+								>
+									{schoolRatings?.middle}
+								</div>
+								{schoolRatings?.middle && <div>Middle</div>}
 							</div>
-							<div>High</div>
+							<div className="value-row">
+								<div
+									className="value"
+									style={{
+										background: getBackground(schoolRatings?.high),
+										color: getColor(schoolRatings?.high)
+									}}
+								>
+									{schoolRatings?.high}
+								</div>
+								{schoolRatings?.high && <div>High</div>}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			)}
 			<div className="description">
 				{description?.replace(
 					'{GEOGRAPHY}',
 					level1Averages?.label ? level1Averages.label : ''
 				)}
 			</div>
-			<div className="ratings-container">
-				<div className="title">Transit Scores</div>
-				<div className="rating">
-					<div
-						className="average"
-						style={{
-							background: getBackground(level1Averages?.avgTransitRating),
-							color: getColor(level1Averages?.avgTransitRating)
-						}}
-					>
-						<div className="value">{level1Averages?.avgTransitRating}</div>
-						<div>Avg</div>
-					</div>
-					<div className="value-container">
-						<div className="value-row">
+			{transitScores && (
+				<div className="ratings-container">
+					<div className="title">Transit Scores</div>
+					<div className="rating">
+						{level1Averages?.avgTransitRating && (
 							<div
-								className="value"
+								className="average"
 								style={{
-									background: getBackground(transitScores?.massTransit),
-									color: getColor(transitScores?.massTransit)
+									background: getBackground(level1Averages?.avgTransitRating),
+									color: getColor(level1Averages?.avgTransitRating)
 								}}
 							>
-								{transitScores?.massTransit}
+								<div className="value">{level1Averages?.avgTransitRating}</div>
+								<div>Avg</div>
 							</div>
-							<IconTrain className="black" />
-						</div>
-						<div className="value-row">
-							<div
-								className="value"
-								style={{
-									background: getBackground(transitScores?.auto),
-									color: getColor(transitScores?.auto)
-								}}
-							>
-								{transitScores?.auto}
+						)}
+						<div className="value-container">
+							<div className="value-row">
+								<div
+									className="value"
+									style={{
+										background: getBackground(transitScores?.massTransit),
+										color: getColor(transitScores?.massTransit)
+									}}
+								>
+									{transitScores?.massTransit}
+								</div>
+								{transitScores?.massTransit && <IconTrain className="black" />}
 							</div>
-							<IconCar className="black" />
-						</div>
-						<div className="value-row">
-							<div
-								className="value"
-								style={{
-									background: getBackground(transitScores?.bike),
-									color: getColor(transitScores?.bike)
-								}}
-							>
-								{transitScores?.bike}
+							<div className="value-row">
+								<div
+									className="value"
+									style={{
+										background: getBackground(transitScores?.auto),
+										color: getColor(transitScores?.auto)
+									}}
+								>
+									{transitScores?.auto}
+								</div>
+								{transitScores?.auto && <IconCar className="black" />}
 							</div>
-							<IconBike className="black" />
+							<div className="value-row">
+								<div
+									className="value"
+									style={{
+										background: getBackground(transitScores?.bike),
+										color: getColor(transitScores?.bike)
+									}}
+								>
+									{transitScores?.bike}
+								</div>
+								{transitScores?.bike && <IconBike className="black" />}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			)}
 		</>
 	)
 }

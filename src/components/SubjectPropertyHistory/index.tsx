@@ -9,11 +9,15 @@ import PropertyValueTrend from './PropertyValueTrend'
 import './SubjectPropertyHistory.scss'
 
 const SubjectPropertyHistory = () => {
-	const { subjectPropertyTransaction1 } = useContext(DataContext)
+	const {
+		subjectPropertyTransaction1,
+		subjectPropertyTransactions
+	} = useContext(DataContext)
 	const photos: string[] = subjectPropertyTransaction1?.photos
 		? subjectPropertyTransaction1.photos
 		: []
-	return (
+	return subjectPropertyTransactions &&
+		subjectPropertyTransactions.length > 0 ? (
 		<>
 			<div className="subject-property-history page">
 				<Header title="Subject Property History" />
@@ -24,9 +28,9 @@ const SubjectPropertyHistory = () => {
 				<ActiveProperty />
 				<Footer />
 			</div>
-			{photos.length && <AdditionalPropertyListing photos={photos} />}
+			{photos.length ? <AdditionalPropertyListing photos={photos} /> : null}
 		</>
-	)
+	) : null
 }
 
 export default SubjectPropertyHistory

@@ -1,8 +1,8 @@
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import { DataContext } from 'components/App'
 import numeral from 'numeral'
 import React, { useContext, useEffect } from 'react'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
 
 const RetailDistressedSales = () => {
@@ -76,56 +76,82 @@ const RetailDistressedSales = () => {
 			<div className="section-title">Retail vs Distressed Sales</div>
 			<div className="chart-row">
 				<div className="info-container">
-					<div className="table-container">
-						<div className="row header">
-							<div className="first" />
-							<div className="marker" />
-							<div className="column">Prior Month</div>
-							<div className="column">1 Year Ago</div>
-						</div>
-						<div className="row">
-							<div className="first">
-								{retailVsDistressedSales?.level1Label}
+					{retailVsDistressedSales && (
+						<div className="table-container">
+							<div className="row header">
+								<div className="first" />
+								<div className="marker" />
+								<div className="column">Prior Month</div>
+								<div className="column">1 Year Ago</div>
 							</div>
-							<div className="marker level1"></div>
-							<div className="column">
-								{retailVsDistressedSales?.level1PriorMonth}
-							</div>
-							<div className="column">
-								{retailVsDistressedSales?.level1PriorYear}
-							</div>
-						</div>
-						<div className="row">
-							<div className="first">
-								{retailVsDistressedSales?.level2Label}
-							</div>
-							<div className="marker level2"></div>
-							<div className="column">
-								{retailVsDistressedSales?.level2PriorMonth}
-							</div>
-							<div className="column">
-								{retailVsDistressedSales?.level2PriorYear}
-							</div>
-						</div>
-						<div className="row">
-							<div className="first">
-								{retailVsDistressedSales?.level3Label}
-							</div>
-							<div className="marker level3"></div>
-							<div className="column">
-								$
-								{numeral(retailVsDistressedSales?.level3PriorMonth).format(
-									'0.[00]a'
+							<div className="row">
+								<div className="first">
+									{retailVsDistressedSales?.level1Label}
+								</div>
+								<div className="marker level1"></div>
+								{retailVsDistressedSales?.level1PriorMonth ? (
+									<div className="column">
+										{retailVsDistressedSales?.level1PriorMonth}
+									</div>
+								) : (
+									<div className="column">&nbsp;</div>
+								)}
+								{retailVsDistressedSales?.level1PriorYear ? (
+									<div className="column">
+										{retailVsDistressedSales?.level1PriorYear}
+									</div>
+								) : (
+									<div className="column">&nbsp;</div>
 								)}
 							</div>
-							<div className="column">
-								$
-								{numeral(retailVsDistressedSales?.level3PriorYear).format(
-									'0.[00]a'
+							<div className="row">
+								<div className="first">
+									{retailVsDistressedSales?.level2Label}
+								</div>
+								<div className="marker level2"></div>
+								{retailVsDistressedSales?.level2PriorMonth ? (
+									<div className="column">
+										${retailVsDistressedSales?.level2PriorMonth}
+									</div>
+								) : (
+									<div className="column">&nbsp;</div>
+								)}
+								{retailVsDistressedSales?.level2PriorYear ? (
+									<div className="column">
+										{retailVsDistressedSales?.level2PriorYear}
+									</div>
+								) : (
+									<div className="column">&nbsp;</div>
+								)}
+							</div>
+							<div className="row">
+								<div className="first">
+									{retailVsDistressedSales?.level3Label}
+								</div>
+								<div className="marker level3"></div>
+								{retailVsDistressedSales?.level3PriorMonth ? (
+									<div className="column">
+										$
+										{numeral(retailVsDistressedSales?.level3PriorMonth).format(
+											'0.[00]a'
+										)}
+									</div>
+								) : (
+									<div className="column">&nbsp;</div>
+								)}
+								{retailVsDistressedSales?.level3PriorYear ? (
+									<div className="column">
+										$
+										{numeral(retailVsDistressedSales?.level3PriorYear).format(
+											'0.[00]a'
+										)}
+									</div>
+								) : (
+									<div className="column">&nbsp;</div>
 								)}
 							</div>
 						</div>
-					</div>
+					)}
 					<div className="description">
 						{retailVsDistressedSales?.description}
 					</div>

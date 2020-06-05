@@ -23,62 +23,64 @@ const Level1Average = () => {
 		avgCrimeIndicator
 	} = { ...level1Averages }
 	return (
-		<div className="level-average-container level1">
-			<div className="title">{label}</div>
-			<div className="info-row">
-				<div className="info-container">
-					<IconSchool />
-					<div className="info">
-						<div className="line" />
-						<div className="value-container">
-							<div className="average">{avgSchoolRating}</div>
-							<div className="icon-row">
-								{avgSchoolIndicator === 'up' ? (
-									<IconUp className="white indicator" />
-								) : avgSchoolIndicator === 'down' ? (
-									<IconDown className="white indicator" />
-								) : null}{' '}
-								{avgSchoolDelta}
+		level1Averages && (
+			<div className="level-average-container level1">
+				<div className="title">{label}</div>
+				<div className="info-row">
+					<div className="info-container">
+						<IconSchool />
+						<div className="info">
+							<div className="line" />
+							<div className="value-container">
+								<div className="average">{avgSchoolRating}</div>
+								<div className="icon-row">
+									{avgSchoolIndicator === 'up' ? (
+										<IconUp className="white indicator" />
+									) : avgSchoolIndicator === 'down' ? (
+										<IconDown className="white indicator" />
+									) : null}{' '}
+									{avgSchoolDelta}
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="info-container">
-					<IconCarSide />
-					<div className="info">
-						<div className="line" />
-						<div className="value-container">
-							<div className="average">{avgTransitRating}</div>
-							<div className="icon-row">
-								{avgTransitIndicator === 'up' ? (
-									<IconUp className="white indicator" />
-								) : avgTransitIndicator === 'down' ? (
-									<IconDown className="white indicator" />
-								) : null}{' '}
-								{avgTransitDelta}
+					<div className="info-container">
+						<IconCarSide />
+						<div className="info">
+							<div className="line" />
+							<div className="value-container">
+								<div className="average">{avgTransitRating}</div>
+								<div className="icon-row">
+									{avgTransitIndicator === 'up' ? (
+										<IconUp className="white indicator" />
+									) : avgTransitIndicator === 'down' ? (
+										<IconDown className="white indicator" />
+									) : null}{' '}
+									{avgTransitDelta}
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="info-container">
-					<IconGun />
-					<div className="info">
-						<div className="line" />
-						<div className="value-container">
-							<div className="average">{avgCrimeRating}</div>
-							<div className="icon-row">
-								{avgCrimeIndicator === '<' ? (
-									<IconArrowLeft className="white indicator-arrow" />
-								) : avgCrimeIndicator === '>' ? (
-									<IconArrowRight className="white indicator-arrow" />
-								) : null}{' '}
-								{avgCrimeDelta}
+					<div className="info-container">
+						<IconGun />
+						<div className="info">
+							<div className="line" />
+							<div className="value-container">
+								<div className="average">{avgCrimeRating}</div>
+								<div className="icon-row">
+									{avgCrimeIndicator === '<' ? (
+										<IconArrowLeft className="white indicator-arrow" />
+									) : avgCrimeIndicator === '>' ? (
+										<IconArrowRight className="white indicator-arrow" />
+									) : null}{' '}
+									{avgCrimeDelta}
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		)
 	)
 }
 

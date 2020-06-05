@@ -29,7 +29,7 @@ const getCondition = (condition: string | null): string =>
 const NotableListingSales = () => {
 	const { featuredProperties } = useContext(DataContext)
 
-	return (
+	return featuredProperties?.length ? (
 		<div className="notable-listing-sales">
 			<div className="section-title">Notable Listings &amp; Sales</div>
 			<div className="listing-container">
@@ -59,35 +59,45 @@ const NotableListingSales = () => {
 										src={imagePath ? imagePath : IconHouseUnavailable}
 									/>
 									<div className="row">
-										<div className="distance">{distance} miles</div>
-										<div className={getStatus(status)}>{status}</div>
-									</div>
-									<div className="feature-number">
-										{category === 'listed' ? (
-											<IconCircle className={getCondition(condition)}>
-												{featureNumber}
-											</IconCircle>
-										) : category === 'u/c' ? (
-											<IconSquare className={getCondition(condition)}>
-												{featureNumber}
-											</IconSquare>
-										) : (
-											<IconTriangle className={getCondition(condition)}>
-												{featureNumber}
-											</IconTriangle>
+										{distance && (
+											<div className="distance">{distance} miles</div>
+										)}
+										{status && (
+											<div className={getStatus(status)}>{status}</div>
 										)}
 									</div>
+									{condition && (
+										<div className="feature-number">
+											{category === 'listed' ? (
+												<IconCircle className={getCondition(condition)}>
+													{featureNumber}
+												</IconCircle>
+											) : category === 'u/c' ? (
+												<IconSquare className={getCondition(condition)}>
+													{featureNumber}
+												</IconSquare>
+											) : (
+												<IconTriangle className={getCondition(condition)}>
+													{featureNumber}
+												</IconTriangle>
+											)}
+										</div>
+									)}
 								</div>
 								<div className="info-container">
 									<div className="row">
-										<div className="price">{numeral(price).format('$0,0')}</div>
+										<div className="price">
+											{price ? numeral(price).format('$0,0') : null}
+										</div>
 										<div className="right">
 											{eventType} {eventDate}
 										</div>
 									</div>
 									<div className="row">
 										<div>{address}</div>
-										<div className="right">{daysOnMarket} DOM</div>
+										{daysOnMarket && (
+											<div className="right">{daysOnMarket} DOM</div>
+										)}
 									</div>
 								</div>
 							</div>
@@ -95,7 +105,7 @@ const NotableListingSales = () => {
 					)}
 			</div>
 		</div>
-	)
+	) : null
 }
 
 export default NotableListingSales

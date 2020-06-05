@@ -1,7 +1,7 @@
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import { DataContext } from 'components/App'
 import React, { useContext, useEffect } from 'react'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
 import AverageDom from './AverageDom'
 
@@ -58,33 +58,58 @@ const ListedInventory = () => {
 	return (
 		<div className="chart-row second">
 			<div className="info-container">
-				<div className="table-container">
-					<div className="row header">
-						<div className="first" />
-						<div className="marker inventory" />
-						<div className="column">Prior Month</div>
-						<div className="column">1 Year Ago</div>
+				{inventory && (
+					<div className="table-container">
+						<div className="row header">
+							<div className="first" />
+							<div className="marker" />
+							<div className="column">Prior Month</div>
+							<div className="column">1 Year Ago</div>
+						</div>
+						<div className="row">
+							<div className="first">{inventory?.level1Label}</div>
+							<div className="marker level1"></div>
+							{inventory?.level1PriorMonth ? (
+								<div className="column">{inventory?.level1PriorMonth}</div>
+							) : (
+								<div className="column">&nbsp;</div>
+							)}
+							{inventory?.level1PriorYear ? (
+								<div className="column">{inventory?.level1PriorYear}</div>
+							) : (
+								<div className="column">&nbsp;</div>
+							)}
+						</div>
+						<div className="row">
+							<div className="first">{inventory?.level2Label}</div>
+							<div className="marker level2"></div>
+							{inventory?.level2PriorMonth ? (
+								<div className="column">{inventory?.level2PriorMonth}</div>
+							) : (
+								<div className="column">&nbsp;</div>
+							)}
+							{inventory?.level2PriorYear ? (
+								<div className="column">{inventory?.level2PriorYear}</div>
+							) : (
+								<div className="column">&nbsp;</div>
+							)}
+						</div>
+						<div className="row">
+							<div className="first">{inventory?.level3Label}</div>
+							<div className="marker level3"></div>
+							{inventory?.level3PriorMonth ? (
+								<div className="column">{inventory?.level3PriorMonth}</div>
+							) : (
+								<div className="column">&nbsp;</div>
+							)}
+							{inventory?.level3PriorYear ? (
+								<div className="column">{inventory?.level3PriorYear}</div>
+							) : (
+								<div className="column">&nbsp;</div>
+							)}
+						</div>
 					</div>
-					<div className="row">
-						<div className="first">{inventory?.level1Label}</div>
-						<div className="marker inventory level1"></div>
-						<div className="column">{inventory?.level1PriorMonth}</div>
-						<div className="column">{inventory?.level1PriorYear}</div>
-					</div>
-					<div className="row">
-						<div className="first">{inventory?.level2Label}</div>
-						<div className="marker inventory level2"></div>
-						<div className="column">{inventory?.level2PriorMonth}</div>
-						<div className="column">{inventory?.level2PriorYear}</div>
-					</div>
-					<div className="row">
-						<div className="first">{inventory?.level3Label}</div>
-						<div className="marker inventory level3"></div>
-						<div className="column">{inventory?.level3PriorMonth}</div>
-						<div className="column">{inventory?.level3PriorYear}</div>
-					</div>
-				</div>
-				<div className="description">{inventory?.description}</div>
+				)}
 			</div>
 			<div className="chart-container">
 				<div className="sub-section-title">
