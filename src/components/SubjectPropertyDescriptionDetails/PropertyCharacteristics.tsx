@@ -88,8 +88,14 @@ const PropertyCharacteristics = () => {
 			chart.height = am4core.percent(100)
 			chart.width = am4core.percent(95)
 
-			// Sort data if its a chart with labels
-			if (chartId === 'beds' || chartId === 'baths' || chartId === 'garage') {
+			//Sort chart data
+			if (
+				chartId === 'beds' ||
+				chartId === 'baths' ||
+				chartId === 'garage' ||
+				chartId === 'age' ||
+				chartId === 'garage'
+			) {
 				chart.data = data.sort((a, b) => {
 					if (a[chartId] === null || b[chartId] === null) {
 						return -1

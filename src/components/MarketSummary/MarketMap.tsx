@@ -41,9 +41,9 @@ const PropertyMarker = ({ property }: any) => {
 				<IconCircle className={color}>{featureNumber}</IconCircle>
 			) : category === 'u/c' ? (
 				<IconSquare className={color}>{featureNumber}</IconSquare>
-			) : (
+			) : category === 'sold' ? (
 				<IconTriangle className={color}>{featureNumber}</IconTriangle>
-			)
+			) : null
 		return <>{icon}</>
 	} else {
 		const icon =
@@ -51,9 +51,9 @@ const PropertyMarker = ({ property }: any) => {
 				<IconCircle className={`legend-shadow  ${color}`} />
 			) : category === 'u/c' ? (
 				<IconSquare className={`legend-shadow  ${color}`} />
-			) : (
+			) : category === 'sold' ? (
 				<IconTriangle className={`legend-shadow  ${color}`} />
-			)
+			) : null
 		return <>{icon}</>
 	}
 }
@@ -93,12 +93,15 @@ const MarketMap = () => {
 					{nearbyPropertyCoords &&
 						nearbyPropertyCoords.map((property: nearbyProperty, i: number) => {
 							return (
-								<PropertyMarker
-									property={property}
-									key={'property' + i}
-									lat={property.lat}
-									lng={property.lng}
-								/>
+								property.lat &&
+								property.lng && (
+									<PropertyMarker
+										property={property}
+										key={'property' + i}
+										lat={property.lat}
+										lng={property.lng}
+									/>
+								)
 							)
 						})}
 					{featurePropertyCoords &&

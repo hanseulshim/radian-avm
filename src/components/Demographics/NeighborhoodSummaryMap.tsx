@@ -31,29 +31,33 @@ const PropertyMap = () => {
 	}, [lat, lng, level1GeoJSON, level2GeoJSON])
 
 	const handleApiLoaded = (map: any) => {
-		const geoJson1 = {
-			type: 'FeatureCollection',
-			features: [
-				{
-					type: 'Feature',
-					properties: { name: 'level1' },
-					geometry: level1Coords
-				}
-			]
+		if (level1Coords?.coordinates) {
+			const geoJson1 = {
+				type: 'FeatureCollection',
+				features: [
+					{
+						type: 'Feature',
+						properties: { name: 'level1' },
+						geometry: level1Coords
+					}
+				]
+			}
+			map.data.addGeoJson(geoJson1)
 		}
-		const geoJson2 = {
-			type: 'FeatureCollection',
-			features: [
-				{
-					type: 'Feature',
-					properties: { name: 'level2' },
-					geometry: level2Coords
-				}
-			]
+		if (level2Coords?.coordinates) {
+			const geoJson2 = {
+				type: 'FeatureCollection',
+				features: [
+					{
+						type: 'Feature',
+						properties: { name: 'level2' },
+						geometry: level2Coords
+					}
+				]
+			}
+			map.data.addGeoJson(geoJson2)
 		}
 
-		map.data.addGeoJson(geoJson1)
-		map.data.addGeoJson(geoJson2)
 		map.data.setStyle(function (feature: any) {
 			const name = feature.getProperty('name')
 			return {

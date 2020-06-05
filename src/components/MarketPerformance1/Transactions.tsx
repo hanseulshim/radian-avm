@@ -10,7 +10,7 @@ const Transactions = () => {
 	const { rental, retailSales, distressedSales, flipSales, flipRental } = {
 		...avgPrices
 	}
-	const { retail, distressed, flipSale }: any = {
+	const { Retail, Distressed, flipSale }: any = {
 		...numberOfTransactions
 	}
 
@@ -27,30 +27,32 @@ const Transactions = () => {
 		chart.data = [
 			{
 				transactionType: 'Retail',
-				value: retail || null
+				value: Retail || 0
 			},
 			{
 				transactionType: 'Distressed',
-				value: distressed || null
+				value: Distressed || 0
 			},
 			{
 				transactionType: 'Rental',
-				value: rentalTransaction || null
+				value: rentalTransaction || 0
 			},
 			{
 				transactionType: 'Flip Sale',
-				value: flipSale || null
+				value: flipSale || 0
 			},
 			{
 				transactionType: 'Flip Rental',
-				value: flipRentalTransaction || null
+				value: flipRentalTransaction || 0
 			}
 		]
 
-		chart.legend = new am4charts.Legend()
-		chart.legend.position = 'right'
-		chart.innerRadius = am4core.percent(60)
-		chart.legend.valueLabels.template.disabled = true
+		if (numberOfTransactions) {
+			chart.legend = new am4charts.Legend()
+			chart.legend.position = 'right'
+			chart.innerRadius = am4core.percent(60)
+			chart.legend.valueLabels.template.disabled = true
+		}
 
 		const pieSeries = chart.series.push(new am4charts.PieSeries())
 		pieSeries.dataFields.value = 'value'
@@ -64,37 +66,39 @@ const Transactions = () => {
 			am4core.color(colors.mountainMist)
 		]
 
-		let sumLabel = chart.createChild(am4core.Label)
-		const values = [
-			retail,
-			distressed,
-			rentalTransaction,
-			flipSale,
-			flipRentalTransaction
-		]
-		const total = values.reduce((total, num) => {
-			return total + num
-		})
-		sumLabel.isMeasured = false
-		sumLabel.fontSize = 32
-		sumLabel.fontWeight = '700'
-		sumLabel.x = 125
-		sumLabel.y = 125
-		sumLabel.text = `${total}`
-		let totalLabel = chart.createChild(am4core.Label)
-		totalLabel.isMeasured = false
-		totalLabel.fontSize = 16
-		totalLabel.fontWeight = '700'
-		totalLabel.x = 135
-		totalLabel.y = 160
-		totalLabel.text = `Total`
+		if (numberOfTransactions) {
+			let sumLabel = chart.createChild(am4core.Label)
+			const values = [
+				Retail,
+				Distressed,
+				rentalTransaction,
+				flipSale,
+				flipRentalTransaction
+			]
+			const total = values.reduce((total, num) => {
+				return total + num
+			})
+			sumLabel.isMeasured = false
+			sumLabel.fontSize = 32
+			sumLabel.fontWeight = '700'
+			sumLabel.x = 125
+			sumLabel.y = 125
+			sumLabel.text = `${total}`
+			let totalLabel = chart.createChild(am4core.Label)
+			totalLabel.isMeasured = false
+			totalLabel.fontSize = 16
+			totalLabel.fontWeight = '700'
+			totalLabel.x = 135
+			totalLabel.y = 160
+			totalLabel.text = `Total`
+		}
 	}, [
 		numberOfTransactions,
-		distressed,
+		Distressed,
 		flipRentalTransaction,
 		flipSale,
 		rentalTransaction,
-		retail
+		Retail
 	])
 	return (
 		<div className="transactions">
