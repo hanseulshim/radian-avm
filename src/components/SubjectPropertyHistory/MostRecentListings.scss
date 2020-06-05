@@ -15,14 +15,6 @@
 			.panel {
 				.image-container {
 					height: 300px;
-					display: flex;
-					justify-content: center;
-					overflow: hidden;
-					align-items: center;
-					background: $alto;
-					img {
-						height: 100%;
-					}
 					position: relative;
 					.circle {
 						position: absolute;

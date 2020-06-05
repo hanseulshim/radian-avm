@@ -19,7 +19,16 @@ body {
 .page {
 	page-break-after: always;
 }
-
+.house-image-container {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	align-items: center;
+	background: $alto;
+	img {
+		max-height: 100%;
+	}
+}
 img {
 	max-width: 100%;
 }

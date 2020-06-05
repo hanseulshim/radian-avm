@@ -8,7 +8,7 @@ const AdditionalPropertyListing = ({ photos }: { photos: string[] }) => {
 			<Header title="Subject Property History" />
 			<div className="property-listing">
 				{photos.map((photo, index) => (
-					<div key={index} className="image-container">
+					<div key={index} className="house-image-container">
 						<img src={photo} alt="house" />
 					</div>
 				))}

@@ -6,14 +6,6 @@
 			height: 672px;
 			.image-container {
 				height: 536.25px;
-				display: flex;
-				justify-content: center;
-				overflow: hidden;
-				align-items: center;
-				background: $alto;
-				img {
-					height: 100%;
-				}
 			}
 			.info-row-1,
 			.info-row-2 {

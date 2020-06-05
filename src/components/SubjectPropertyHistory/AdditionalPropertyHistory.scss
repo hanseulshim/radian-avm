@@ -34,14 +34,6 @@
 			.image-container {
 				width: 500px;
 				margin-left: 20px;
-				display: flex;
-				justify-content: center;
-				overflow: hidden;
-				align-items: center;
-				background: $alto;
-				img {
-					height: 100%;
-				}
 			}
 		}
 
@@ -53,14 +45,6 @@
 		}
 		.image-container {
 			width: 100%;
-			display: flex;
-			justify-content: center;
-			overflow: hidden;
-			align-items: center;
-			background: $alto;
-			img {
-				height: 100%;
-			}
 		}
 	}
 }

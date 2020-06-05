@@ -40,7 +40,7 @@ const AdditionalPropertyHistory = () => {
 								</div>
 							</div>
 						</div>
-						<div className="image-container">
+						<div className="image-container house-image-container">
 							<img
 								src={heroImage ? heroImage : IconHouseUnavailable}
 								alt="house"
@@ -49,7 +49,10 @@ const AdditionalPropertyHistory = () => {
 					</div>
 					<div className="photo-container">
 						{photos.slice(0, 9).map((photo, index) => (
-							<div key={index} className="image-container">
+							<div
+								key={index}
+								className="image-container house-image-container"
+							>
 								<img src={photo} alt="house" />
 							</div>
 						))}

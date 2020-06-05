@@ -11,16 +11,5 @@
 		grid-template-columns: 400px 400px 400px;
 		grid-template-rows: 300px 300px 300px 300px;
 		gap: 25px 12px;
-
-		.image-container {
-			overflow: hidden;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background: $alto;
-			img {
-				height: 100%;
-			}
-		}
 	}
 }

@@ -22,12 +22,7 @@
 
 				.image-container {
 					height: 300px;
-					overflow: hidden;
 					position: relative;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					background: $alto;
 
 					.row {
 						position: absolute;
@@ -61,10 +56,6 @@
 						position: absolute;
 						top: 5px;
 						right: 5px;
-					}
-
-					img {
-						height: 100%;
 					}
 				}
 				.info-container {
