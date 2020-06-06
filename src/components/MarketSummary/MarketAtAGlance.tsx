@@ -3,6 +3,7 @@ import IconHouse from 'assets/IconHouse'
 import IconSquare from 'assets/IconSquare'
 import IconTriangle from 'assets/IconTriangle'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import React, { useContext } from 'react'
 import MarketMap from './MarketMap'
 
@@ -52,7 +53,9 @@ const MarketAtAGlance = () => {
 				</div>
 			</div>
 			<div className="content-container">
-				<div className="description">{marketAtAGlance}</div>
+				<div className="description">
+					{marketAtAGlance && formatString(marketAtAGlance, 700)}
+				</div>
 				<div className="map-container">
 					<MarketMap />
 				</div>

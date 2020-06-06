@@ -1,6 +1,7 @@
 import { DataContext } from 'components/App'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import formatString from 'helper'
 import React, { useContext } from 'react'
 import AgeOfPopulation from './AgeOfPopulation'
 import './Demographics.scss'
@@ -20,7 +21,9 @@ const Demographics = () => {
 			<div className="summary-container">
 				<div className="header">Neighborhood Summary</div>
 				<div className="description-container">
-					<div className="description">{neighborhoodSummary}</div>
+					<div className="description">
+						{neighborhoodSummary && formatString(neighborhoodSummary, 150)}
+					</div>
 					<div>Comparison numbers are based on annual change</div>
 				</div>
 			</div>

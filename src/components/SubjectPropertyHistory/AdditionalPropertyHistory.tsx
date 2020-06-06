@@ -2,6 +2,7 @@ import IconHouseUnavailable from 'assets/IconHouseUnavailable.png'
 import { DataContext } from 'components/App'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import { formatString } from 'helper'
 import moment from 'moment'
 import React, { useContext } from 'react'
 import AdditionalPropertyListing from './AdditionalPropertyListing'
@@ -35,7 +36,7 @@ const AdditionalPropertyHistory = () => {
 							</div>
 							<div>
 								<div className="title comment">MLS Comments:</div>
-								<div>{mlsComments}</div>
+								<div>{mlsComments && formatString(mlsComments, 750)}</div>
 							</div>
 						</div>
 					</div>

@@ -2,6 +2,7 @@ import IconBike from 'assets/IconBike'
 import IconCar from 'assets/IconCar'
 import IconTrain from 'assets/IconTrain'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import React, { useContext } from 'react'
 
 const getColor = (value?: number | null): string =>
@@ -96,10 +97,14 @@ const MarketAverages = () => {
 				</div>
 			)}
 			<div className="description">
-				{description?.replace(
-					'{GEOGRAPHY}',
-					level1Averages?.label ? level1Averages.label : ''
-				)}
+				{description &&
+					formatString(
+						description?.replace(
+							'{GEOGRAPHY}',
+							level1Averages?.label ? level1Averages.label : ''
+						),
+						150
+					)}
 			</div>
 			{transitScores && (
 				<div className="ratings-container">

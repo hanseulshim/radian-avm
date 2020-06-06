@@ -3,6 +3,7 @@ import * as am4core from '@amcharts/amcharts4/core'
 import IconActiveListings from 'assets/IconActiveListings'
 import IconMedians from 'assets/IconMedians'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import numeral from 'numeral'
 import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors'
@@ -163,7 +164,10 @@ const ListedPriceRange = () => {
 						</div>
 					</div>
 				)}
-				<div className="description">{avgListingPrice?.description}</div>
+				<div className="description">
+					{avgListingPrice?.description &&
+						formatString(avgListingPrice?.description, 200)}
+				</div>
 			</div>
 			<div className="chart-container">
 				<div className="sub-section-title">

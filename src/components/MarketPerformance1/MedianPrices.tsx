@@ -3,6 +3,7 @@ import * as am4core from '@amcharts/amcharts4/core'
 import IconLine from 'assets/IconLine'
 import IconListed from 'assets/IconListed'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors'
 
@@ -80,7 +81,9 @@ const MedianPrices = () => {
 		<div className="median-prices">
 			<div className="at-a-glance">
 				<div className="title">At a Glance</div>
-				<div className="description">{atAGlance}</div>
+				<div className="description">
+					{atAGlance && formatString(atAGlance, 250)}
+				</div>
 			</div>
 			<div className="chart-container">
 				<div className="section-title">

@@ -1,5 +1,6 @@
 import PropertyFeatureHouse from 'assets/PropertyFeatureHouse.png'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import React, { useContext } from 'react'
 
 const getText = (text?: string | null): string => {
@@ -33,11 +34,17 @@ const PropertyFeatures = () => {
 				<div className="info-container">
 					<div>
 						{interiorFeatures && <div className="title">Interior Features</div>}
-						<div>{getText(interiorFeatures)}</div>
+						<div>
+							{getText(interiorFeatures) &&
+								formatString(getText(interiorFeatures), 200)}
+						</div>
 					</div>
 					<div className="info">
 						{exteriorFeatures && <div className="title">Exterior Features</div>}
-						<div>{getText(exteriorFeatures)}</div>
+						<div>
+							{getText(exteriorFeatures) &&
+								formatString(getText(exteriorFeatures), 200)}
+						</div>
 					</div>
 				</div>
 				<div className="image-container">

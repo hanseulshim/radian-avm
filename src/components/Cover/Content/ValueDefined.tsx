@@ -1,6 +1,7 @@
 import { DataContext } from 'components/App'
 import MapMarker from 'components/Common/MapMarker'
 import GoogleMapReact from 'google-map-react'
+import { formatString } from 'helper'
 import React, { useContext, useEffect, useState } from 'react'
 
 const ValueDefined = () => {
@@ -20,7 +21,9 @@ const ValueDefined = () => {
 	return (
 		<div className="value-defined-container">
 			<div className="section-title">AVM Value Defined</div>
-			<div className="description">{avmValueDefined}</div>
+			<div className="description">
+				{avmValueDefined && formatString(avmValueDefined, 200)}
+			</div>
 			<div className="map-container">
 				{lat && lng && (
 					<GoogleMapReact

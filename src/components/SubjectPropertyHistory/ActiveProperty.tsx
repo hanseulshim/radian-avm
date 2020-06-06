@@ -1,5 +1,6 @@
 import IconHouseUnavailable from 'assets/IconHouseUnavailable.png'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import moment from 'moment'
 import React, { useContext } from 'react'
 
@@ -29,7 +30,7 @@ const ActiveProperty = () => {
 						</div>
 						<div>
 							<div className="title comment">MLS Comments:</div>
-							<div>{mlsComments}</div>
+							<div>{mlsComments && formatString(mlsComments, 750)}</div>
 						</div>
 					</div>
 				</div>

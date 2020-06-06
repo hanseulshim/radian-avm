@@ -1,6 +1,7 @@
 import * as am4charts from '@amcharts/amcharts4/charts'
 import * as am4core from '@amcharts/amcharts4/core'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import numeral from 'numeral'
 import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors'
@@ -153,7 +154,8 @@ const RetailDistressedSales = () => {
 						</div>
 					)}
 					<div className="description">
-						{retailVsDistressedSales?.description}
+						{retailVsDistressedSales?.description &&
+							formatString(retailVsDistressedSales?.description, 200)}
 					</div>
 				</div>
 				<div className="chart-container">

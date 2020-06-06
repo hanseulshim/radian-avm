@@ -1,4 +1,5 @@
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import React, { useContext } from 'react'
 
 const AtAGlance = () => {
@@ -9,7 +10,7 @@ const AtAGlance = () => {
 	return (
 		<div className="at-a-glance-container">
 			<div className="title">At A Glance</div>
-			<div>{atAGlance}</div>
+			<div>{atAGlance && formatString(atAGlance, 200)}</div>
 			<div className="divider" />
 			<div className="title">
 				<sup>*</sup>SqFt

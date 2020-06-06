@@ -6,6 +6,7 @@ import singleChild from 'assets/icon_fam_2-1.svg'
 import twoChild from 'assets/icon_fam_2-2.svg'
 import couple from 'assets/icon_fam_2.svg'
 import { DataContext } from 'components/App'
+import { formatString } from 'helper'
 import React, { useContext, useEffect } from 'react'
 import { colors } from 'styles/colors'
 
@@ -98,10 +99,14 @@ const FamilyMakeup = () => {
 				style={{ borderRadius: '50%' }}
 			/>
 			<div className="description">
-				{familyMakeupDescription
-					?.replace('{PERCENT}', info.percent)
-					.replace('{GEOGRAPHY}', info.geography)
-					.replace('{FAMILY_MAKEUP}', info.makeup)}
+				{familyMakeupDescription &&
+					formatString(
+						familyMakeupDescription
+							?.replace('{PERCENT}', info.percent)
+							.replace('{GEOGRAPHY}', info.geography)
+							.replace('{FAMILY_MAKEUP}', info.makeup),
+						150
+					)}
 			</div>
 		</>
 	)
