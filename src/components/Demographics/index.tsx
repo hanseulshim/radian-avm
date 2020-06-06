@@ -1,7 +1,7 @@
 import { DataContext } from 'components/App'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
-import formatString from 'helper'
+import { formatString } from 'helper'
 import React, { useContext } from 'react'
 import AgeOfPopulation from './AgeOfPopulation'
 import './Demographics.scss'
