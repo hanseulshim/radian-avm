@@ -36,7 +36,7 @@ const SubjectProperty = () => {
 				</div>
 				{dwellingType && <span className="dwelling-type">{dwellingType}</span>}
 			</div>
-			<div className="image-container">
+			<div className="image-container house-image-container">
 				<img
 					src={imagePath ? imagePath : IconHouseUnavailable}
 					alt="Subject Property"

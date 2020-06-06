@@ -14,7 +14,7 @@ const SubjectPropertyHistory = () => {
 		subjectPropertyTransactions
 	} = useContext(DataContext)
 	const photos: string[] = subjectPropertyTransaction1?.photos
-		? subjectPropertyTransaction1.photos
+		? subjectPropertyTransaction1.photos.slice(0, 12)
 		: []
 	return subjectPropertyTransactions &&
 		subjectPropertyTransactions.length > 0 ? (

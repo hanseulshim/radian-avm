@@ -53,7 +53,7 @@ const NotableListingSales = () => {
 							index
 						) => (
 							<div key={index} className="listing">
-								<div className="image-container">
+								<div className="image-container house-image-container">
 									<img
 										alt="house"
 										src={imagePath ? imagePath : IconHouseUnavailable}

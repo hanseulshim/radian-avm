@@ -34,7 +34,7 @@ const ActiveProperty = () => {
 						</div>
 					</div>
 				</div>
-				<div className="image-container">
+				<div className="image-container house-image-container">
 					<img src={heroImage ? heroImage : IconHouseUnavailable} alt="house" />
 				</div>
 			</div>

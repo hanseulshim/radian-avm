@@ -31,7 +31,7 @@ const MostRecentListings = () => {
 					({ type, actionDate, actionAmount, imagePath }, index, arr) => {
 						return (
 							<div className="panel" key={index}>
-								<div className="image-container">
+								<div className="image-container house-image-container">
 									<img
 										src={imagePath ? imagePath : IconHouseUnavailable}
 										alt="house"
