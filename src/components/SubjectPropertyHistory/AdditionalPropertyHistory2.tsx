@@ -5,7 +5,7 @@ import Header from 'components/Header'
 import { formatString } from 'helper'
 import moment from 'moment'
 import React, { useContext } from 'react'
-import AdditionalPropertyListing from './AdditionalPropertyListing'
+import { generateListings } from './helper'
 
 const AdditionalPropertyHistory2 = () => {
 	const { subjectPropertyTransaction3 } = useContext(DataContext)
@@ -61,9 +61,7 @@ const AdditionalPropertyHistory2 = () => {
 				</div>
 				<Footer />
 			</div>
-			{photos.length > 9 && (
-				<AdditionalPropertyListing photos={photos.slice(9, 21)} />
-			)}
+			{generateListings(photos.slice(9))}
 		</>
 	) : null
 }

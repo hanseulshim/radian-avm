@@ -3,7 +3,7 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React, { useContext } from 'react'
 import ActiveProperty from './ActiveProperty'
-import AdditionalPropertyListing from './AdditionalPropertyListing'
+import { generateListings } from './helper'
 import MostRecentListings from './MostRecentListings'
 import PropertyValueTrend from './PropertyValueTrend'
 import './SubjectPropertyHistory.scss'
@@ -14,7 +14,7 @@ const SubjectPropertyHistory = () => {
 		subjectPropertyTransactions
 	} = useContext(DataContext)
 	const photos: string[] = subjectPropertyTransaction1?.photos
-		? subjectPropertyTransaction1.photos.slice(0, 12)
+		? subjectPropertyTransaction1.photos
 		: []
 	return subjectPropertyTransactions &&
 		subjectPropertyTransactions.length > 0 ? (
@@ -28,7 +28,7 @@ const SubjectPropertyHistory = () => {
 				<ActiveProperty />
 				<Footer />
 			</div>
-			{photos.length ? <AdditionalPropertyListing photos={photos} /> : null}
+			{generateListings(photos)}
 		</>
 	) : null
 }
