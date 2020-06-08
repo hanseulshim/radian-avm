@@ -1,7 +1,7 @@
+import * as am4charts from '@amcharts/amcharts4/charts'
+import * as am4core from '@amcharts/amcharts4/core'
 import { DataContext } from 'components/App'
 import React, { useContext, useEffect } from 'react'
-import * as am4core from '@amcharts/amcharts4/core'
-import * as am4charts from '@amcharts/amcharts4/charts'
 import { colors } from 'styles/colors'
 
 const AgeOfPopulation = () => {
@@ -72,7 +72,7 @@ const AgeOfPopulation = () => {
 			property: 'radius',
 			target: bullet,
 			min: 5,
-			max: 50,
+			max: 50
 		})
 		bullet.hiddenState.properties.scale = 0.01
 		bullet.hiddenState.properties.opacity = 0.5
@@ -82,7 +82,10 @@ const AgeOfPopulation = () => {
 	}, [data])
 	return (
 		<div className="age-of-population-container">
-			<div className="section-title">Age of Population</div>
+			<div className="section-title">
+				Age of Population
+				{ageOfPopulation?.label ? ` (${ageOfPopulation?.label})` : null}
+			</div>
 			<div className="chart-container" id="populationByAgeChart">
 				Chart
 			</div>
