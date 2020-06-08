@@ -12,6 +12,7 @@ const IncomeOfPopulation = () => {
 		const chart = am4core.create('incomeOfPopulationChart', am4charts.XYChart)
 		chart.data = incomeOfPopulationData as any
 		chart.paddingLeft = 0
+		chart.paddingRight = 25
 
 		const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis())
 		categoryAxis.dataFields.category = 'category'
