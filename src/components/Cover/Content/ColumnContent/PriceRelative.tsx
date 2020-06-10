@@ -53,16 +53,16 @@ const PriceRelative = ({
 			level1Valuelabel.text = `${level1Value}%`
 			level1Valuelabel.align = 'center'
 			level1Valuelabel.isMeasured = false
-			level1Valuelabel.x = 20
-			level1Valuelabel.y = 15
+			level1Valuelabel.x = 32.5
+			level1Valuelabel.y = 17
 
 			//Absolutely positioned line for level 1 value label
 			let level1Line = chart.createChild(am4core.Rectangle)
 			level1Line.isMeasured = false
-			level1Line.width = 60
+			level1Line.width = 90
 			level1Line.height = 2
-			level1Line.x = 60
-			level1Line.y = 25
+			level1Line.x = 30
+			level1Line.y = 35
 			level1Line.fill = retail
 				? am4core.color(colors.neptune)
 				: am4core.color(colors.azure)
@@ -73,16 +73,16 @@ const PriceRelative = ({
 			let level2Valuelabel = chart.createChild(am4core.Label)
 			level2Valuelabel.text = `${level2Value}%`
 			level2Valuelabel.isMeasured = false
-			level2Valuelabel.x = 10
-			level2Valuelabel.y = 40
+			level2Valuelabel.x = 5
+			level2Valuelabel.y = 45
 
 			//Absolutely positioned line for level 2 value label
 			let level2Line = chart.createChild(am4core.Rectangle)
 			level2Line.isMeasured = false
-			level2Line.width = 75
+			level2Line.width = 115
 			level2Line.height = 2
-			level2Line.x = 45
-			level2Line.y = 50
+			level2Line.x = 5
+			level2Line.y = 62.5
 			level2Line.fill = retail
 				? am4core.color(colors.neptune05)
 				: am4core.color(colors.azure05)
@@ -154,7 +154,12 @@ const PriceRelative = ({
 						) : null}
 					</div>
 				</div>
-				<div id={`priceRelative${retail && 'Retail'}`} />
+				<div
+					id={`priceRelative${retail && 'Retail'}`}
+					style={{
+						height: '100%'
+					}}
+				/>
 			</div>
 		</div>
 	)
