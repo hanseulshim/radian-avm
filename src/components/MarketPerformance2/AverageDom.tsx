@@ -12,11 +12,12 @@ const AverageDom = () => {
 	useEffect(() => {
 		const chart = am4core.create('averageDomChart', am4charts.XYChart)
 		chart.data = avgDom as any
+		chart.paddingRight = 20
 
 		const dateAxis = chart.xAxes.push(new am4charts.DateAxis())
 		dateAxis.baseInterval = {
 			timeUnit: 'year',
-			count: 1,
+			count: 1
 		}
 
 		dateAxis.renderer.minGridDistance = 10

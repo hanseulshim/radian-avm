@@ -63,7 +63,7 @@ const Transactions = () => {
 			am4core.color(colors.azure),
 			am4core.color(colors.slateGray),
 			am4core.color(colors.wisteria),
-			am4core.color(colors.mountainMist)
+			am4core.color(colors.thunderbird)
 		]
 
 		if (numberOfTransactions) {
