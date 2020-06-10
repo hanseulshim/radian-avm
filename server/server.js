@@ -14,7 +14,7 @@ const server = async () => {
 		path: 'AVM.pdf',
 		format: 'Letter',
 		printBackground: true,
-		scale: 0.58,
+		scale: 0.57,
 		margin: {
 			top: 0,
 			bottom: 0,
