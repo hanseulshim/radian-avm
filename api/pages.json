@@ -819,7 +819,7 @@
 			"saleRange1": 420000,
 			"saleRange2": 590000,
 			"grossProfitRange1": 30000,
-			"grossProfitRange2": -85000
+			"grossProfitRange2": 85000
 		},
 		"flipRental": {
 			"avgRent": 1500,
