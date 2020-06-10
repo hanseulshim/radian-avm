@@ -112,7 +112,7 @@ const RetailDistressedSales = () => {
 								<div className="marker level2"></div>
 								{retailVsDistressedSales?.level2PriorMonth ? (
 									<div className="column">
-										${retailVsDistressedSales?.level2PriorMonth}
+										{retailVsDistressedSales?.level2PriorMonth}
 									</div>
 								) : (
 									<div className="column">&nbsp;</div>
